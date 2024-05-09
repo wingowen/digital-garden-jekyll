@@ -11,7 +11,7 @@ permalink: /
     得失从缘，心无增减。
 </p>
 
-[[关于我]]。
+[[关于我]]的[[数字花园构建]]。
 
 <strong>Recently updated notes</strong>
 

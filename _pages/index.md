@@ -7,11 +7,9 @@ permalink: /
 
 # WINGO'S LIFE
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-    得失从缘，心无增减。
-</p>
+[[我]]的[[数字花园构建]]。
 
-[[关于我]]的[[数字花园构建]]。
+对于我而言，人生在于不断的[[体验]]与[[探索]]。
 
 <strong>Recently updated notes</strong>
 

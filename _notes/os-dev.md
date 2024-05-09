@@ -1,1 +1,1 @@
-<object data="”/assets/pdfs/os-dev.pdf”" type="’application/pdf’" width="100%" height="500" style="”border:"></object>
+<object data="/assets/pdfs/os-dev.pdf" type="application/pdf" width="100%" height="500" style="”border:"></object>

@@ -5,7 +5,7 @@ id: home
 permalink: /
 ---
 
-# WINGO'S LIFE
+# 🎉 WELCOM 🎉
 
 [[我]]的[[数字花园构建]]。
 

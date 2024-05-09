@@ -5,13 +5,13 @@ id: home
 permalink: /
 ---
 
-# 🎉 WELCOM 🎉
+# 🎉 欢迎 🎉
 
-[[我]]的[[数字花园构建]]。
+[[WINGO]]的[[数字花园构建]]。
 
 对于我而言，人生在于不断的[[体验]]与[[探索]]。
 
-<strong>Recently updated notes</strong>
+<strong>🧐近日文章🧐</strong>
 
 <ul>
   {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}

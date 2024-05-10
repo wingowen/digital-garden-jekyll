@@ -1,24 +1,13 @@
-// 定义变量
-$btn-padding: 5px 10px;
-$btn-font-size: 14px;
-$btn-border: 1px solid #ccc;
-$btn-background: #f7f7f7;
-$btn-hover-background: #e0e0e0;
-$transition-speed: 0.3s;
-
 // 折叠按钮样式
 .collapse-btn {
-  padding: $btn-padding;
-  font-size: $btn-font-size;
-  cursor: pointer;
-  border: $btn-border;
-  background-color: $btn-background;
-  outline: none;
-  transition: background-color $transition-speed;
-
-  // 鼠标悬停效果
+  transition: background 300ms;
+  padding: 0 0.1em;
+  text-decoration: none;
+  border-bottom: 1px solid $color-border;
+  color: $color-primary;
   &:hover {
-    background-color: $btn-hover-background;
+    color: black !important;
+    background: #fffaf1;
   }
 }
 

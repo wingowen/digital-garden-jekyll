@@ -52,22 +52,14 @@ layout: default
 
 <!-- 自定义折叠功能 -->
 <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  // 默认所有折叠内容都是关闭的
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      // 切换当前折叠内容的显示状态
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
-    });
-  }
+  document.querySelector('.collapse-btn').addEventListener('click', function () {
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
 </script>
 
 <!-- {% include notes_graph.html %} -->

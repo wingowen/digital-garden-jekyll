@@ -8,6 +8,7 @@
     outline: none;
   }
 
+  .accordion:focus
   .active,
   .accordion:hover {
     color: black !important;
@@ -15,7 +16,7 @@
   }
 
   .panel {
-    padding: 0 18px;
+    padding: 0;
     background-color: white;
     max-height: 0;
     overflow: hidden;

@@ -45,4 +45,56 @@ layout: default
 
 <hr>
 
-{% include notes_graph.html %}
+<style>
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+
+  .active,
+  .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+</style>
+
+<button class="accordion">关系图谱</button>
+<div class="panel">
+  {% include notes_graph.html %}
+</div>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  // 默认所有折叠内容都是关闭的
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      // 切换当前折叠内容的显示状态
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+
+<!-- {% include notes_graph.html %} -->

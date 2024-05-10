@@ -1,17 +1,25 @@
-  .collapse-btn {
-    padding: 5px 10px;
-    font-size: 14px;
+  .accordion {
+    background-color: white;
+    color: black;
     cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #f7f7f7;
+    padding: 0 0.1em;
+    border: none;
+    text-align: left;
     outline: none;
-    transition: background-color 0.3s;
+    font-size: 15px;
+    transition: 0.4s;
   }
-  .collapse-btn:hover {
-    background-color: #e0e0e0;
+
+  .active,
+  .accordion:hover {
+    color: black !important;
+    background: #fffaf1;
   }
-  .collapse-content {
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.2s ease-out;
   }

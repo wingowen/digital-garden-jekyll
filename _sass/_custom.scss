@@ -1,25 +1,48 @@
-  .accordion {
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 0 0.1em;
-    border: none;
-    text-align: left;
-    outline: none;
-  }
+.accordion {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 0 0.1em;
+  border: none;
+  text-align: left;
+  outline: none;
+}
 
-  .accordion:focus
-  .active,
-  .accordion:hover {
-    color: black !important;
-    background: #fffaf1;
-  }
+.accordion:focus
+.active,
+.accordion:hover {
+  color: black !important;
+  background: #fffaf1;
+}
 
-  .panel {
-    padding: 0;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-  }
-  
+.panel {
+  padding: 0;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.tag-cloud {
+list-style: none;
+padding: 0;
+text-align: justify; 
+font-size: 16px;
+li {
+  display: inline-block;
+  margin: 0 12px 12px 0; 
+}
+}
+#archives {
+padding: 5px;
+}
+.archive-group {
+margin: 5px;
+border-top: 1px solid #ddd;
+}
+.archive-item {
+margin-left: 5px;
+}
+.post-tags {
+text-align: left;
+}

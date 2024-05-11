@@ -1,5 +1,5 @@
 title:               数字花园
-include:             ['_pages']
+include:             ['_pages', '_tags']
 exclude:             ['_includes/notes_graph.json']
 # You may need to change the base URL depending on your deploy configuration.
 baseurl:             ''
@@ -31,6 +31,7 @@ collections:
   notes:
     output: true
     permalink: /:slug
+  tags: {}
 
 defaults:
   - scope:

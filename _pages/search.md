@@ -4,9 +4,6 @@ title: 搜索
 permalink: /search
 ---
 
-<!-- HTML elements for search -->
-<input type="text" id="search-input" placeholder="搜索博客 - 输入标题/相关内容/日期/Tags.." style="width:380px;"/>
-<ul id="results-container"></ul>
 
 <!-- script pointing to jekyll-search.js -->
 <script src="js/simple-jekyll-search.min.js"></script>
@@ -22,3 +19,7 @@ SimpleJekyllSearch({
     fuzzy: false
   })
 </script>
+
+<!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="搜索博客" style="width:380px;"/>
+<ul id="results-container"></ul>

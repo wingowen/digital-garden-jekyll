@@ -43,6 +43,6 @@ defaults:
     values:
       layout: "note"
   - scope:
-      path: ""
+      path: "_notes/**/*.md"
     values:
       toc: true

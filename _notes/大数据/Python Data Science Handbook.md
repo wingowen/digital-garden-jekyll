@@ -4,7 +4,6 @@ tags:
 name: Python Data Science Handbook
 ---
 
-
 [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 数据科学有三个领域交叉而成：
@@ -178,7 +177,7 @@ Python 是动态类型，我们甚至可以创建不同类型元素的列表。�
 
 下图展示了动态类型的列表和固定类型的数组（NumPy实现的）的区别：
 
-![[02-IMAGES/ed3c4eda17191e3bbcd446bab0f5bf24_MD5.png]]
+![](assets/images/PythonDataScienceHandbook-1.png)
 
 从底层实现上看，数组仅仅包含一个指针指向一块连续的内存空间。而 Python 列表，含有一个指针指向一块连续的指针内存空间，里面的每个指针再指向内存中每个独立的 Python 对象，如我们前面看到的整数。列表的优势在于灵活：因为每个元素都是完整的 Python 的类型对象结构，包含了数据和类型信息，因此列表可以存储任何类型的数据。 NumPy 使用的固定类型的数组缺少这种灵活性，但是对于存储和操作数据会高效许多。
 
@@ -537,7 +536,7 @@ plt.ylabel('number');
 
 对于相同尺寸的数组来说，二元运算是按每个元素进行运算的。广播机制允许这样的二元运算能够在不同尺寸和形状的数组之间进行。
 
-![[02-IMAGES/Python Data Science Handbook.png]]
+![](assets/images/PythonDataScienceHandbook-2.png)
 
 **Rules of Broadcasting**
 
@@ -969,7 +968,7 @@ display('df8', 'df9', 'pd.merge(df8, df9, on="name", suffixes=["_L", "_R"])')
 
 **GroupBy: Split, Apply, Combine**
 
-![[02-IMAGES/c75e3a1bea2f517b3d5cf3d5148bf02d_MD5.png]]
+![](assets/images/PythonDataScienceHandbook-3.png)
 
 - 拆分 split 步骤表示按照指定键上的值对 `DataFrame` 进行拆分和分组的功能。
 - 应用 apply 步骤表示在每个独立的分组上调用某些函数进行计算，通常是聚合、转换或过滤。

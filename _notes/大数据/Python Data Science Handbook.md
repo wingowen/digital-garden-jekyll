@@ -1,3 +1,10 @@
+---
+tags:
+  - LLM
+name: Python Data Science Handbook
+---
+
+
 [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)
 
 数据科学有三个领域交叉而成：

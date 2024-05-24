@@ -1,5 +1,6 @@
 ---
 slug: CS
 name: CS
-tags: CS
+tags:
+  - CS
 ---

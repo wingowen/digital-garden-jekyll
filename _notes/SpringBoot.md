@@ -41,3 +41,13 @@ public static String readFileFromResource(String fileName) {
 
 
 ```
+
+# Context
+
+```java
+// 在 Spring Boot 项目中通常存在两种管理方式
+// 一、SpringBoot 管理的上下文对象
+// 二、普通的 Java 对象
+
+
+```

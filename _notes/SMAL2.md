@@ -5,5 +5,4 @@ RelayState 可以帮助应用程序在用户通过身份提供商验证后重定
 参考
 - [SAML2.0 笔记（二）](https://blog.csdn.net/CoffeeAndIce/article/details/127957055)
 - [理解 SAML 流程](https://docs.authing.co/v2/concepts/saml/saml-flow.html)
-- [spring_prevalent_assemble/saml/README.md)
 - [生成证书_合作伙伴中心](https://support.huaweicloud.com/devg-bpconsole/appendix_00003.html)

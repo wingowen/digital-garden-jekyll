@@ -2,6 +2,8 @@
 
 [[JAVA]]
 
+[练手项目](https://gitee.com/wingowen/demo-mybatis-plus)
+
 # 注解
 
 自定义注解的实现方式

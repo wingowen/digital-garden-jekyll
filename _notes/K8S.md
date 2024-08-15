@@ -15,3 +15,6 @@ flannel 方案。
 
 ## 集群伸缩
 
+手动。
+
+自动 Cluster Autoscaler。

@@ -1,3 +1,6 @@
+---
+---
+
 Docker 或者容器和传统虚拟化最大的区别，就是虚拟化的封装是系统级的封装，docker 或者其他容器是进程级的封装。
 
 Docker 底层技术主要包括 Namespaces，Cgroups 和 rootfs。

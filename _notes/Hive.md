@@ -11,7 +11,7 @@ Hive 基本介绍及简单使用。
 
 对接项目中使用华为的 MRS，底层为 Hive，验证其是否支持批量 Update 数据。
 
-```SQL
+```
 set hive.support.concurrency = true;
 set hive.exec.dynamic.partition.mode = nonstrict;
 set hive.txn.manager = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;

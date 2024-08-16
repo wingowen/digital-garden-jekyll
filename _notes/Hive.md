@@ -7,7 +7,7 @@ Hive 基本介绍及简单使用。
 
 <!-- more -->
 
-### MRS
+# MRS
 
 对接项目中使用华为的 MRS，底层为 Hive，验证其是否支持批量 Update 数据。
 
@@ -47,7 +47,7 @@ UPDATE users_acid SET user_id = user_id + 10 where user_id in (1,3);
 
 Hive 的 ACID 事务使用写时复制（Copy-On-Write）策略来实现行级别的更新和删除。当执行更新或删除操作时，Hive 不会直接修改现有的 ORC 文件，而是创建一个新的文件来存储更新后的数据。原始文件保持不变，直到事务提交。在查询时，Hive 会合并基础文件和增量文件，以提供最新的数据视图。
 
-### 基本概念
+# 基本概念
 
 Hive 是基于 Hadoop 的一个数据仓库工具，可以将结构化的数据文件映射为一张表，并提供类 SQL 查询功能。
 
@@ -59,7 +59,7 @@ Hive 是基于 Hadoop 的一个数据仓库工具，可以将结构化的数据�
 > Hive 分析数据底层的实现是 MapReduce；
 > 执行程序运行在 Yarn 上
 
-#### HQL VS SQL
+**HQL VS SQL**
 
 |              | Hive      | RDBMS    |
 | ------------ | --------- | -------- |
@@ -91,7 +91,7 @@ Hadoop
 
 Hive 通过给用户提供的一系列交互接口，接收到用户的指令（SQL），使用自己的 Driver， 结合元数据（MetaStore），将这些指令翻译成 MapReduce，提交到 Hadoop 中执行，最后，将执行返回的结果输出到用户交互接口。
 
-#### 安装配置
+# 安装配置
 
 ```shell
 # hive 安装
@@ -119,7 +119,7 @@ bin/hadoop fs -chmod g+w /user/hive/warehouse
 </property>
 ```
 
-### 基本操作
+# 基本操作
 
 ```shell
 bin/hive
@@ -135,7 +135,7 @@ hive> select * from student;
 hive> quit;
 ```
 
-#### 文件导入
+**文件导入**
 
 ```shell
 # 将 /opt/module/datas/student.txt 文件导入 hive 的 student(id int, name string) 表中
@@ -146,7 +146,7 @@ hive> load data local inpath '/opt/module/datas/student.txt' into table student;
 
 > 再打开一个客户端窗口启动 hive，会产生 java.sql.SQLException 异常。原因是，Metastore 默认存储在自带的 derby 数据库中，推荐使用 MySQL 存储 Metastore。
 
-##### MySQL 安装
+**MySQL 安装**
 
 ```shell
 # 检查环境
@@ -183,7 +183,7 @@ mysql>flush privileges;
 mysql>quit;
 ```
 
-##### 元数据配置
+**元数据配置**
 
 ```shell
 # 拷贝所需驱动
@@ -222,7 +222,7 @@ cp mysql-connector-java-5.1.27-bin.jar /opt/module/hive/lib/
 
 > 查看 MySQL 数据库，显示增加了 metastore 数据库。
 
-#### 交互命令
+**交互命令**
 
 ```shell
 # 查看帮助
@@ -241,9 +241,9 @@ hive(default)>! ls /opt/module/datas;
 cat .hivehistory
 ```
 
-### 属性配置
+# 属性配置
 
-#### 仓库路径
+**仓库路径**
 
 Default 数据仓库的最原始位置是在 hdfs 上的：/user/hive/warehouse 路径下；
 
@@ -275,7 +275,7 @@ Default 数据仓库的最原始位置是在 hdfs 上的：/user/hive/warehouse 
 bin/hdfs dfs -chmod g+w /user/hive/warehouse
 ```
 
-#### 日志信息
+**日志信息**
 
 ```shell
 # 方式一
@@ -290,9 +290,9 @@ hive (default)> set hive.log.dir=/opt/module/hive/logs;
 hive (default)> set [某一参数]
 ```
 
-### 数据类型
+# 数据类型
 
-#### 简单类型
+**简单类型**
 
 | 类型      | 描述                               | 示例         |
 | --------- | ---------------------------------- | ------------ |
@@ -311,7 +311,7 @@ hive (default)> set [某一参数]
 | timestamp | 时间戳，纳秒精度                   | 122327493795 |
 | date      | 日期                               | ‘2018-04-07’ |
 
-#### 复杂类型
+**复杂类型**
 
 | 类型   | 描述                                              | 示例                                                         |
 | ------ | ------------------------------------------------- | ------------------------------------------------------------ |
@@ -319,7 +319,7 @@ hive (default)> set [某一参数]
 | map    | key-value，key 必须为原始类型，value 可以任意类型 | map(‘a’,1,’b’,2)                                             |
 | struct | 字段集合,类型可以不同                             | struct(‘1’,1,1.0), named_stract(‘col1’,’1’,’col2’,1,’clo3’,1.0) |
 
-#### 实例操作
+**实例操作**
 
 ```json
 {
@@ -370,7 +370,7 @@ lili 18 beijing
 Time taken: 0.076 seconds, Fetched: 1 row(s)
 ```
 
-#### 类型转化
+**类型转化**
 
 Hive 的原子数据类型是可以进行隐式转换的，类似于 Java 的类型转换，例如某表达式 使用 INT 类型，TINYINT 会自动转换为 INT 类型，但是 Hive 不会进行反向转化，例如， 某表达式使用 TINYINT 类型，INT 不会自动转换为 TINYINT 类型，它会返回错误，除非使用 CAST 操作。
 
@@ -385,13 +385,11 @@ Hive 的原子数据类型是可以进行隐式转换的，类似于 Java 的类
 
 > 例如 CAST('1' AS INT) 将把字符串 '1'  转换成整数 1；如果强制类型转换失败，如执行 CAST('X' AS INT)，表达式返回空值 NULL。
 
-### DDL
+# DDL
 
 > Data Definition Language 数据定义。
 
-#### 库操作
-
-##### 创建
+## 库操作
 
 > 创建一个数据库，数据库在 HDFS 上的默认存储路径是 /user/hive/warehouse/*.db
 
@@ -401,7 +399,7 @@ create database if not exists db_hive;
 create database db_hive location '/db_hive.db';
 ```
 
-##### 显示
+**显示**
 
 ```shell
 # 显示数据库信息
@@ -412,7 +410,7 @@ desc database extended db_hive;
 use db_hive;
 ```
 
-##### 修改
+**修改**
 
 用户可以使用 ALTER DATABASE 命令为某个数据库的 DBPROPERTIES 设置键-值对属性值，来描述这个数据库的属性信息。
 
@@ -422,7 +420,7 @@ use db_hive;
 alter database db_hive set dbproperties('createtime'='20170830');
 ```
 
-##### 删除
+**删除**
 
 ```shell
 # 采用 if exists 判断数据库是否存在
@@ -431,9 +429,9 @@ drop database if exists [db_name];
 drop database [db_name] cascade;
 ```
 
-#### 表操作
+## 表操作
 
-##### 表类型
+**表类型**
 
 ```shell
 CREATE [EXTERNAL] TABLE [IF NOT EXISTS] table_name 
@@ -470,7 +468,7 @@ LOCATION 指定表在 HDFS 上的存储位置。
 
 LIKE 允许用户复制现有的表结构，但是不复制数据。
 
-###### 内部表
+内部表
 
 > 默认创建的表都是所谓的管理表，有时也被称为内部表。因为这种表，Hive 会（或多或少地）控制着数据的生命周期。Hive 默认情况下会将这些表的数据存储在由配置项 hive.metastore.warehouse.dir（例如，/user/hive/warehouse）所定义的目录的子目录下。当删除一个管理表时，Hive 也会删除这个表中数据。内部表不适合和其他工具共享数据。
 
@@ -490,7 +488,7 @@ create table if not exists student02 like student;
 desc formatted student01
 ```
 
-###### 外部表
+外部表
 
 > 因为表是外部表，所以 Hive 并非认为其完全拥有这份数据。删除该表并不会删除掉这 份数据，不过描述表的元数据信息会被删除掉。
 
@@ -533,7 +531,7 @@ hive (default)> desc formatted dept;
 Table Type: EXTERNAL_TABLE
 ```
 
-##### 表转换
+表转换
 
 > 只能用单引号，严格区分大小写，如果不是完全符合，那么只会添加 K V 而不生效。
 
@@ -551,7 +549,7 @@ hive (default)> desc formatted student;
 Table Type: MANAGED_TABLE
 ```
 
-##### 分区表
+分区表
 
 > 分区表实际上就是对应一个 HDFS 文件系统上的独立的文件夹，该文件夹下是该分区所有的数据文件。Hive 中的分区就是分目录，把一个大的数据集根据业务需要分割成小的数据集。在查询时通过 WHERE 子句中的表达式选择查询所需要的指定的分区，这样的查询效率会提高很多。
 
@@ -640,7 +638,7 @@ hive (default)> load data local inpath '/opt/module/datas/dept.txt' into table d
 hive (default)> select * from dept_partition2 where month='201709' and day='10';
 ```
 
-#### 列信息
+列信息
 
 ```shell
 # 更新列
@@ -650,15 +648,15 @@ ALTER TABLE table_name ADD|REPLACE COLUMNS (col_name data_type [COMMENT col_comm
 
 ```
 
-#### 删除表
+删除表
 
 ```shell
 hive (default)> drop table [table_name];
 ```
 
-### DML
+# DML
 
-#### 数据导入
+数据导入
 
 ```shell
 # 创建一张表
@@ -727,7 +725,7 @@ hive (default)> select * from student;
 hive (default)> import table student partition(month='201709') from '/user/hive/warehouse/export/student';
 ```
 
-#### 数据导出
+数据导出
 
 > Insert 导出。
 
@@ -758,7 +756,7 @@ bin/hive -e 'select * from default.student;' > /opt/module/datas/export/student.
 hive (default) >export table default.student to '/user/hive/warehouse/export/student';
 ```
 
-#### 清除表
+清除表
 
 > Truncate 只能删除管理表，不能删除外部表中数据。
 
@@ -766,7 +764,7 @@ hive (default) >export table default.student to '/user/hive/warehouse/export/stu
 hive (default)> truncate table student;
 ```
 
-### 查询
+## 查询
 
 > 基本查询
 
@@ -809,7 +807,7 @@ hive (default)> select avg(sal) avg_sal from emp;
 hive (default)> select * from emp limit 5;
 ```
 
-#### Where
+Where
 
 ```shell
 # 查询出薪水大于 1000 的所有员工
@@ -854,7 +852,7 @@ hive (default)> select * from emp where sal>1000 or deptno=30;
 hive (default)> select * from emp where deptno not IN(30, 20);
 ```
 
-#### 分组
+分组
 
 > GROUP BY 语句通常会和聚合函数一起使用，按照一个或者多个列队结果进行分组，然后对每个组执行聚合操作。
 
@@ -874,7 +872,7 @@ hive (default)> select t.deptno, t.job, max(t.sal) max_sal from emp t group by t
 hive (default)> select deptno, avg(sal) avg_sal from emp group by deptno having avg_sal > 2000;
 ```
 
-#### Join
+Join
 
 > 是只支持等值连接，不支持非等值连接
 
@@ -895,9 +893,9 @@ hive (default)> select e.empno, e.ename, d.deptno from emp e full join dept d on
 
 > 多表连接，大多数情况下，Hive 会对每对 JOIN 连接对象启动一个 MapReduce 任务。Hive 总是按照从左到右的 顺序执行的。
 
-#### 排序
+排序
 
-##### 全局排序
+全局排序
 
 > Order By：全局排序，一个 MapReduce。
 >
@@ -914,7 +912,7 @@ hive (default)> select ename, sal*2 twosal from emp order by twosal;
 hive (default)> select ename, deptno, sal from emp order by deptno, sal ;
 ```
 
-##### 内部排序
+内部排序
 
 > 每个 MapReduce 内部排序（Sort By）。
 >
@@ -930,7 +928,7 @@ hive (default)> select * from emp sort by empno desc;
 hive (default)> insert overwrite local directory '/opt/module/datas/sortby-result' select * from emp sort by deptno desc;
 ```
 
-##### 分区排序
+分区排序
 
 > Distribute By：类似 MR 中 partition，进行分区，结合 sort by 使用。
 >
@@ -951,7 +949,7 @@ hive (default)> select * from emp cluster by deptno;
 hive (default)> select * from emp distribute by deptno sort by deptno;
 ```
 
-#### 桶
+桶
 
 > 分区针对的是数据的存储路径；分桶针对的是数据文件。
 
@@ -988,7 +986,7 @@ hive (default)> insert into table stu_buck
 hive (default)> select * from stu_buck;
 ```
 
-##### 分桶抽样查询
+分桶抽样查询
 
 > 对于非常大的数据集，有时用户需要使用的是一个具有代表性的查询结果而不是全部结 果。Hive 可以通过对表进行抽样来满足这个需求。
 
@@ -1002,9 +1000,9 @@ hive (default)> select * from stu_buck tablesample (bucket 1 out of 4 on id);
 > y 必须是 table 总 bucket 数的倍数或者因子。hive 根据 y 的大小，决定抽样的比例。
 > table 总 bucket 数为 4，tablesample(bucket 1 out of 2)，表示总共抽取（4/2=）2 个 bucket 的数据，抽取第  1(x) 个和第 4(x+y) 个 bucket 的数据。
 
-#### 其它
+其它
 
-##### 空字段赋值
+空字段赋值
 
 ```shell
 # 如果员工的 comm 为 NULL，则用-1 代替
@@ -1044,7 +1042,7 @@ group by
     # B 1 2
 ```
 
-##### 行转列
+行转列
 
 > CONCAT(string A/col, string B/col…)：返回输入字符串连接后的结果，支持任意个输入 字符串；
 >
@@ -1084,7 +1082,7 @@ group by
     # 白羊座,B 宋宋
 ```
 
-##### 列转行
+列转行
 
 > EXPLODE(col)：将 hive 一列中复杂的 array 或者 map 结构拆分成多行。 
 >
@@ -1126,7 +1124,7 @@ lateral view
     # 《战狼 2》 灾难
 ```
 
-##### 窗口函数
+窗口函数
 
 > OVER()：指定分析函数工作的数据窗口大小，这个数据窗口大小可能会随着行的变而变化；
 > CURRENT ROW：当前行； 
@@ -1200,7 +1198,7 @@ select name,orderdate,cost, ntile(5) over(order by orderdate) sorted from busine
 where sorted = 1;
 ```
 
-##### Rank
+Rank
 
 > RANK() 排序相同时会重复，总数不会变；
 > DENSE_RANK()排序相同时会重复，总数会减少；
@@ -1222,7 +1220,7 @@ name subject score rp drp rmp
 婷婷 英语 78 3 2 3
 ```
 
-### 函数
+## 函数
 
 ```shell
 # 查看系统自带的函数
@@ -1233,6 +1231,6 @@ hive> desc function upper;
 hive> desc function extended upper;
 ```
 
-#### 自定义函数
+自定义函数
 
 [官方文档地址](https://cwiki.apache.org/confluence/display/Hive/HivePlugins)

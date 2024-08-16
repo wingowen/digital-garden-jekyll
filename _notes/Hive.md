@@ -7,6 +7,46 @@ Hive 基本介绍及简单使用。
 
 <!-- more -->
 
+### MRS
+
+对接项目中使用华为的 MRS，底层为 Hive，验证其是否支持批量 Update 数据。
+
+```SQL
+set hive.support.concurrency = true;
+set hive.exec.dynamic.partition.mode = nonstrict;
+set hive.txn.manager = org.apache.hadoop.hive.ql.lockmgr.DbTxnManager;
+
+DROP TABLE users_acid;
+-- 清理事务日志
+DELETE FROM TXN_COMPONENTS WHERE TC_TABLE = 'users_acid';
+DELETE FROM COMPLETED_TXN_COMPONENTS WHERE CTC_TABLE = 'users_acid';
+DELETE FROM HIVE_LOCKS WHERE HL_TABLE = 'users_acid';
+DELETE FROM NEXT_TXN_ID;
+-- 清理元数据
+DELETE FROM TAB_COL_STATS WHERE TABLE_NAME = 'users_acid';
+DELETE FROM PART_COL_STATS WHERE TABLE_NAME = 'users_acid';
+-- 创建 ACID 表
+CREATE TABLE users_acid (
+user_id INT,
+username STRING,
+email STRING
+)
+CLUSTERED BY (user_id) INTO 3 BUCKETS
+STORED AS ORC
+TBLPROPERTIES ('transactional'='true');
+
+INSERT INTO TABLE users_acid VALUES
+(1, 'alice', 'alice@example.com'),
+(2, 'bob', 'bob@example.com'),
+(3, 'charlie', 'charlie@example.com'),
+(4, 'dave', 'dave@example.com'),
+(5, 'eve', 'eve@example.com');
+-- update 成功
+UPDATE users_acid SET user_id = user_id + 10 where user_id in (1,3);
+```
+
+Hive 的 ACID 事务使用写时复制（Copy-On-Write）策略来实现行级别的更新和删除。当执行更新或删除操作时，Hive 不会直接修改现有的 ORC 文件，而是创建一个新的文件来存储更新后的数据。原始文件保持不变，直到事务提交。在查询时，Hive 会合并基础文件和增量文件，以提供最新的数据视图。
+
 ### 基本概念
 
 Hive 是基于 Hadoop 的一个数据仓库工具，可以将结构化的数据文件映射为一张表，并提供类 SQL 查询功能。

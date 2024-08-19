@@ -5,3 +5,6 @@
 
 ![](assets/images/RPC-1.png)
 
+> Java RPC 框架 Dubbo 是阿里巴巴内部的 [[SOA]] 服务化治理方案的核心框架。
+
+

@@ -5,6 +5,7 @@ Namenode 是一个中心服务器，负责管理文件系统的命名空间以�
 
 Datanode一般是一个设备上部署一个，负责管理它所在节点上的存储。负责处理文件系统客户端的读写请求。在 Namenod e的统一调度下进行数据块的创建、删除和复制。
 
+
 ![](assets/images/HDFS-1.png)
 
 Zookeeper 负责接受 NameNode 的心跳，当 Actived NameNode 不向 Zookeeper 报告心跳时，Standby NameNode 的监控进程会收到这个消息，从而激活 Standby NameNode 并接管 Active NameNode 的工作。

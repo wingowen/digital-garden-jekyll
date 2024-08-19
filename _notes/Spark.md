@@ -35,3 +35,23 @@ Shuffle 是一项昂贵的操作，因为它通常会跨节点操作数据，这
 - **窄依赖 (narrow dependency)**：父 RDDs 的一个分区最多被子 RDDs 一个分区所依赖；
 - **宽依赖 (wide dependency)**：父 RDDs 的一个分区可以被子 RDDs 的多个子分区所依赖。
 
+RDD(s) 及其之间的依赖关系组成了 DAG(有向无环图)，DAG 定义了这些 RDD(s) 之间的 Lineage(血统) 关系，通过血统关系，如果一个 RDD 的部分或者全部计算结果丢失了，也可以重新进行计算。
+
+# Spark SQL
+
+RDD VS. DataFrame
+- 如果你想使用函数式编程而不是 DataFrame API，则使用 RDDs；
+- 如果你的数据是非结构化的 (比如流媒体或者字符流)，则使用 RDDs；
+- 如果你的数据是结构化的 (如 RDBMS 中的数据) 或者半结构化的 (如日志)，出于性能上的考虑，应优先使用 DataFrame。
+
+![](assets/images/Spark-1.png)
+
+Dataset：集成了 RDD 和 DataFrame 的优点，具备强类型的特点，同时支持 Lambda 函数，但只能在 Scala 和 Java 语言中使用。
+
+# Spark Streaming
+
+Storm 和 Flink 都是真正意义上的流计算框架，但 Spark Streaming 只是将数据流进行极小粒度的拆分，拆分为多个批处理，使得其能够得到接近于流处理的效果，但其本质上还是批处理（或微批处理）。
+
+
+
+

@@ -1,3 +1,5 @@
+RPC 可使用 HTTP / TCP 协议，其中 TCP 协议更高效。HTTP 一次请求一个 ID，TCP 一次连接只有一个 ID。
+
 客户方像调用本地方法一样去调用远程接口方法，RPC 框架提供接口的代理实现，实际的调用将委托给代理 RpcProxy 。代理封装调用信息并将调用转交给 RpcInvoker 去实际执行。在客户端的RpcInvoker 通过连接器 RpcConnector 去维持与服务端的通道 RpcChannel，并使用 RpcProtocol 执行协议编码 encode 并将编码后的请求消息通过通道发送给服务方。
 
 

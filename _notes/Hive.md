@@ -7,6 +7,33 @@ Hive 基本介绍及简单使用。
 
 <!-- more -->
 
+
+![](assets/images/Hive-1.png)
+
+
+# 特性
+
+## 分区与分桶
+
+分区 Partitioned by，即 HDFS 按分区字段不同值组合创建单独的数据目录。
+- 静态分区（指定分区字段的值）
+- 动态分区（不指定～）
+
+分桶 Clustered by Sorted by，对指定字段做了 hash 散列然后存放到对应文件中。
+
+本质上都是按不同粒度拆分数据，查询时无需查询全表，提高查询效率。
+
+## 索引
+
+索引的设计目标是提高表某些列的查询速度。如果没有索引，带有谓词的查询会加载整个表或分区并处理所有行。但是如果 column 存在索引，则只需要加载和处理文件的一部分。
+
+在指定列上建立索引，会产生一张索引表（表结构如下），里面的字段包括：索引列的值、该值对应的 HDFS 文件路径、该值在文件中的偏移量。在查询涉及到索引字段时，首先到索引表查找索引列值对应的 HDFS 文件路径及偏移量，这样就避免了全表扫描。
+
+缺陷：无法自动 rebuild，3.0 后移除索引。
+
+- 具有自动重写的物化视图 (Materialized View) 可以产生与索引相似的效果（Hive 2.3.0 增加了对物化视图的支持，在 3.0 之后正式引入）。
+- 使用列式存储文件格式（Parquet，ORC）进行存储时，这些格式支持选择性扫描，可以跳过不需要的文件或块。
+
 # MRS
 
 对接项目中使用华为的 MRS，底层为 Hive，验证其是否支持批量 Update 数据。
@@ -91,6 +118,102 @@ Hadoop
 
 Hive 通过给用户提供的一系列交互接口，接收到用户的指令（SQL），使用自己的 Driver， 结合元数据（MetaStore），将这些指令翻译成 MapReduce，提交到 Hadoop 中执行，最后，将执行返回的结果输出到用户交互接口。
 
+## 数据类型
+
+**简单类型**
+
+| 类型      | 描述                               | 示例         |
+| --------- | ---------------------------------- | ------------ |
+| boolean   | true / false                       | TRUE         |
+| tinyint   | 1 字节的有符号整数                 | -128~127 1Y  |
+| smallint  | 2 个字节的有符号整数，-32768~32767 | 1S           |
+| int       | 4 个字节的带符号整数               | 1            |
+| bigint    | 8 字节带符号整数                   | 1L           |
+| float     | 4 字节单精度浮点数                 | 1.0          |
+| double    | 8 字节双精度浮点数                 | 1.0          |
+| deicimal  | 任意精度的带符号小数               | 1.0          |
+| String    | 字符串，变长                       | “a”,’b’      |
+| varchar   | 变长字符串                         | “a”,’b’      |
+| char      | 固定长度字符串                     | “a”,’b’      |
+| binary    | 字节数组                           | 无法表示     |
+| timestamp | 时间戳，纳秒精度                   | 122327493795 |
+| date      | 日期                               | ‘2018-04-07’ |
+
+**复杂类型**
+
+| 类型   | 描述                                              | 示例                                                         |
+| ------ | ------------------------------------------------- | ------------------------------------------------------------ |
+| array  | 有序的的同类型的集合                              | array(1,2)                                                   |
+| map    | key-value，key 必须为原始类型，value 可以任意类型 | map(‘a’,1,’b’,2)                                             |
+| struct | 字段集合,类型可以不同                             | struct(‘1’,1,1.0), named_stract(‘col1’,’1’,’col2’,1,’clo3’,1.0) |
+
+**实例操作**
+
+```json
+{
+    "name": "songsong",
+    "friends": ["bingbing" , "lili"] , // 列表 Array
+    "children": { // 键值 Map
+        "xiao song": 18 ,
+        "xiaoxiao song": 19
+    }
+    "address": { // 结构 Struct,
+    "street": "hui long guan" ,
+    "city": "beijing"
+}
+}
+```
+
+> 基于上述数据结构，我们在 Hive 里创建对应的表，并导入数据。
+
+```txt
+songsong,bingbing_lili,xiao song:18_xiaoxiao song:19,hui long guan_beijing // 第一条 JSON
+yangyang,caicai_susu,xiao yang:18_xiaoxiao yang:19,chao yang_beijing // 第二条 JSON
+```
+
+> MAP，STRUCT 和 ARRAY 里的元素间关系都可以用同一个字符表示，这里用 “_”。
+
+```sql
+create table test(
+    name string,
+    friends array<string>,
+    children map<string, int>,
+    address struct<street:string, city:string>
+)
+row format delimited
+fields terminated by ','
+collection items terminated by '_'
+map keys terminated by ':'
+lines terminated by '\n';
+```
+
+```shell
+# 导入数据
+hive (default)> load data local inpath ‘/opt/module/datas/test.txt’ into table test
+# 访问三种集合列里的数据，以下分别是 ARRAY，MAP，STRUCT 的访问方式
+select friends[1],children['xiao song'],address.city from test where name="songsong";
+OK
+_c0 _c1 city
+lili 18 beijing
+Time taken: 0.076 seconds, Fetched: 1 row(s)
+```
+
+**类型转化**
+
+Hive 的原子数据类型是可以进行隐式转换的，类似于 Java 的类型转换，例如某表达式 使用 INT 类型，TINYINT 会自动转换为 INT 类型，但是 Hive 不会进行反向转化，例如， 某表达式使用 TINYINT 类型，INT 不会自动转换为 TINYINT 类型，它会返回错误，除非使用 CAST 操作。
+
+隐式类型转换规则：
+
+> 任何整数类型都可以隐式地转换为一个范围更广的类型，如 TINYINT 可以转换成 INT，INT 可以转换成 BIGINT；
+> 所有整数类型、FLOAT 和 STRING 类型都可以隐式地转换成 DOUBLE；
+> TINYINT、SMALLINT、INT 都可以转换为 FLOAT；
+> BOOLEAN 类型不可以转换为任何其它的类型。
+
+可以使用 CAST 操作显示进行数据类型转换
+
+> 例如 CAST('1' AS INT) 将把字符串 '1'  转换成整数 1；如果强制类型转换失败，如执行 CAST('X' AS INT)，表达式返回空值 NULL。
+
+
 # 安装配置
 
 ```shell
@@ -119,7 +242,7 @@ bin/hadoop fs -chmod g+w /user/hive/warehouse
 </property>
 ```
 
-# 基本操作
+## 基本操作
 
 ```shell
 bin/hive
@@ -241,7 +364,7 @@ hive(default)>! ls /opt/module/datas;
 cat .hivehistory
 ```
 
-# 属性配置
+## 属性配置
 
 **仓库路径**
 
@@ -290,100 +413,6 @@ hive (default)> set hive.log.dir=/opt/module/hive/logs;
 hive (default)> set [某一参数]
 ```
 
-# 数据类型
-
-**简单类型**
-
-| 类型      | 描述                               | 示例         |
-| --------- | ---------------------------------- | ------------ |
-| boolean   | true / false                       | TRUE         |
-| tinyint   | 1 字节的有符号整数                 | -128~127 1Y  |
-| smallint  | 2 个字节的有符号整数，-32768~32767 | 1S           |
-| int       | 4 个字节的带符号整数               | 1            |
-| bigint    | 8 字节带符号整数                   | 1L           |
-| float     | 4 字节单精度浮点数                 | 1.0          |
-| double    | 8 字节双精度浮点数                 | 1.0          |
-| deicimal  | 任意精度的带符号小数               | 1.0          |
-| String    | 字符串，变长                       | “a”,’b’      |
-| varchar   | 变长字符串                         | “a”,’b’      |
-| char      | 固定长度字符串                     | “a”,’b’      |
-| binary    | 字节数组                           | 无法表示     |
-| timestamp | 时间戳，纳秒精度                   | 122327493795 |
-| date      | 日期                               | ‘2018-04-07’ |
-
-**复杂类型**
-
-| 类型   | 描述                                              | 示例                                                         |
-| ------ | ------------------------------------------------- | ------------------------------------------------------------ |
-| array  | 有序的的同类型的集合                              | array(1,2)                                                   |
-| map    | key-value，key 必须为原始类型，value 可以任意类型 | map(‘a’,1,’b’,2)                                             |
-| struct | 字段集合,类型可以不同                             | struct(‘1’,1,1.0), named_stract(‘col1’,’1’,’col2’,1,’clo3’,1.0) |
-
-**实例操作**
-
-```json
-{
-    "name": "songsong",
-    "friends": ["bingbing" , "lili"] , // 列表 Array
-    "children": { // 键值 Map
-        "xiao song": 18 ,
-        "xiaoxiao song": 19
-    }
-    "address": { // 结构 Struct,
-    "street": "hui long guan" ,
-    "city": "beijing"
-}
-}
-```
-
-> 基于上述数据结构，我们在 Hive 里创建对应的表，并导入数据。
-
-```txt
-songsong,bingbing_lili,xiao song:18_xiaoxiao song:19,hui long guan_beijing // 第一条 JSON
-yangyang,caicai_susu,xiao yang:18_xiaoxiao yang:19,chao yang_beijing // 第二条 JSON
-```
-
-> MAP，STRUCT 和 ARRAY 里的元素间关系都可以用同一个字符表示，这里用 “_”。
-
-```sql
-create table test(
-    name string,
-    friends array<string>,
-    children map<string, int>,
-    address struct<street:string, city:string>
-)
-row format delimited
-fields terminated by ','
-collection items terminated by '_'
-map keys terminated by ':'
-lines terminated by '\n';
-```
-
-```shell
-# 导入数据
-hive (default)> load data local inpath ‘/opt/module/datas/test.txt’ into table test
-# 访问三种集合列里的数据，以下分别是 ARRAY，MAP，STRUCT 的访问方式
-select friends[1],children['xiao song'],address.city from test where name="songsong";
-OK
-_c0 _c1 city
-lili 18 beijing
-Time taken: 0.076 seconds, Fetched: 1 row(s)
-```
-
-**类型转化**
-
-Hive 的原子数据类型是可以进行隐式转换的，类似于 Java 的类型转换，例如某表达式 使用 INT 类型，TINYINT 会自动转换为 INT 类型，但是 Hive 不会进行反向转化，例如， 某表达式使用 TINYINT 类型，INT 不会自动转换为 TINYINT 类型，它会返回错误，除非使用 CAST 操作。
-
-隐式类型转换规则：
-
-> 任何整数类型都可以隐式地转换为一个范围更广的类型，如 TINYINT 可以转换成 INT，INT 可以转换成 BIGINT；
-> 所有整数类型、FLOAT 和 STRING 类型都可以隐式地转换成 DOUBLE；
-> TINYINT、SMALLINT、INT 都可以转换为 FLOAT；
-> BOOLEAN 类型不可以转换为任何其它的类型。
-
-可以使用 CAST 操作显示进行数据类型转换
-
-> 例如 CAST('1' AS INT) 将把字符串 '1'  转换成整数 1；如果强制类型转换失败，如执行 CAST('X' AS INT)，表达式返回空值 NULL。
 
 # DDL
 
@@ -468,7 +497,7 @@ LOCATION 指定表在 HDFS 上的存储位置。
 
 LIKE 允许用户复制现有的表结构，但是不复制数据。
 
-内部表
+### 内部表
 
 > 默认创建的表都是所谓的管理表，有时也被称为内部表。因为这种表，Hive 会（或多或少地）控制着数据的生命周期。Hive 默认情况下会将这些表的数据存储在由配置项 hive.metastore.warehouse.dir（例如，/user/hive/warehouse）所定义的目录的子目录下。当删除一个管理表时，Hive 也会删除这个表中数据。内部表不适合和其他工具共享数据。
 
@@ -488,7 +517,7 @@ create table if not exists student02 like student;
 desc formatted student01
 ```
 
-外部表
+### 外部表
 
 > 因为表是外部表，所以 Hive 并非认为其完全拥有这份数据。删除该表并不会删除掉这 份数据，不过描述表的元数据信息会被删除掉。
 

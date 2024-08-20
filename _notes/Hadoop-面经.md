@@ -160,3 +160,118 @@ Hadoop 对小文件处理效率不高，因为==每个文件在 HDFS 中至少�
 
 Hadoop 2.x 引入了 HDFS 快照功能，允许用户对文件系统目录创建快照，以便在数据损坏或误删除时恢复数据。快照是文件系统目录在某个时间点的只读副本。
 
+# MapReduce 架构
+
+- **JobTracker** 负责作业调度和任务管理。JobTracker 负责调度 Map 和 Reduce 任务，并记录每个 Map 任务的输出位置。Reduce 任务启动时，JobTracker 会通知它从哪些 Map 任务的输出位置拉取数据。
+- **TaskTracker** 负责执行具体的 Map 和 Reduce 任务。
+- **HDFS** 用于存储输入和输出数据。
+
+# MapReduce 工作原理
+
+1. **输入数据分割**：输入数据被分割成多个数据块，每个数据块由一个 Map 任务处理。
+2. **Map 阶段**：Map 任务读取输入数据，并生成键值对。
+3. **Shuffle 阶段**：将 Map 任务的输出进行排序和分区，发送给相应的 Reduce 任务。
+4. **Reduce 阶段**：Reduce 任务接收键值对，进行合并和聚合，生成最终结果。
+5. **输出结果**：Reduce 任务的输出被写入 HDFS。
+
+# Shuffle 过程
+
+1. **Map 端输出**：Map 任务将输出结果写入环型缓冲区。
+2. **溢写到磁盘**：当环型缓冲区满时，数据被溢写到磁盘。
+3. **合并溢写文件**：将多个溢写文件合并成一个文件。
+4. **分区**：对合并后的文件进行分区。
+5. **排序**：对每个分区的数据进行排序。（内存做快排，磁盘做归并）
+6. **传输到 Reduce**：将排序后的数据传输到相应的 Reduce 任务。
+
+优化措施
+
+- **Combiner**：在 Map 端进行预聚合。
+- **压缩**：对数据进行压缩，减少网络传输开销。
+- **优化分区**：合理设置分区数，避免数据倾斜。
+
+# MapReduce Join
+
+Reduce Side Join
+1. mapper 分别读取不同的数据集；
+2. mapper 的输出中，通常以 join 的字段作为输出的key；
+3. 不同数据集的数据经过 shuffle，key 一样的会被分到同一分组处理；
+4. 在 reduce 中根据业务需求把数据进行关联整合汇总，最终输出。
+
+Map Side Join（大小表）
+1. 首先分析 join 处理的数据集，使用分布式缓存技术将小的数据集进行分布式缓存；
+2. MapReduce 框架在执行的时候会自动将缓存的数据分发到各个 maptask 运行的机器上；
+3. 程序只运行 mapper，在 mapper 初始化的时候从分布式缓存中读取小数据集数据，然后和自己读取的大数据集进行 join 关联，输出最终的结果；
+4. 整个 join 的过程没有 shuffle，没有 reducer。
+
+> map 端 join 最大的优势减少 shuffle 时候的数据传输成本。并且 mapper 的并行度可以根据输入数据量自动调整，充分发挥分布式计算的优势。
+
+# 分片分区
+
+Map 的分片大小通常由输入数据的大小和 HDFS 的块大小决定。默认情况下，Map 的分片大小等于 HDFS 的块大小（128MB）。MapTask 的数量由输入数据的分片数决定。输入数据被分割成多个数据块，每个数据块由一个 Map 任务处理。默认情况下，MapTask 的数量等于输入数据的分片数。
+
+MapReduce 分区是将 Map 任务的输出结果按 key 分配到不同的 Reduce 任务。
+
+# MapReduce GC
+
+选择合适的 JVM 垃圾回收器可以提高 MapReduce 的吞吐量。常见的选择包括：
+- **G1 GC**：适用于大内存的场景，可以减少停顿时间。
+- **Parallel GC**：适用于高吞吐量的场景，可以并行处理垃圾回收。
+- **CMS GC**：适用于低延迟的场景，可以减少停顿时间。
+
+# 什么是 YARN
+
+YARN（Yet Another Resource Negotiator）是 Hadoop 的资源管理器，负责集群资源的管理和作业调度。它将资源管理和作业调度/监控分离，使得 Hadoop 可以支持多种计算框架，如 MapReduce、Spark、Flink 等。YARN 的核心思想是将 JobTracker 的两个主要功能（资源管理和作业调度/监控）分离成两个独立的守护进程：ResourceManager 和 NodeManager。
+
+# YARN 有几个模块
+
+- **ResourceManager (RM)**：负责整个系统的资源管理和分配。
+- **NodeManager (NM)**：负责单个节点的资源管理和使用。
+- **ApplicationMaster (AM)**：负责应用程序的管理，包括任务的监控和容错。
+- **Container**：YARN 中的资源抽象，包括内存、CPU 等。
+
+# YARN 工作机制
+
+1. **客户端提交作业**：客户端将作业提交给 ResourceManager。
+2. **ResourceManager 分配资源**：ResourceManager 分配一个 Container 给 ApplicationMaster，并在该 Container 中启动 ApplicationMaster。
+3. **ApplicationMaster 注册**：ApplicationMaster 向 ResourceManager 注册，并请求资源以运行任务。
+4. **NodeManager 启动任务**：ResourceManager 将资源分配给 NodeManager，NodeManager 在 Container 中启动任务。
+5. **任务执行**：任务在 Container 中执行，ApplicationMaster 监控任务的进度和状态。
+6. **任务完成**：任务完成后，ApplicationMaster 向 ResourceManager 注销，并释放资源。
+
+# YARN 的优势以及解决的问题
+
+优势
+- **支持多种计算框架**：YARN 可以支持多种计算框架，如 MapReduce、Spark、Flink 等。
+- **资源利用率高**：YARN 可以更有效地管理和利用集群资源。
+- **可扩展性好**：YARN 的设计使其更容易扩展到大规模集群。
+- **容错性好**：YARN 提供了更好的容错机制，确保作业的连续运行。
+
+解决问题
+- **资源管理问题**：YARN 提供了更细粒度的资源管理，提高了资源利用率。
+- **作业调度问题**：YARN 提供了更灵活的作业调度机制，支持多种调度策略。
+- **多租户问题**：YARN 支持多租户，允许多个用户或团队共享同一个集群。
+
+# YARN 容错机制
+
+- **ResourceManager 高可用**：通过多个 ResourceManager 实例实现高可用。使用 ZooKeeper 协调 ResourceManager 的主备切换。
+- **NodeManager 自动恢复**：NodeManager 可以自动恢复失败的容器和任务。
+- **ApplicationMaster 重试**：ApplicationMaster 可以重试失败的任务。
+
+# YARN 调度器
+
+- **FIFO Scheduler**：先进先出调度器。
+- **Capacity Scheduler**：容量调度器，支持多租户和资源共享。
+- **Fair Scheduler**：公平调度器，支持资源公平分配。
+
+# Hadoop 3.x YARN
+
+- **资源本地化改进**：提高了资源本地化的效率。
+- **容器重用**：支持容器的重用，减少了容器启动时间。
+- **GPU 和 FPGA 支持**：支持 GPU 和 FPGA 等硬件资源的管理。
+- **改进的调度器**：提供了更灵活和高效的调度器。
+
+### YARN 监控
+
+- **ResourceManager Web UI**：通过 ResourceManager 的 Web 界面监控集群状态和作业进度。
+- **Metrics 和 JMX**：通过收集 YARN 的 Metrics 和 JMX 数据进行监控。
+- **第三方监控工具**：使用第三方监控工具（如 Prometheus、Ganglia 等）进行监控。

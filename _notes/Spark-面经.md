@@ -72,7 +72,7 @@ Yarn：只需要一个节点用于提交作业，不需要启动 Master 和 Work
 
 # Spark 的阶段划分
 
-Spark 将作业划分为多个阶段（Stage），每个阶段由一组任务（Task）组成。阶段划分的依据是 Shuffle 边界，即数据需要在不同节点之间重新分区的操作。
+Spark 将作业划分为多个阶段（Stage），每个阶段由一组任务（Task）组成。阶段划分的依据是 Shuffle 边界，即数据需要在不同节点之间重新分区的。
 
 - **Shuffle Map Stage**：负责生成 Shuffle 数据，输出中间结果到磁盘，供下一个阶段使用。
 - **Result Stage**：负责最终结果的计算，直接输出结果到 Driver 或写入外部存储。

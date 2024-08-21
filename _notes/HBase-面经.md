@@ -30,15 +30,15 @@ HBase 架构包括以下组件：
 # HBase 读写数据流程
 
 **写流程**：
-1. 客户端通过 ZooKeeper 找到对应的 RegionServer。
-2. 客户端向 RegionServer 发送写请求。
-3. RegionServer 将数据写入 MemStore。
-4. 当 MemStore 满时，数据被刷写到磁盘上的 HFile。
+- 客户端通过 ZooKeeper 找到对应的 RegionServer；
+- 客户端向 RegionServer 发送写请求；
+- RegionServer 将数据写入 MemStore；
+- 当 MemStore 满时，数据被刷写到磁盘上的 HFile。
 
 **读流程**：
-1. 客户端通过 ZooKeeper 找到对应的 RegionServer。
-2. 客户端向 RegionServer 发送读请求。
-3. RegionServer 首先检查 MemStore，然后检查 BlockCache（读缓存），最后检查 HFile。
+- 客户端通过 ZooKeeper 找到对应的 RegionServer；
+- 客户端向 RegionServer 发送读请求；
+- RegionServer 首先检查 MemStore，然后检查 BlockCache（读缓存），最后检查 HFile。
 
 # HBase 的读写缓存
 

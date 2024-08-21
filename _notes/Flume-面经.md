@@ -72,6 +72,8 @@ Flume 拦截器（Interceptor）用于在数据从 Source 传输到 Channel 的�
 - **Flume 作为 Kafka 的消费者**：使用 Kafka Source 接收 Kafka 中的数据，并将其传输到 Channel 和 Sink。
 - **Flume 作为 Kafka 的生产者**：使用 Kafka Sink 将数据发送到 Kafka 主题。
 
+以实时流处理项目为例，由于采集的数据量可能存在峰值和峰谷，假设是一个电商项目，那么峰值通常出现在秒杀时，这时如果直接将 Flume 聚合后的数据输入到 Storm 等分布式计算框架中，可能就会超过集群的处理能力，这时采用 Kafka 就可以起到削峰的作用。Kafka 天生为大数据场景而设计，具有高吞吐的特性，能很好地抗住峰值数据的冲击。
+
 # 为什么要使用 Flume 进行数据采集
 
 使用 Flume 进行数据采集的原因包括：

@@ -218,22 +218,6 @@ Kafka 通过以下机制保证数据的 Exactly Once：
 
 2. **事务支持**：Kafka 支持事务机制，通过事务 API 实现跨多个分区和主题的 Exactly Once 语义。
 
-  
-
-# Kafka 消费者保证 Exactly Once
-
-  
-
-Kafka 消费者通过以下机制保证 Exactly Once：
-
-  
-
-1. **幂等消费者**：消费者通过配置 `isolation.level` 参数为 `read_committed`，确保只读取已提交的消息。
-
-2. **事务支持**：消费者通过事务机制确保消息的 Exactly Once 处理。
-
-  
-
 # Kafka 监控实现
 
   

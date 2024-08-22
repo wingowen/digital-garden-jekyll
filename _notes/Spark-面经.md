@@ -73,14 +73,12 @@ Yarn：只需要一个节点用于提交作业，不需要启动 Master 和 Work
 # Spark 的阶段划分
 
 Spark 将作业划分为多个阶段（Stage），每个阶段由一组任务（Task）组成。阶段划分的依据是 Shuffle 边界，即数据需要在不同节点之间重新分区的。
-
 - **Shuffle Map Stage**：负责生成 Shuffle 数据，输出中间结果到磁盘，供下一个阶段使用。
 - **Result Stage**：负责最终结果的计算，直接输出结果到 Driver 或写入外部存储。
 
 # Spark 处理数据的具体流程
 
 Spark 处理数据的具体流程包括以下步骤：
-
 1. **创建 RDD**：从外部数据源（如 HDFS、本地文件系统）或通过转换操作（如`map`、`filter`）创建 RDD。
 2. **转换操作**：对 RDD 进行各种转换操作，如`map`、`filter`、`join`等，这些操作会生成新的 RDD。
 3. **行动操作**：触发实际的计算，如`collect`、`count`、`saveAsTextFile`等。
@@ -90,8 +88,6 @@ Spark 处理数据的具体流程包括以下步骤：
 
 # Spark join 的分类
 
-Spark 中的 join 操作可以分为以下几类：
-
 - **Inner Join**：只返回两个 RDD 中键相同的记录。
 - **Outer Join**：包括 Left Outer Join、Right Outer Join 和 Full Outer Join，返回一个 RDD 中所有记录和另一个 RDD 中匹配的记录。
 - **Semi Join**：类似于 Inner Join，但只返回左 RDD 中的记录，不包括右 RDD 中的记录。
@@ -100,81 +96,71 @@ Spark 中的 join 操作可以分为以下几类：
 # Spark map join 的实现原理
 
 Map Join（也称为 Broadcast Join）是一种优化技术，适用于其中一个 RDD 较小的场景。其实现原理如下：
-
 1. **广播变量**：将较小的 RDD 作为广播变量发送到所有 Executor。
 2. **本地 Join**：在每个 Executor 上，对较大的 RDD 进行 map 操作，并在本地与广播变量进行 Join。
 3. **避免 Shuffle**：由于较小的 RDD 已经在每个 Executor 上可用，因此避免了昂贵的 Shuffle 操作。
 
-# 介绍下 Spark Shuffle 及其优缺点
+# Spark Shuffle
 
 Spark Shuffle 是数据在不同节点之间重新分区的过程，通常发生在宽依赖操作（如`reduceByKey`、`groupByKey`）中。
-
-## 优点：
 - **灵活性**：允许数据在不同节点之间重新分布，支持复杂的聚合和 Join 操作。
 - **容错性**：Shuffle 数据通常写入磁盘，有助于在节点故障时恢复数据。
-
-## 缺点：
 - **性能开销**：Shuffle 操作涉及大量的磁盘 I/O 和网络传输，可能导致性能瓶颈。
 - **资源消耗**：Shuffle 操作需要额外的内存和磁盘空间来存储中间结果。
 
-# 什么情况下会产生 Spark Shuffle?
-
-Spark Shuffle 通常在以下情况下产生：
+**什么情况下会产生 Spark Shuffle?**
 
 - **宽依赖操作**：如`reduceByKey`、`groupByKey`、`join`等。
 - **重新分区操作**：如`repartition`、`coalesce`等。
 - **排序操作**：如`sortByKey`。
 
-# 为什么要 Spark Shuffle?
+**为什么要 Spark Shuffle?**
 
 Spark Shuffle 是必要的，因为它允许数据在不同节点之间重新分布，支持复杂的聚合和 Join 操作。没有 Shuffle，Spark 无法实现跨节点的数据合并和关联。
 
-# Spark 为什么快?
-
-Spark 之所以快，主要归功于以下几个因素：
+# Spark 为什么快
 
 - **内存计算**：Spark 将数据存储在内存中，减少了磁盘 I/O，提高了计算速度。
 - **DAG 调度**：Spark 使用有向无环图（DAG）来优化任务调度，减少了不必要的计算和数据传输。
 - **延迟计算**：Spark 采用延迟计算模型，只在行动操作时才触发实际的计算，减少了不必要的中间结果生成。
 - **数据本地性**：Spark 尽量在数据所在的节点上执行任务，减少了网络传输。
 
-# Spark 为什么适合迭代处理?
+# Spark 为什么适合迭代处理
 
 Spark 适合迭代处理，因为它支持内存计算和高效的 DAG 调度。在迭代算法中，数据通常需要多次访问和处理，Spark 的内存计算模型可以显著减少磁盘 I/O，提高迭代速度。此外，Spark 的 DAG 调度可以优化迭代过程中的任务执行顺序，减少不必要的计算和数据传输。
 
-# Spark 数据倾斜问题，如何定位，解决方案
+# Spark 数据倾斜问题
 
 数据倾斜是指在分布式计算中，某些节点上的数据量远大于其他节点，导致计算负载不均衡。
 
-## 定位：
+**定位**
 - **观察任务执行时间**：检查任务执行时间，如果某些任务执行时间远长于其他任务，可能存在数据倾斜。
 - **分析 Shuffle 数据**：检查 Shuffle 数据的分布，如果某些节点上的 Shuffle 数据量远大于其他节点，可能存在数据倾斜。
 
-## 解决方案：
+**解决方案：**
 - **重新分区**：使用`repartition`或`coalesce`操作重新分区数据，尝试均匀分布数据。
 - **自定义分区器**：实现自定义分区器，根据数据特征进行分区。
 - **局部聚合**：在 Shuffle 之前进行局部聚合，减少 Shuffle 数据量。
 - **广播变量**：对于小数据集，使用广播变量进行 Map Join，避免 Shuffle。
 
-# Spark 的 stage 如何划分?在源码中是怎么判断属于 Shuffle Map Stage 或 Result Stage 的?
+# Spark 的 stage 如何划分
+
+Spark 阶段划分
+- **无 Shuffle 操作**：如果一个操作可以在单个节点上完成，不需要跨节点进行数据交换，那么这个操作会被划分为一个独立的阶段 Result Stage。
+- **Shuffle 操作**：如果一个操作需要跨节点进行数据交换（如`groupByKey`、`reduceByKey`、`join`等），那么这个操作会触发一个新的阶段，即 Shuffle 阶段。
 
 Spark 的阶段划分是基于 Shuffle 边界的。在源码中，Spark 使用`DAGScheduler`来划分阶段。
-
 - **Shuffle Map Stage**：当遇到需要 Shuffle 的操作（如`reduceByKey`）时，Spark 会创建一个 Shuffle Map Stage，负责生成 Shuffle 数据。
-- **Result Stage**：直接计算最终结果的阶段，通常是最后一个阶段。
-
+- **Result Stage**：直接计算最终结果的阶段，通常是最后一个阶段。`collect`操作会触发这个阶段，因为它需要将最终的结果收集到驱动程序（Driver）中。
 在源码中，`DAGScheduler`通过分析 RDD 的血统（Lineage）来确定 Shuffle 边界，并据此划分阶段。
 
 # Spark join 在什么情况下会变成窄依赖?
 
 Spark join 操作通常是宽依赖，但在以下情况下可能变成窄依赖：
-
 - **Broadcast Join**：当其中一个 RDD 较小时，可以将其作为广播变量发送到所有 Executor，从而避免 Shuffle，实现窄依赖。
 - **Repartition Join**：如果两个 RDD 已经按照相同的键分区，并且分区数相同，可以直接在本地进行 Join，避免 Shuffle。
 
 # Spark 的内存模型?
-
-Spark 的内存模型包括以下几个部分：
 
 - **堆内存**：用于存储 Java 对象和 Spark 内部数据结构。
 - **堆外内存**：用于存储直接内存缓冲区，提高性能。
@@ -183,9 +169,7 @@ Spark 的内存模型包括以下几个部分：
 
 Spark 允许用户配置存储内存和执行内存的比例，以优化性能。
 
-# Spark 分哪几个部分(模块)?分别有什么作用(做什么，自己用过哪些，做过什么)?
-
-Spark 主要分为以下几个模块：
+# Spark 模块
 
 - **Spark Core**：提供了 RDD（弹性分布式数据集）和基本的任务调度功能。
 - **Spark SQL**：提供了处理结构化数据的接口，支持 SQL 查询和 DataFrame API。
@@ -193,35 +177,24 @@ Spark 主要分为以下几个模块：
 - **MLlib**：提供了机器学习算法库，支持常见的机器学习任务。
 - **GraphX**：提供了图计算功能，支持图算法和图操作。
 
-# RDD 的宽依赖和窄依赖，举例一些算子
+# RDD 的宽依赖和窄依赖
 
 - **窄依赖**：父 RDD 的每个分区最多被一个子 RDD 的分区使用。例如：`map`、`filter`、`union`。
 - **宽依赖**：父 RDD 的每个分区被多个子 RDD 的分区使用。例如：`reduceByKey`、`groupByKey`、`join`。
 
-# Spark SQL 的 GroupBy 会造成窄依赖吗?
-
-Spark SQL 的`GroupBy`操作通常会造成宽依赖，因为它需要对数据进行 Shuffle，以便将相同键的数据分组到同一个分区中。
-
-# GroupBy 是行动算子吗
-
-`GroupBy`是转换算子，不是行动算子。它返回一个`DataFrame`或`Dataset`，不会触发实际的计算。
-
-# Spark 的宽依赖和窄依赖，为什么要这么划分?
-
-宽依赖和窄依赖的划分是为了优化任务调度和容错处理。
+**宽依赖和窄依赖的划分是为了优化任务调度和容错处理。**
 
 - **窄依赖**：允许任务在单个节点上执行，减少网络传输和磁盘 I/O，提高性能。
 - **宽依赖**：需要 Shuffle 操作，支持跨节点的数据合并和关联，但可能导致性能瓶颈。
 
-# 说下 Spark 中的 Transform 和 Action，为什么 Spark 要把操作分为 Transform 和 Action?常用的列举一些，说下算子原理
+# Transform 和 Action
 
 - **Transform**：转换操作，返回一个新的 RDD，不会触发实际的计算。例如：`map`、`filter`、`flatMap`。
 - **Action**：行动操作，触发实际的计算，返回结果或输出数据。例如：`collect`、`count`、`saveAsTextFile`。
 
 Spark 将操作分为 Transform 和 Action 的原因是为了支持延迟计算（Lazy Evaluation），即只在行动操作时才触发实际的计算。这样可以优化任务调度和资源利用，减少不必要的中间结果生成。
 
-## 常用算子原理：
-
+**常用算子**
 - **map**：对 RDD 中的每个元素应用一个函数，返回一个新的 RDD。
 - **filter**：对 RDD 中的每个元素应用一个过滤函数，返回一个新的 RDD，包含满足条件的元素。
 - **flatMap**：对 RDD 中的每个元素应用一个函数，返回一个包含多个元素的迭代器，然后将所有元素合并成一个新的 RDD。
@@ -229,3 +202,4 @@ Spark 将操作分为 Transform 和 Action 的原因是为了支持延迟计算�
 - **collect**：将 RDD 中的所有元素收集到 Driver 端，返回一个数组。
 - **count**：返回 RDD 中的元素数量。
 - **saveAsTextFile**：将 RDD 中的元素保存为文本文件。
+

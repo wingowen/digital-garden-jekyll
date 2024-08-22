@@ -203,3 +203,312 @@ Spark 将操作分为 Transform 和 Action 的原因是为了支持延迟计算�
 - **count**：返回 RDD 中的元素数量。
 - **saveAsTextFile**：将 RDD 中的元素保存为文本文件。
 
+# Spark 的哪些算子会有 shuffle 过程?
+
+- `reduceByKey`
+- `groupByKey`
+- `join`
+- `distinct`
+- `repartition`
+- `coalesce`
+- `sortByKey`
+
+# RDD、DataFrame、DataSet、DataStream
+
+- **RDD**：弹性分布式数据集，Spark 的基础数据结构，提供了低层次的 API。
+- **DataFrame**：类似于关系型数据库中的表，提供了更高层次的 API，支持 Schema。
+- **DataSet**：结合了 RDD 和 DataFrame 的优点，提供了类型安全和优化。
+- **DataStream**：用于 Spark Streaming 的数据结构，处理实时数据流。
+
+# Application、Job、Stage、Task
+
+- **Application**：用户提交的完整程序。
+- **Job**：由 Action 触发，包含多个 Stage。
+- **Stage**：由多个 Task 组成，根据 Shuffle 边界划分。
+- **Task**：最小的执行单元，对应一个数据分片。
+
+# Stage 内部逻辑
+
+Stage 内部是并行执行的，每个 Task 处理一个数据分片，没有 Shuffle 操作。
+
+# 为什么要根据宽依赖划分 Stage?
+
+宽依赖（Shuffle 依赖）会导致数据重新分区，需要跨节点传输数据，因此需要划分 Stage 以优化执行计划和资源利用。
+
+# Stage 的数量等于什么
+
+Stage 的数量等于 Shuffle 边界的数量加1。
+
+# 介绍下 Spark 的 DAG 以及它的生成过程
+
+DAG 表示 RDD 之间的依赖关系，生成过程如下：
+1. 用户提交代码。
+2. Spark 构建 RDD 的依赖关系。
+3. 生成 DAG。
+DAG 可以表示复杂的计算流程，Spark 利用 DAG 进行优化，如延迟执行、任务调度等。
+
+# DAGScheduler
+
+DAGScheduler 根据 Shuffle 边界划分 Stage，并生成 TaskSet，负责任务的调度。
+
+TaskSet 是一组可以并行执行的 Task 的集合，这些 Task 都属于同一个 Stage，并且可以在不同的 Executor上 运行。
+
+# Spark 容错机制
+
+Spark 通过 RDD 的血缘关系和检查点机制实现容错。
+
+# Executor 内存分配
+
+Executor 内存分为堆内内存和堆外内存，由 Spark 配置参数控制。
+
+# Spark 小文件合并问题
+
+通过调整 batchsize 和使用合并操作（如 coalesce 或 repartition）解决小文件问题。
+
+# Spark 参数(性能)调优
+
+- 调整并行度。
+- 优化 Shuffle 操作。
+- 调整内存分配。
+- 使用广播变量。
+
+# 介绍一下 Spark 怎么基于内存计算的
+
+Spark 利用内存加速数据处理，通过 RDD 的缓存和重用减少磁盘 I/O。
+
+# 说下什么是 RDD(对 RDD 的理解)?RDD 有哪些特点?说下知道的 RDD 算子
+
+- **RDD**：弹性分布式数据集，Spark 的基础数据结构。
+- **特点**：不可变、分区、容错、惰性计算。
+- **算子**：map, filter, reduceByKey, groupByKey 等。
+
+# RDD 底层原理
+
+RDD 通过血缘关系和分区实现数据的并行处理和容错。
+
+# RDD 属性
+
+- 分区列表。
+- 计算函数。
+- 依赖关系。
+- 分区器。
+- 存储级别。
+
+# RDD 的缓存级别?
+
+- MEMORY_ONLY
+- MEMORY_AND_DISK
+- DISK_ONLY
+- MEMORY_ONLY_SER
+- MEMORY_AND_DISK_SER
+
+# Spark 广播变量的实现和原理?
+
+广播变量将只读变量广播到每个节点，减少数据传输。
+
+# reduceByKey 和 groupByKey 的区别和作用?
+
+- **reduceByKey**：在每个分区内先进行 reduce 操作，再进行 Shuffle。
+- **groupByKey**：直接进行 Shuffle，再进行 group 操作。
+
+# reduceByKey 和 reduce 的区别?
+
+- **reduceByKey**：对每个键的值进行 reduce 操作。
+- **reduce**：对整个 RDD 进行 reduce 操作。
+
+# 使用 reduceByKey 出现数据倾斜怎么办?
+
+- 使用随机前缀或后缀。
+- 调整分区数。
+- 使用自定义分区器。
+
+# Spark SQL 的执行原理?
+
+Spark SQL 将 SQL 查询转换为逻辑计划，再转换为物理计划，最后生成 Task 执行。
+
+# Spark SQL 的优化?
+
+- 使用 Catalyst 优化器。
+- 使用 Tungsten 项目优化内存和 CPU 使用。
+
+# 说下 Spark checkpoint
+
+Checkpoint 将 RDD 持久化到磁盘，用于容错和减少血缘关系。
+
+# Spark SQL 与 DataFrame 的使用?
+
+Spark SQL 提供 SQL 接口，DataFrame 提供类似表的 API。
+
+# Sparksql 自定义函数?怎么创建 DataFrame?
+
+- 使用`udf`函数创建自定义函数。
+- 使用`spark.createDataFrame`创建 DataFrame。
+
+# HashPartitioner 和 RangePartitioner 的实现
+
+- **HashPartitioner**：根据键的哈希值分区。
+- **RangePartitioner**：根据键的范围分区。
+
+# Spark 的水塘抽样
+
+水塘抽样是一种随机抽样算法，用于从大数据集中抽取样本。
+
+# DAGScheduler、TaskScheduler、SchedulerBackend 实现原理
+
+- **DAGScheduler**：负责划分 Stage 和生成 TaskSet。
+- **TaskScheduler**：负责 Task 的调度和分发。
+- **SchedulerBackend**：负责与集群管理器通信。
+
+# 介绍下 Sparkclient 提交 application 后，接下来的流程?
+
+1. 提交 Application。
+2. 启动 Driver。
+3. 生成 DAG。
+4. 划分 Stage。
+5. 生成 Task。
+6. 分发 Task。
+7. 执行 Task。
+
+# Spark 的几种部署方式
+
+- Standalone
+- YARN
+- Mesos
+- Kubernetes
+
+# 在 Yarn-client 情况下，Driver 此时在哪
+
+在 Yarn-client 模式下，Driver 运行在客户端节点。
+
+# Spark 的 cluster 模式有什么好处
+
+- 更好的资源利用。
+- 更好的容错性。
+- 更好的隔离性。
+
+# Driver 怎么管理 executor
+
+Driver 通过 SchedulerBackend 与 Executor 通信，管理 Task 的分发和执行。
+
+# Spark 的 map 和 flatmap 的区别?
+
+- **map**：对每个元素应用函数，返回新的 RDD。
+- **flatmap**：对每个元素应用函数，返回扁平化的 RDD。
+
+# Spark 的 cache 和 persist 的区别?它们是 transformaiton 算子还是 action 算子?
+
+- **cache**：默认使用 MEMORY_ONLY 级别缓存。
+- **persist**：可以指定缓存级别。
+- 都是 transformation 算子。
+
+# Saprk Streaming 从 Kafka 中读取数据两种方式?
+
+- 使用 Direct Approach。
+- 使用 Receiver-based Approach。
+
+# Spark Streaming 的工作原理?
+
+Spark Streaming 将实时数据流划分为小批次，使用 RDD 进行处理。
+
+# Spark Streaming 的 DStream 和 DStreamGraph 的区别?
+
+- **DStream**：表示离散数据流。
+- **DStreamGraph**：表示 DStream 之间的依赖关系。
+
+# Spark 输出文件的个数，如何合并小文件?
+
+通过调整分区数和使用合并操作（如 coalesce 或 repartition）解决小文件问题。
+
+# Spark 的 driver 是怎么驱动作业流程的?
+
+Driver 生成 DAG，划分 Stage，生成 Task，分发 Task，监控执行。
+
+# Spark SQL 的劣势?
+
+- 对复杂查询的支持不如传统数据库。
+- 对小数据集的性能不如传统数据库。
+
+# 介绍下 Spark Streaming 和 Structed Streaming
+
+- **Spark Streaming**：基于微批处理模型。
+- **Structed Streaming**：基于连续处理模型。
+
+# Spark 为什么比 Hadoop 速度快?
+
+- 基于内存计算。
+- 优化了 Shuffle 操作。
+- 提供了更高层次的 API。
+
+# DAG 划分 Spark 源码实现?
+
+DAGScheduler 根据 Shuffle 边界划分 Stage，生成 TaskSet。
+
+# Spark Streaming 的双流 join 的过程，怎么做的?
+
+使用窗口操作和状态管理实现双流 join。
+
+# Spark 的 Block 管理
+
+Spark 使用 BlockManager 管理数据的存储和传输。
+
+# Spark 怎么保证数据不丢失
+
+通过 RDD 的血缘关系和检查点机制实现容错。
+
+# Spark SQL 如何使用 UDF?
+
+使用`udf`函数创建自定义函数，并在 SQL 查询中使用。
+
+# Spark 温度二次排序
+
+使用自定义排序函数和`sortByKey`实现二次排序。
+
+# Spark 实现 wordcount
+
+使用`flatMap`, `map`, `reduceByKey`实现 wordcount。
+
+# Spark Streaming 怎么实现数据持久化保存?
+
+使用`foreachRDD`和外部存储系统（如 HDFS）实现数据持久化。
+
+# Spark SQL 读取文件，内存不够使用，如何处理?
+
+- 调整并行度。
+- 使用外部存储系统。
+- 优化查询。
+
+# Spark 的 lazy 体现在哪里?
+
+Spark 的 transformation 算子是惰性执行的，只有遇到 action 算子才会触发计算。
+
+# Spark 中的并行度等于什么
+
+并行度等于分区的数量。
+
+# Spark 运行时并行度的设署
+
+通过调整分区数和配置参数设置并行度。
+
+# Spark SQL 的数据倾斜
+
+使用随机前缀或后缀，调整分区数，使用自定义分区器解决数据倾斜。
+
+# Spark 的 exactly-once
+
+使用事务和幂等操作实现 exactly-once 语义。
+
+# Spark 的 RDD 和 partition 的联系
+
+RDD 由多个 partition 组成，每个 partition 是一个数据分片。
+
+# Spark 3.0特性
+
+- 动态分区修剪。
+- 自适应查询执行。
+- 更好的 Python 支持。
+
+# Spark 计算的灵活性体现在哪里
+
+- 提供了多种数据处理 API。
+- 支持多种数据源。
+- 提供了多种优化和调优手段。

@@ -385,23 +385,28 @@ Spark Streaming 将实时数据流划分为小批次，使用 RDD 进行处理�
 
 # Spark 的 Block 管理
 
-Spark 使用 BlockManager 管理数据的存储和传输。
-
-# Spark 怎么保证数据不丢失
-
-通过 RDD 的血缘关系和检查点机制实现容错。
-
-# Spark SQL 如何使用 UDF?
-
-使用`udf`函数创建自定义函数，并在 SQL 查询中使用。
-
-# Spark 温度二次排序
-
-使用自定义排序函数和`sortByKey`实现二次排序。
+Spark 使用 BlockManager 管理数据的存储和传输。BlockManager 是 Spark 中的一个核心组件，负责管理分布式数据集（RDD）的分区和数据块（Block）。Block 是 Spark 中的基本数据单元，每个 RDD 的分区对应一个或多个 Block。BlockManager 运行在每个节点上，包括 Driver 和 Executor，负责数据的存储、传输和容错。
 
 # Spark 实现 wordcount
 
-使用`flatMap`, `map`, `reduceByKey`实现 wordcount。
+```
+import org.apache.spark._
+
+val conf = new SparkConf().setAppName("WordCountExample").setMaster("local")
+val sc = new SparkContext(conf)
+
+// 创建一个包含文本的 RDD
+val text = sc.textFile("path/to/text/file")
+
+// 实现 wordcount
+val wordCount = text.flatMap(line => line.split(" "))
+  .map(word => (word, 1))
+  .reduceByKey(_ + _)
+
+wordCount.collect().foreach(println)
+
+sc.stop()
+```
 
 # Spark Streaming 怎么实现数据持久化保存?
 

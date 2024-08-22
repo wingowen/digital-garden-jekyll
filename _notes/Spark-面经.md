@@ -216,6 +216,7 @@ Spark 将操作分为 Transform 和 Action 的原因是为了支持延迟计算�
 # RDD、DataFrame、DataSet、DataStream
 
 - **RDD**：弹性分布式数据集，Spark 的基础数据结构，提供了低层次的 API。
+	- RDD 的分区是 Spark 中一个重要的概念，它决定了数据在集群中的分布和并行处理的方式
 - **DataFrame**：类似于关系型数据库中的表，提供了更高层次的 API，支持 Schema。
 - **DataSet**：结合了 RDD 和 DataFrame 的优点，提供了类型安全和优化。
 - **DataStream**：用于 Spark Streaming 的数据结构，处理实时数据流。
@@ -263,24 +264,16 @@ Executor 内存分为堆内内存和堆外内存，由 Spark 配置参数控制�
 
 # Spark 小文件合并问题
 
-通过调整 batchsize 和使用合并操作（如 coalesce 或 repartition）解决小文件问题。
+通过调整 batch size 和使用合并操作（如 coalesce 或 repartition）解决小文件问题。
+
+batch size 通常指的是Spark Streaming处理实时数据流时，将连续的数据流切分成的小批量数据的大小。每个批量数据（batch）都是一个RDD，Spark Streaming会以固定的时间间隔（称为**批处理间隔，batch interval**）来处理这些批量数据。
 
 # Spark 参数(性能)调优
 
 - 调整并行度。
 - 优化 Shuffle 操作。
 - 调整内存分配。
-- 使用广播变量。
-
-# 介绍一下 Spark 怎么基于内存计算的
-
-Spark 利用内存加速数据处理，通过 RDD 的缓存和重用减少磁盘 I/O。
-
-# 说下什么是 RDD(对 RDD 的理解)?RDD 有哪些特点?说下知道的 RDD 算子
-
-- **RDD**：弹性分布式数据集，Spark 的基础数据结构。
-- **特点**：不可变、分区、容错、惰性计算。
-- **算子**：map, filter, reduceByKey, groupByKey 等。
+- 使用广播变量。广播变量（Broadcast Variables）是一种高效的共享变量，用于在集群中的所有节点上缓存只读数据。 
 
 # RDD 底层原理
 
@@ -294,7 +287,7 @@ RDD 通过血缘关系和分区实现数据的并行处理和容错。
 - 分区器。
 - 存储级别。
 
-# RDD 的缓存级别?
+# RDD 的缓存级别
 
 - MEMORY_ONLY
 - MEMORY_AND_DISK
@@ -302,16 +295,12 @@ RDD 通过血缘关系和分区实现数据的并行处理和容错。
 - MEMORY_ONLY_SER
 - MEMORY_AND_DISK_SER
 
-# Spark 广播变量的实现和原理?
-
-广播变量将只读变量广播到每个节点，减少数据传输。
-
-# reduceByKey 和 groupByKey 的区别和作用?
+# reduceByKey 和 groupByKey
 
 - **reduceByKey**：在每个分区内先进行 reduce 操作，再进行 Shuffle。
 - **groupByKey**：直接进行 Shuffle，再进行 group 操作。
 
-# reduceByKey 和 reduce 的区别?
+# reduceByKey 和 reduce
 
 - **reduceByKey**：对每个键的值进行 reduce 操作。
 - **reduce**：对整个 RDD 进行 reduce 操作。
@@ -335,56 +324,20 @@ Spark SQL 将 SQL 查询转换为逻辑计划，再转换为物理计划，最�
 
 Checkpoint 将 RDD 持久化到磁盘，用于容错和减少血缘关系。
 
-# Spark SQL 与 DataFrame 的使用?
+# Spark SQL 与 DataFrame 的使用
 
 Spark SQL 提供 SQL 接口，DataFrame 提供类似表的 API。
-
-# Sparksql 自定义函数?怎么创建 DataFrame?
-
-- 使用`udf`函数创建自定义函数。
-- 使用`spark.createDataFrame`创建 DataFrame。
 
 # HashPartitioner 和 RangePartitioner 的实现
 
 - **HashPartitioner**：根据键的哈希值分区。
 - **RangePartitioner**：根据键的范围分区。
 
-# Spark 的水塘抽样
-
-水塘抽样是一种随机抽样算法，用于从大数据集中抽取样本。
-
-# DAGScheduler、TaskScheduler、SchedulerBackend 实现原理
+# DAGScheduler、TaskScheduler、SchedulerBackend
 
 - **DAGScheduler**：负责划分 Stage 和生成 TaskSet。
 - **TaskScheduler**：负责 Task 的调度和分发。
 - **SchedulerBackend**：负责与集群管理器通信。
-
-# 介绍下 Sparkclient 提交 application 后，接下来的流程?
-
-1. 提交 Application。
-2. 启动 Driver。
-3. 生成 DAG。
-4. 划分 Stage。
-5. 生成 Task。
-6. 分发 Task。
-7. 执行 Task。
-
-# Spark 的几种部署方式
-
-- Standalone
-- YARN
-- Mesos
-- Kubernetes
-
-# 在 Yarn-client 情况下，Driver 此时在哪
-
-在 Yarn-client 模式下，Driver 运行在客户端节点。
-
-# Spark 的 cluster 模式有什么好处
-
-- 更好的资源利用。
-- 更好的容错性。
-- 更好的隔离性。
 
 # Driver 怎么管理 executor
 
@@ -415,20 +368,7 @@ Spark Streaming 将实时数据流划分为小批次，使用 RDD 进行处理�
 - **DStream**：表示离散数据流。
 - **DStreamGraph**：表示 DStream 之间的依赖关系。
 
-# Spark 输出文件的个数，如何合并小文件?
-
-通过调整分区数和使用合并操作（如 coalesce 或 repartition）解决小文件问题。
-
-# Spark 的 driver 是怎么驱动作业流程的?
-
-Driver 生成 DAG，划分 Stage，生成 Task，分发 Task，监控执行。
-
-# Spark SQL 的劣势?
-
-- 对复杂查询的支持不如传统数据库。
-- 对小数据集的性能不如传统数据库。
-
-# 介绍下 Spark Streaming 和 Structed Streaming
+# Spark Streaming 和 Structed Streaming
 
 - **Spark Streaming**：基于微批处理模型。
 - **Structed Streaming**：基于连续处理模型。
@@ -439,13 +379,9 @@ Driver 生成 DAG，划分 Stage，生成 Task，分发 Task，监控执行。
 - 优化了 Shuffle 操作。
 - 提供了更高层次的 API。
 
-# DAG 划分 Spark 源码实现?
-
-DAGScheduler 根据 Shuffle 边界划分 Stage，生成 TaskSet。
-
 # Spark Streaming 的双流 join 的过程，怎么做的?
 
-使用窗口操作和状态管理实现双流 join。
+双流 join（Dual-Stream Join）是指将两个实时数据流进行连接的操作。由于数据流是无限且不断变化的，双流 join 在实现上有一定的复杂性。Spark Streaming 提供了几种不同的方法来处理双流 join，包括基于窗口的 join 和基于状态的 join。
 
 # Spark 的 Block 管理
 

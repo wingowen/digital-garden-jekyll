@@ -410,37 +410,28 @@ sc.stop()
 
 # Spark Streaming 怎么实现数据持久化保存?
 
-使用`foreachRDD`和外部存储系统（如 HDFS）实现数据持久化。
+```
+val streamingContext = new StreamingContext(sparkConf, Seconds(1))
+val lines = streamingContext.socketTextStream("localhost", 9999)
+
+lines.foreachRDD { rdd =>
+  rdd.saveAsTextFile("hdfs://path/to/output/directory")
+}
+
+streamingContext.start()
+streamingContext.awaitTermination()
+```
 
 # Spark SQL 读取文件，内存不够使用，如何处理?
 
-- 调整并行度。
-- 使用外部存储系统。
-- 优化查询。
-
-# Spark 的 lazy 体现在哪里?
-
-Spark 的 transformation 算子是惰性执行的，只有遇到 action 算子才会触发计算。
-
-# Spark 中的并行度等于什么
-
-并行度等于分区的数量。
+- **调整并行度**：增加或减少分区数，以适应集群的资源情况。可以通过 `repartition` 或 `coalesce` 方法调整分区数。
+- **使用外部存储系统**：将数据存储在 HDFS 或其他分布式文件系统中，以利用集群的存储资源。
+- **优化查询**：通过优化查询语句和数据处理逻辑，减少内存使用。例如，使用过滤条件减少数据量，或使用更高效的数据结构。
 
 # Spark 运行时并行度的设署
 
-通过调整分区数和配置参数设置并行度。
-
-# Spark SQL 的数据倾斜
-
-使用随机前缀或后缀，调整分区数，使用自定义分区器解决数据倾斜。
-
-# Spark 的 exactly-once
-
-使用事务和幂等操作实现 exactly-once 语义。
-
-# Spark 的 RDD 和 partition 的联系
-
-RDD 由多个 partition 组成，每个 partition 是一个数据分片。
+- **调整分区数**：使用 `repartition` 或 `coalesce` 方法调整 RDD 的分区数。
+- **配置参数**：通过 Spark 配置参数设置并行度，如 `spark.default.parallelism` 和 `spark.sql.shuffle.partitions`。
 
 # Spark 3.0特性
 

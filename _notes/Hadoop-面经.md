@@ -140,14 +140,35 @@ Hadoop 对小文件处理效率不高，因为==每个文件在 HDFS 中至少�
 
 - **NameNode**：管理文件系统的命名空间，维护文件系统树及整个树内所有的文件和目录。
 - **DataNode**：存储实际的数据块，执行数据块的读/写操作。
-- **SecondaryNameNode**：辅助 NameNode，定期合并编辑日志和文件系统镜像，减轻 NameNode 的负担。
+- **SecondaryNameNode**：辅助 NameNode，定期合并编辑日志 edits 和文件系统镜像 fsimage，减轻 NameNode 的负担。
 - **Client**：与 HDFS 交互的客户端。
+
+# HDFS 启动过程
+
+1. Loading fsimage：加载元信息文件，元信息记录了数据块的位置，获取整个 HDFS 中数据块的分布信息。元信息中不包含 HDFS 的状态信息。
+2. Loading edits：加载日志信息，日志中记录了 HDFS 的最新状态。
+3. Saving checkpoints：触发一个检查点，以最高优先级唤醒 Secondary NamNode，开启合并最新状态信息 edits 到镜像文件 fsimage 的过程。
+4. Safe mode：进入安全模式，检查数据块的完整性。（安全模式下不能写只能查）
+
+# HDFS 高级特性
+
+- 回收站
+- 名称 / 空间配额
+- 目录级别快照
+- 安全模式
+- 权限管理
 
 # HDFS 的容错机制
 
 - **数据冗余**：默认情况下，每个数据块有三个副本，分布在不同的 DataNode 上。
 - **自动故障检测**：DataNode 定期向 NameNode 发送心跳和块报告，NameNode 检测 DataNode 是否存活。
 - **自动恢复**：当 DataNode 故障时，NameNode 会自动复制数据块到其他 DataNode，以保持副本数。
+
+# HDFS ViewFS
+
+- **统一命名空间**：在一个大型组织中，可能有多个 HDFS 集群，每个集群都有自己的命名空间。使用 `viewfs`，可以创建一个统一的命名空间，使得用户和应用程序可以像访问单个文件系统一样访问这些集群。
+- **简化管理**：通过 `viewfs`，管理员可以更容易地管理跨多个集群的文件和目录，而不需要用户了解每个集群的具体配置。
+- **灵活的挂载点配置**：`viewfs` 允许管理员配置挂载点，将特定的路径映射到不同的文件系统，从而实现灵活的数据访问和管理。
 
 # HDFS NameNode HA
 

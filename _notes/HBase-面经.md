@@ -24,6 +24,7 @@ HBase 的原理基于 Google 的 Bigtable 论文，它使用 HDFS 作为底层�
 HBase 架构包括以下组件：
 - **HMaster**：负责管理 RegionServer，分配 Region，处理 RegionServer 的故障转移。
 - **RegionServer**：负责存储和处理实际的数据，管理 Region 的读写请求。
+	- WAL Write Ahead Logging 预写日志。
 - **ZooKeeper**：用于协调 HBase 集群，维护集群状态，处理 Leader 选举。
 - **HDFS**：作为底层存储系统，存储 HBase 的数据文件。
 
@@ -40,9 +41,9 @@ HBase 架构包括以下组件：
 - 客户端向 RegionServer 发送读请求；
 - RegionServer 首先检查 MemStore，然后检查 BlockCache（读缓存），最后检查 HFile。
 
-# HBase 的读写缓存
+# HBase RegionServer 读写缓存
 
-- **MemStore**：写缓存，存储在内存中，当满时刷写到 HFile。
+- **MemStore**：写缓存，存储在内存中，当满时刷写到 HFile。一个列族对应一个 MemStore，写入 Hfile 时顺序写入，避免寻址速度快。
 - **BlockCache**：读缓存，存储在内存中，用于加速读操作。
 
 # HBase 的删除数据
@@ -57,12 +58,19 @@ HBase 本身不直接支持二级索引，但可以通过协处理器（Coproces
 
 当 RegionServer 宕机时，ZooKeeper 会检测到并通知 HMaster。HMaster 会将宕机 RegionServer 上的 Region 重新分配给其他存活的 RegionServer，并触发这些 Region 的恢复过程。
 
-# HBase 的一个 region 由哪些东西组成?
+# HBase Region
 
-一个 Region 由以下部分组成：
+Region 是 HBase 表的一个连续部分，包含表中的一部分行。每个 region 包含一个行键（row key）范围，从开始键（start key）到结束键（end key）。Region 的默认大小是 1G，包含 8 个 Hfile 的数据文件，每个数据文件是 128MB。
+
 - **Start Key** 和 **End Key**：定义 Region 的范围。
 - **MemStore**：内存中的写缓存。
 - **HFile**：磁盘上的数据文件。
+
+# Hfile
+
+HFile的存储结构是基于列式存储的，但它并不是传统意义上的列存储数据库。HBase是一个基于列族（column family）的存储系统，每个列族在物理上存储在一起，而列族中的列（qualifier）则存储在同一列族中。这种存储模型使得 HBase 能够高效地存储和访问大规模的结构化数据，同时支持灵活的查询和过滤操作。
+
+
 
 # HBase 高可用怎么实现的?
 

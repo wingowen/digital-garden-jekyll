@@ -27,15 +27,18 @@ Flink 是一个分布式流处理框架，具有高吞吐量、低延迟和容�
 
 # Flink 的 Watermark
 
-Watermark 是 Flink 处理乱序事件的一种机制。Watermark 需要实现 `WatermarkGenerator` 接口，在数据流中定义。Watermark 的作用是标记事件时间的进度，允许窗口在特定时间点触发计算。
+在 Flink 中，Watermark 是一种重要的机制，用于处理基于事件时间的乱序数据。通过生成合适的 Watermark，Flink 可以确保基于事件时间的窗口计算能够正确进行。用户可以选择内置的 Watermark 生成策略，也可以自定义生成逻辑，以适应不同的业务需求。
 
-# Flink 的窗口机制
-
-Flink 的窗口机制允许用户根据时间或其他属性对数据流进行分组，并在这些分组上应用计算。窗口可以是时间驱动的（如滚动窗口、滑动窗口、会话窗口）或数据驱动的（如全局窗口）。
+**Watermark 的生成**
+- **固定延迟生成器（Fixed Delay Generator）**：生成一个固定延迟的 Watermark。例如，如果设置延迟为 5 秒，那么Watermark将比当前最大事件时间小 5 秒。
+- **单调递增生成器（Monotonously Increasing Generator）**：生成的 Watermark 总是等于当前最大事件时间。这种策略适用于数据几乎不乱序的场景。
+- **自定义生成器（Custom Generator）**：用户可以实现 `AssignerWithPeriodicWatermarks` 或 `AssignerWithPunctuatedWatermarks` 接口，自定义Watermark的生成逻辑。
 
 # Flink 的 CEP
 
 Flink CEP（Complex Event Processing）是 Flink 提供的一个库，用于从事件流中检测复杂的事件模式。
+
+Flink CEP 的步骤：定义一个模式（Pattern）；将 Pattern 应用到 DataStream 上，检测满足规则的复杂事件，得到一个 PatternStream；对 PatternStream 进行转换处理，将检测到的复杂事件提取出来，包装成报警信息输出。
 
 # Flink 的 Checkpoint 机制
 

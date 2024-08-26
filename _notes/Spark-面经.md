@@ -320,7 +320,7 @@ Spark SQL 将 SQL 查询转换为逻辑计划，再转换为物理计划，最�
 - 使用 Catalyst 优化器。
 - 使用 Tungsten 项目优化内存和 CPU 使用。
 
-# 说下 Spark checkpoint
+# 说下 Spark 
 
 Checkpoint 将 RDD 持久化到磁盘，用于容错和减少血缘关系。
 
@@ -433,7 +433,7 @@ streamingContext.awaitTermination()
 - **调整分区数**：使用 `repartition` 或 `coalesce` 方法调整 RDD 的分区数。
 - **配置参数**：通过 Spark 配置参数设置并行度，如 `spark.default.parallelism` 和 `spark.sql.shuffle.partitions`。
 
-# Spark 3.0特性
+# Spark 3.0 特性
 
 - 动态分区修剪是一种优化技术，通过在运行时根据查询条件动态地过滤掉不需要的分区，从而减少数据扫描量，提高查询性能。
 - 自适应查询执行是一种运行时优化技术，允许 Spark 在执行查询时根据中间结果的统计信息动态调整执行计划。AQE 可以自动处理数据倾斜、调整 shuffle 分区数等，从而提高查询性能。

@@ -27,6 +27,7 @@ SchedulerBackend：负责与集群管理器（如 YARN、Mesos）通信，管理
 - Driver：负责整个应用的执行，包括创建 SparkContext、调度任务等。
 - Executor：负责执行具体的任务，并将结果返回给 Driver。
 - Cluster Manager：负责管理集群资源，如 YARN、Mesos、Standalone 等。
+- Worker Node：集群中的一个节点，通常是一个物理机或虚拟机，它提供计算资源来运行 Executor。
 
 # Spark 的使用场景
 

@@ -26,6 +26,8 @@ Flink 是一个分布式流处理框架，具有高吞吐量、低延迟和容�
 
 # Flink 的 Watermark
 
+Watermark 水位线。
+
 在 Flink 中，Watermark 是一种重要的机制，用于处理基于事件时间的乱序数据。通过生成合适的 Watermark，Flink 可以确保基于事件时间的窗口计算能够正确进行。用户可以选择内置的 Watermark 生成策略，也可以自定义生成逻辑，以适应不同的业务需求。
 
 **水印类型**
@@ -42,6 +44,11 @@ Flink 是一个分布式流处理框架，具有高吞吐量、低延迟和容�
 Flink CEP（Complex Event Processing）是 Flink 提供的一个库，用于从事件流中检测复杂的事件模式。
 
 Flink CEP 的步骤：定义一个模式（Pattern）；将 Pattern 应用到 DataStream 上，检测满足规则的复杂事件，得到一个 PatternStream；对 PatternStream 进行转换处理，将检测到的复杂事件提取出来，包装成报警信息输出。
+
+# 数据流
+
+- 无界数据流 DataStream API。
+- 有界数据流 DataSet API。
 
 # Flink Checkpoint
 
@@ -126,6 +133,8 @@ Check 是指 Flink 的 Checkpoint 机制，Barrier 是 Checkpoint 过程中用�
 
 # Flink 状态机制
 
+记录各个算子之前已经计算过值的结果，当有新数据来的时候，直接在这个结果上计算更新。这个就是**状态**。
+
 ![](assets/images/Flink-面经-1.png)
 
 Flink 的状态机制允许用户在流处理过程中维护和管理状态。
@@ -156,7 +165,8 @@ Flink 的状态机制允许用户在流处理过程中维护和管理状态。
 
 # Flink on YARN 
 
-Flink on YARN 模式允许 Flink 在 YARN 集群上运行。
+- 内存集中管理模式：提前分配一个 Flink Session，资源持续占有不释放。只有一个 Session，会存在 Job 抢占资源的情况。
+- 内存 Job 管理模式：每个 Job 独立申请 Flink Session，Job 完成后释放资源。
 
 # Flink 数据不丢失
 

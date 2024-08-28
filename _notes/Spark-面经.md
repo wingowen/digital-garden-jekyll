@@ -365,7 +365,7 @@ Spark Streaming 将实时数据流划分为小批次，使用 RDD 进行处理�
 
 # Spark Streaming 的 DStream 和 DStreamGraph 的区别?
 
-- **DStream**：表示离散数据流。
+- **DStream**：表示离散数据流。Dstream 由一系列的 RDD 组成。
 - **DStreamGraph**：表示 DStream 之间的依赖关系。
 
 # Spark Streaming 和 Structed Streaming

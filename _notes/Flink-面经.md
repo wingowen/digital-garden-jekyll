@@ -171,3 +171,9 @@ Flink 的状态机制允许用户在流处理过程中维护和管理状态。
 # Flink 数据不丢失
 
 Flink 通过 Checkpoint 和状态管理确保数据不丢失。
+
+Flink 并行度
+Flink Task 类型
+Flink 广播变量
+Flink 分布式缓存
+Flink 累加器

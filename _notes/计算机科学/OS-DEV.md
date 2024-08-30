@@ -8,6 +8,8 @@ tags: "CS"
 brew install bochs sdl nasm
 ```
 
+[手写一个简单的操作系统](https://jaylinh-com.github.io/os-dev/doc/introduction.html)
+
 # The Boot Process
 
 BIOS: Basic Input / Output Software

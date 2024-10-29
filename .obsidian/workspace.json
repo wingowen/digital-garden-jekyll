@@ -11,8 +11,12 @@
             "id": "c143f09de71961c2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Kafka.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -58,7 +62,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_notes/Kafka.md"
+              }
             }
           }
         ]
@@ -82,6 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_notes/Kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,6 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_notes/Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,8 +147,16 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "46f954af614e0acc",
+  "active": "c143f09de71961c2",
   "lastOpenFiles": [
+    "_notes/杂项/关于我.md",
+    "_notes/Kafka.md",
+    "_notes/Kafka-面经.md",
+    "_notes/大模型/大模型.md",
+    "_notes/机器学习.md",
+    "_pages/index.md",
+    "_notes/大数据/Python Data Science Handbook.md",
+    "_notes/杂项/数字花园.md",
     "_notes/金融哲学三部曲：货币起源.md",
     "_notes/杂项/万卷书.md",
     "_notes/被追赶的经济体.md",
@@ -148,14 +164,10 @@
     "_notes/大数据组件.md",
     "_notes/大数据开发工程师面经.md",
     "_notes/Hadoop-面经.md",
-    "_notes/杂项/关于我.md",
-    "_pages/index.md",
-    "_notes/杂项/数字花园.md",
     "_notes/杂项/技术探索.md",
     "_notes/OnJava8.md",
     "_notes/金融哲学三部曲：市场本质.md",
     "_notes/风险 SQL 审计.md",
-    "_notes/Kafka.md",
     "_notes/漫步华尔街.md",
     "_notes/被赶超的经济体.md",
     "_notes/关于投资的思考.md",
@@ -168,12 +180,8 @@
     "assets/pdfs/os-dev.pdf",
     "assets/images/算法-2.png",
     "_notes/Spark-面经.md",
-    "_notes/Zookeeper-面经.md",
-    "_notes/Flink-面经.md",
     "assets/images/算法-1.png",
     "assets/images/Flink-面经-1.png",
-    "_notes/杂项/碎碎念.md",
-    "_notes/杂项/人生体验清单.md",
     "assets/images/HBase-面经-2.png",
     "assets/images/HBase-面经-1.png",
     "assets/images/大数据开发工程师面经-1.png",

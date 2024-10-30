@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/大模型/大模型.md",
+                "file": "_tags/LLM.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/大模型/大模型.md"
+                "file": "_tags/LLM.md"
               }
             }
           }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/大模型/大模型.md",
+                "file": "_tags/LLM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/大模型/大模型.md",
+                "file": "_tags/LLM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,8 +149,8 @@
   },
   "active": "c143f09de71961c2",
   "lastOpenFiles": [
-    "_tags/LLM.md",
     "_notes/大模型/大模型.md",
+    "_tags/LLM.md",
     "_notes/机器学习.md",
     "_notes/杂项/关于我.md",
     "_notes/Kafka.md",

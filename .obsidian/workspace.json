@@ -18,8 +18,31 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d54ec58699a33ba5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_notes/机器学习.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "167e2239da24e0b5",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://luweikxy.gitbook.io/machine-learning-notes/self-attention-and-transformer"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#DW",
+                "query": "卷积",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -62,17 +85,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_tags/LLM.md"
-              }
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 234.5
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -88,7 +109,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_tags/LLM.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +125,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_tags/LLM.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +153,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -147,11 +167,11 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "c143f09de71961c2",
+  "active": "167e2239da24e0b5",
   "lastOpenFiles": [
-    "_notes/大模型/大模型.md",
-    "_tags/LLM.md",
     "_notes/机器学习.md",
+    "_tags/LLM.md",
+    "_notes/大模型/大模型.md",
     "_notes/杂项/关于我.md",
     "_notes/Kafka.md",
     "_notes/Kafka-面经.md",

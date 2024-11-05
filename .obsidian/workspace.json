@@ -30,19 +30,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "167e2239da24e0b5",
-            "type": "leaf",
-            "state": {
-              "type": "surfing-view",
-              "state": {
-                "url": "https://luweikxy.gitbook.io/machine-learning-notes/self-attention-and-transformer"
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +76,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_tags/LLM.md"
+                "file": "_notes/机器学习.md"
               }
             }
           }
@@ -111,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_tags/LLM.md",
+                "file": "_notes/机器学习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_tags/LLM.md",
+                "file": "_notes/机器学习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +161,7 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "167e2239da24e0b5",
+  "active": "d54ec58699a33ba5",
   "lastOpenFiles": [
     "_notes/机器学习.md",
     "_tags/LLM.md",

@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "32e815fec96f1e74",
+        "id": "ec237f956c705ad1",
         "type": "tabs",
         "children": [
           {
-            "id": "c143f09de71961c2",
+            "id": "ba8f55b04673b778",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_tags/LLM.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d54ec58699a33ba5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_notes/机器学习.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -75,13 +58,10 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_notes/机器学习.md"
-              }
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -101,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/机器学习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/机器学习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,10 +139,13 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "d54ec58699a33ba5",
+  "active": "ba8f55b04673b778",
   "lastOpenFiles": [
-    "_notes/机器学习.md",
     "_tags/LLM.md",
+    "_notes/考研/计算机组成/计算机组成.md",
+    "_notes/考研/计算机组成/计算机系统层次结构.md",
+    "_notes/考研/计算机组成/计算机发展历程.md",
+    "_notes/机器学习.md",
     "_notes/大模型/大模型.md",
     "_notes/杂项/关于我.md",
     "_notes/Kafka.md",
@@ -186,12 +167,9 @@
     "_notes/漫步华尔街.md",
     "_notes/被赶超的经济体.md",
     "_notes/关于投资的思考.md",
-    "_notes/算法.md",
     "assets/images/徐远的投资课-1.png",
     "assets/images/徐远的投资课-3.png",
     "assets/images/徐远的投资课-2.png",
-    "_notes/大数据/数据仓库.md",
-    "_notes/计算机科学/OS-DEV.md",
     "assets/pdfs/os-dev.pdf",
     "assets/images/算法-2.png",
     "assets/images/算法-1.png",

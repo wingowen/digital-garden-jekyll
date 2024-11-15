@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ec237f956c705ad1",
+        "id": "f3c3f1c56b4897d4",
         "type": "tabs",
         "children": [
           {
-            "id": "ba8f55b04673b778",
+            "id": "8d9ee8a165100797",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,7 +139,7 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "ba8f55b04673b778",
+  "active": "8d9ee8a165100797",
   "lastOpenFiles": [
     "_tags/LLM.md",
     "_notes/考研/计算机组成/计算机组成.md",

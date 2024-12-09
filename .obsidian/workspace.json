@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/杂项/百宝袋.md",
+                "file": "_notes/考研/考研.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/杂项/百宝袋.md"
+                "file": "_notes/考研/考研.md"
               }
             }
           }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/杂项/百宝袋.md",
+                "file": "_notes/考研/考研.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/杂项/百宝袋.md",
+                "file": "_notes/考研/考研.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +149,18 @@
   },
   "active": "5bbe74ef52fd909d",
   "lastOpenFiles": [
-    "_pages/index.md",
+    "_notes/英语阅读.md",
+    "_notes/英语一.md",
+    "_notes/考研/考研.md",
+    "_notes/2012 考研英语二真题.md",
+    "_notes/2011 考研英语二真题.md",
     "_notes/杂项/关于我.md",
+    "_pages/index.md",
     "_notes/杂项/数字花园.md",
+    "_notes/杂项/万卷书.md",
+    "_notes/金融哲学三部曲：货币起源.md",
+    "_notes/杂项/技术探索.md",
+    "_notes/杂项/百宝袋.md",
     "_notes/自动化.md",
     "_tags/LLM.md",
     "_notes/考研/计算机组成/计算机组成.md",
@@ -162,19 +171,10 @@
     "_notes/Kafka.md",
     "_notes/Kafka-面经.md",
     "_notes/大数据/Python Data Science Handbook.md",
-    "_notes/金融哲学三部曲：货币起源.md",
-    "_notes/杂项/万卷书.md",
     "_notes/被追赶的经济体.md",
     "_notes/徐远的投资课.md",
     "_notes/大数据组件.md",
     "_notes/大数据开发工程师面经.md",
-    "_notes/Hadoop-面经.md",
-    "_notes/杂项/技术探索.md",
-    "_notes/OnJava8.md",
-    "_notes/金融哲学三部曲：市场本质.md",
-    "_notes/风险 SQL 审计.md",
-    "_notes/漫步华尔街.md",
-    "_notes/被赶超的经济体.md",
     "assets/images/徐远的投资课-1.png",
     "assets/images/徐远的投资课-3.png",
     "assets/images/徐远的投资课-2.png",

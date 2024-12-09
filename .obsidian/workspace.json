@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/自动化.md",
+                "file": "_notes/杂项/百宝袋.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/自动化.md"
+                "file": "_notes/杂项/百宝袋.md"
               }
             }
           }
@@ -71,7 +71,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 234.5,
+    "collapsed": true
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -87,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/自动化.md",
+                "file": "_notes/杂项/百宝袋.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/自动化.md",
+                "file": "_notes/杂项/百宝袋.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,9 +149,10 @@
   },
   "active": "5bbe74ef52fd909d",
   "lastOpenFiles": [
-    "_notes/杂项/关于我.md",
     "_pages/index.md",
+    "_notes/杂项/关于我.md",
     "_notes/杂项/数字花园.md",
+    "_notes/自动化.md",
     "_tags/LLM.md",
     "_notes/考研/计算机组成/计算机组成.md",
     "_notes/考研/计算机组成/计算机系统层次结构.md",
@@ -174,7 +175,6 @@
     "_notes/风险 SQL 审计.md",
     "_notes/漫步华尔街.md",
     "_notes/被赶超的经济体.md",
-    "_notes/关于投资的思考.md",
     "assets/images/徐远的投资课-1.png",
     "assets/images/徐远的投资课-3.png",
     "assets/images/徐远的投资课-2.png",

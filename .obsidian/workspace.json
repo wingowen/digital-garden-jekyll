@@ -71,8 +71,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 234.5
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -147,7 +146,7 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "5bbe74ef52fd909d",
+  "active": "46f954af614e0acc",
   "lastOpenFiles": [
     "_notes/英语阅读.md",
     "_notes/英语一.md",

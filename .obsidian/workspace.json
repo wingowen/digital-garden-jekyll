@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/大模型/大模型.md",
+                "file": "_notes/机器学习.md",
                 "mode": "source",
                 "source": false
               }
@@ -63,7 +63,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/大模型/大模型.md"
+                "file": "_notes/机器学习.md"
               }
             }
           }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/大模型/大模型.md",
+                "file": "_notes/机器学习.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/大模型/大模型.md",
+                "file": "_notes/机器学习.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }

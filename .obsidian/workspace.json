@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/机器学习.md",
+                "file": "_notes/杂项/技术探索.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "机器学习"
+              "title": "技术探索"
             }
           }
         ]
@@ -62,18 +62,6 @@
               "icon": "lucide-search",
               "title": "Search"
             }
-          },
-          {
-            "id": "2862b08edeb6f0b5",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "_notes/机器学习.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of 机器学习"
-            }
           }
         ]
       }
@@ -91,13 +79,25 @@
         "type": "tabs",
         "children": [
           {
+            "id": "2862b08edeb6f0b5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_notes/杂项/技术探索.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of 技术探索"
+            }
+          },
+          {
             "id": "b497bf5510296504",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/机器学习.md",
-                "collapseAll": false,
+                "file": "_notes/杂项/技术探索.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -106,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 机器学习"
+              "title": "Backlinks for 技术探索"
             }
           },
           {
@@ -115,12 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/机器学习.md",
+                "file": "_notes/杂项/技术探索.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 机器学习"
+              "title": "Outgoing links from 技术探索"
             }
           },
           {
@@ -154,6 +154,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "pkmer:Open Pkmer Market": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -164,32 +165,33 @@
   },
   "active": "fa0706888a23c32d",
   "lastOpenFiles": [
+    "_notes/使用 iPhone 15 PRO 拍摄 Vlog.md",
+    "_notes/杂项/技术探索.md",
+    "_notes/杂项/关于我.md",
+    "_pages/index.md",
+    "_notes/杂项/碎碎念.md",
+    "_notes/杂项/万卷书.md",
+    "assets/images/关于我-1.png",
+    "_notes/机器学习.md",
     "_notes/大模型/大模型.md",
     "_tags/LLM.md",
-    "_notes/杂项/关于我.md",
     "_notes/考研/考研.md",
     "_notes/英语阅读.md",
     "_notes/英语一.md",
     "_notes/2012 考研英语二真题.md",
     "_notes/2011 考研英语二真题.md",
-    "_pages/index.md",
     "_notes/杂项/数字花园.md",
-    "_notes/杂项/万卷书.md",
     "_notes/金融哲学三部曲：货币起源.md",
-    "_notes/杂项/技术探索.md",
     "_notes/杂项/百宝袋.md",
     "_notes/自动化.md",
     "_notes/考研/计算机组成/计算机组成.md",
     "_notes/考研/计算机组成/计算机系统层次结构.md",
     "_notes/考研/计算机组成/计算机发展历程.md",
-    "_notes/机器学习.md",
     "_notes/Kafka.md",
     "_notes/Kafka-面经.md",
     "_notes/大数据/Python Data Science Handbook.md",
     "_notes/被追赶的经济体.md",
     "_notes/徐远的投资课.md",
-    "_notes/大数据组件.md",
-    "_notes/大数据开发工程师面经.md",
     "assets/images/徐远的投资课-1.png",
     "assets/images/徐远的投资课-3.png",
     "assets/images/徐远的投资课-2.png",
@@ -200,7 +202,6 @@
     "assets/images/HBase-面经-2.png",
     "assets/images/HBase-面经-1.png",
     "assets/images/大数据开发工程师面经-1.png",
-    "assets/images/Spark-1.png",
     "_site/英语阅读.html",
     "_site/英语一.html",
     "_site/自动化.html",

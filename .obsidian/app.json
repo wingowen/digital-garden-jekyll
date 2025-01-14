@@ -4,5 +4,7 @@
   "newFileFolderPath": "_notes",
   "showInlineTitle": false,
   "promptDelete": false,
-  "attachmentFolderPath": "assets/images"
+  "attachmentFolderPath": "assets/images",
+  "newLinkFormat": "absolute",
+  "showRibbon": false
 }

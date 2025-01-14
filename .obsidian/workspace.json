@@ -20,18 +20,6 @@
               "icon": "lucide-file",
               "title": "神经网络"
             }
-          },
-          {
-            "id": "8c90c6b5635ed30e",
-            "type": "leaf",
-            "state": {
-              "type": "surfing-view",
-              "state": {
-                "url": "https://job3.co/index/post"
-              },
-              "icon": "lucide-file",
-              "title": "Job3"
-            }
           }
         ]
       }
@@ -64,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "卷积",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -72,15 +60,15 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "搜索"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 234.5
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -99,7 +87,7 @@
                 "file": "_notes/神经网络.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of 神经网络"
+              "title": "神经网络 的大纲"
             }
           },
           {
@@ -108,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/神经网络.md",
+                "file": "_notes/杂项/关于我.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +106,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 神经网络"
+              "title": "Backlinks for 关于我"
             }
           },
           {
@@ -127,12 +115,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/神经网络.md",
+                "file": "_notes/杂项/关于我.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 神经网络"
+              "title": "Outgoing links from 关于我"
             }
           },
           {
@@ -162,25 +150,29 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
-      "pkmer:Open Pkmer Market": false,
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": true,
+      "command-palette:打开命令面板": false,
+      "pkmer:Open Pkmer Market": true
     }
   },
   "active": "fa0706888a23c32d",
   "lastOpenFiles": [
+    "assets/images/神经网络-15.png",
+    "_notes/杂项/关于我.md",
+    "_notes/神经网络.md",
+    "_notes/考研/计算机组成/计算机系统层次结构.md",
+    "_notes/大数据/数据仓库.md",
+    "assets/images/神经网络-14.png",
     "assets/images/神经网络-13.png",
     "assets/images/神经网络-12.png",
-    "_notes/神经网络.md",
     "assets/images/神经网络-11.png",
     "assets/images/神经网络-10.png",
     "assets/images/神经网络-9.png",
@@ -188,9 +180,6 @@
     "assets/images/神经网络-7.png",
     "assets/images/神经网络-6.png",
     "assets/images/神经网络-5.png",
-    "assets/images/神经网络-4.png",
-    "_notes/杂项/关于我.md",
-    "assets/images/神经网络-3.png",
     "_pages/index.md",
     "_notes/杂项/数字花园.md",
     "_notes/杂项/技术探索.md",
@@ -202,7 +191,6 @@
     "_notes/SpringBoot.md",
     "_notes/自动化.md",
     "_notes/大数据组件.md",
-    "_notes/大数据/数据仓库.md",
     "_notes/大数据/Python Data Science Handbook.md",
     "_notes/K8S.md",
     "_notes/计算机科学/Linux.md",
@@ -213,7 +201,6 @@
     "_notes/机器学习.md",
     "_notes/大模型/大模型.md",
     "_tags/LLM.md",
-    "_notes/考研/考研.md",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

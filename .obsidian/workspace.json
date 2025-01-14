@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "神经网络"
             }
+          },
+          {
+            "id": "8c90c6b5635ed30e",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://job3.co/index/post"
+              },
+              "icon": "lucide-file",
+              "title": "Job3"
+            }
           }
         ]
       }
@@ -150,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,6 +178,9 @@
   },
   "active": "fa0706888a23c32d",
   "lastOpenFiles": [
+    "assets/images/神经网络-12.png",
+    "_notes/神经网络.md",
+    "assets/images/神经网络-11.png",
     "assets/images/神经网络-10.png",
     "assets/images/神经网络-9.png",
     "assets/images/神经网络-8.png",
@@ -173,11 +189,8 @@
     "assets/images/神经网络-5.png",
     "assets/images/神经网络-4.png",
     "_notes/杂项/关于我.md",
-    "_notes/神经网络.md",
     "assets/images/神经网络-3.png",
     "assets/images/神经网络-3.png",
-    "assets/images/神经网络-2.png",
-    "assets/images/神经网络-1.png",
     "_pages/index.md",
     "_notes/杂项/数字花园.md",
     "_notes/杂项/技术探索.md",

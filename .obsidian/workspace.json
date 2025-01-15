@@ -146,8 +146,7 @@
               "title": "Tags"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -166,10 +165,11 @@
   },
   "active": "fa0706888a23c32d",
   "lastOpenFiles": [
-    "assets/images/注意力机制-1.png",
+    "assets/images/注意力机制-2.png",
     "_notes/杂项/关于我.md",
-    "_notes/注意力机制.md",
     "_notes/神经网络.md",
+    "_notes/注意力机制.md",
+    "assets/images/注意力机制-1.png",
     "assets/images/神经网络-15.png",
     "_notes/考研/计算机组成/计算机系统层次结构.md",
     "_notes/大数据/数据仓库.md",
@@ -181,7 +181,6 @@
     "assets/images/神经网络-9.png",
     "assets/images/神经网络-8.png",
     "assets/images/神经网络-7.png",
-    "assets/images/神经网络-6.png",
     "_pages/index.md",
     "_notes/杂项/数字花园.md",
     "_notes/杂项/技术探索.md",

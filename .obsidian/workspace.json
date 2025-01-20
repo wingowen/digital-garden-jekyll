@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/杂项/关于我.md",
+                "file": "_notes/电商数仓.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "关于我"
+              "title": "电商数仓"
             }
           }
         ]
@@ -85,10 +85,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/杂项/关于我.md"
+                "file": "_notes/电商数仓.md"
               },
               "icon": "lucide-list",
-              "title": "关于我 的大纲"
+              "title": "电商数仓 的大纲"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/杂项/关于我.md",
+                "file": "_notes/电商数仓.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "关于我 的反向链接列表"
+              "title": "电商数仓 的反向链接列表"
             }
           },
           {
@@ -167,8 +167,12 @@
   },
   "active": "fa0706888a23c32d",
   "lastOpenFiles": [
-    "_notes/电商数仓.md",
+    "assets/images/电商数仓-2.png",
+    "assets/images/电商数仓-1.png",
     "_notes/杂项/关于我.md",
+    "_notes/Web3.0.md",
+    "_notes/区块链基础知识25讲.md",
+    "_notes/电商数仓.md",
     "_notes/注意力机制.md",
     "assets/images/注意力机制-2.png",
     "_notes/神经网络.md",
@@ -182,7 +186,6 @@
     "assets/images/神经网络-11.png",
     "assets/images/神经网络-10.png",
     "assets/images/神经网络-9.png",
-    "assets/images/神经网络-8.png",
     "_pages/index.md",
     "_notes/杂项/数字花园.md",
     "_notes/杂项/技术探索.md",
@@ -200,9 +203,6 @@
     "_notes/Linux 常用命令.md",
     "_notes/使用 iPhone 15 PRO 拍摄 Vlog.md",
     "_notes/杂项/碎碎念.md",
-    "_notes/杂项/万卷书.md",
-    "_notes/机器学习.md",
-    "_notes/大模型/大模型.md",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

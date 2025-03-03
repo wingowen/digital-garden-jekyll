@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/区块链技术与应用.md",
+                "file": "_notes/大模型/大模型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "区块链技术与应用"
+              "title": "大模型"
             }
           }
         ]
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/区块链技术与应用.md",
+                "file": "_notes/大模型/大模型.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "区块链技术与应用 的反向链接列表"
+              "title": "大模型 的反向链接列表"
             }
           },
           {
@@ -167,16 +167,17 @@
   },
   "active": "fa0706888a23c32d",
   "lastOpenFiles": [
-    "_notes/区块链技术与应用.md",
-    "_notes/Web3.0.md",
+    "_notes/大模型/大模型.md",
     "_notes/杂项/关于我.md",
+    "_notes/神经网络.md",
+    "_notes/注意力机制.md",
+    "_notes/Web3.0.md",
+    "_notes/区块链技术与应用.md",
     "_notes/电商数仓.md",
     "assets/images/电商数仓-2.png",
     "assets/images/电商数仓-1.png",
     "_notes/区块链基础知识25讲.md",
-    "_notes/注意力机制.md",
     "assets/images/注意力机制-2.png",
-    "_notes/神经网络.md",
     "assets/images/注意力机制-1.png",
     "assets/images/神经网络-15.png",
     "_notes/考研/计算机组成/计算机系统层次结构.md",
@@ -202,7 +203,6 @@
     "_notes/计算机科学/Linux.md",
     "_notes/Linux 常用命令.md",
     "_notes/使用 iPhone 15 PRO 拍摄 Vlog.md",
-    "_notes/杂项/碎碎念.md",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

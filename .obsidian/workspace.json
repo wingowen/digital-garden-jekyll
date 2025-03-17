@@ -11,10 +11,14 @@
             "id": "0c027d9bfdce5199",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_notes/Java 查漏补缺.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Java 查漏补缺"
             }
           }
         ]
@@ -80,9 +84,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {},
+              "state": {
+                "file": "_notes/Java 查漏补缺.md"
+              },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Java 查漏补缺 的大纲"
             }
           },
           {
@@ -159,12 +165,13 @@
   },
   "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
+    "_notes/杂项/关于我.md",
+    "_notes/Java 查漏补缺.md",
     "_notes/Web3开发工程师学习计划.md",
     "_notes/区块链工作原理.md",
     "_notes/杂项/数字花园.md",
     "_pages/index.md",
     "_notes/杂项/技术探索.md",
-    "_notes/杂项/关于我.md",
     "_notes/任职要求.md",
     "_notes/量化交易.md",
     "_notes/未命名.md",
@@ -195,7 +202,6 @@
     "_notes/风险 SQL 审计.md",
     "_notes/RPC.md",
     "_notes/SMAL2.md",
-    "_notes/SpringBoot.md",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

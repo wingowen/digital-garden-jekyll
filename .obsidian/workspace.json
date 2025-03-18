@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Web3开发工程师学习计划.md",
+                "file": "_notes/Go 语言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Web3开发工程师学习计划"
+              "title": "Go 语言"
             }
           }
         ]
@@ -85,10 +85,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Web3开发工程师学习计划.md"
+                "file": "_notes/Go 语言.md"
               },
               "icon": "lucide-list",
-              "title": "Web3开发工程师学习计划 的大纲"
+              "title": "Go 语言 的大纲"
             }
           },
           {
@@ -97,6 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_notes/Go 语言.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "Go 语言 的反向链接列表"
             }
           },
           {
@@ -130,7 +131,7 @@
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "书签"
             }
           },
           {
@@ -146,7 +147,8 @@
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,10 +167,11 @@
   },
   "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
-    "_notes/Defi 开发.md",
-    "_notes/Web3开发工程师学习计划.md",
-    "_notes/Java 查漏补缺.md",
     "_notes/杂项/关于我.md",
+    "_notes/Go 语言.md",
+    "_notes/Java 查漏补缺.md",
+    "_notes/Web3开发工程师学习计划.md",
+    "_notes/Defi 开发.md",
     "_notes/区块链工作原理.md",
     "_notes/杂项/数字花园.md",
     "_pages/index.md",
@@ -201,7 +204,6 @@
     "_notes/算法.md",
     "_notes/关于投资的思考.md",
     "_notes/风险 SQL 审计.md",
-    "_notes/RPC.md",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

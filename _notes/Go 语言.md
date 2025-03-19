@@ -106,3 +106,47 @@ func pow(x, n, lim float64) float64 {
 }
 ```
 
+`switch` 语句是编写一连串 `if - else` 语句的简便方法，它运行第一个 `case` 值等于条件表达式的子句。
+- 只会运行选定的 `case`，而非之后所有的 `case`，除非以 `fallthrough` 语句结束，否则分支会自动终止。
+- `case` 无需为常量，且取值不限于整数。
+
+```go
+package main
+
+import (
+	"fmt"
+	"runtime"
+)
+
+func main() {
+	fmt.Print("Go 运行的系统环境：")
+	switch os := runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("macOS.")
+	case "linux":
+		fmt.Println("Linux.")
+	default:
+		// freebsd, openbsd,
+		// plan9, windows...
+		fmt.Printf("%s.\n", os)
+	}
+}
+```
+
+`defer` 语句会将函数推迟到外层函数返回之后执行。推迟调用的函数其参数会立即求值，但直到外层函数返回前该函数都不会被调用。
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	defer fmt.Print("world ")
+	fmt.Print("hello")
+}
+
+// hello world
+```
+
+# 指针
+

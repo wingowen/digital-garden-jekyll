@@ -1,6 +1,15 @@
 参考资料
 - [Go 语言圣经](https://gopl-zh.github.io/)
 - [Go 语言之旅](https://tour.go-zh.org)
+
+# 开发环境
+
+Go 官方下载地址：[The Go Programming Language](https://go.dev/dl/)。
+
+
+
+
+
 # 基础
 
 包，每个 Go 程序都由包构成，程序从 main 包开始运行。
@@ -178,5 +187,32 @@ func main() {
 
 - 一个结构体（`struct`）就是一组字段（field）。
 - 结构体字段可通过点号 `.` 来访问。
-- 
+- 如果我们有一个指向结构体的指针 `p` 那么可以通过 `(*p).X` 来访问其字段 `X`。 不过这么写太啰嗦了，所以语言也允许我们使用隐式解引用，直接写 `p.X` 就可以。
+- 使用 `FileName:` 语法可以仅列出部分字段（字段名的顺序无关）。
+- 特殊的前缀 `&` 返回一个指向结构体的指针。
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	X, Y int
+}
+
+var (
+	v1 = Vertex{1, 2}  // 创建一个 Vertex 类型的结构体
+	v2 = Vertex{X: 1}  // Y:0 被隐式地赋予零值
+	v3 = Vertex{}      // X:0 Y:0
+	p  = &Vertex{1, 2} // 创建一个 *Vertex 类型的结构体（指针）
+)
+
+func main() {
+	fmt.Println(v1, p, v2, v3)
+}
+
+// {1 2} &{1 2} {1 0} {0 0}
+```
+
+
 

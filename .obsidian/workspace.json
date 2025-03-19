@@ -147,8 +147,7 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -165,7 +164,7 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "0c027d9bfdce5199",
+  "active": "2862b08edeb6f0b5",
   "lastOpenFiles": [
     "_notes/杂项/关于我.md",
     "_notes/Go 语言.md",

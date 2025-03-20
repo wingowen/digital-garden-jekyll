@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/MySQL.md",
+                "file": "_notes/Redis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL"
+              "title": "Redis"
             }
           }
         ]
@@ -85,10 +85,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/MySQL.md"
+                "file": "_notes/Redis.md"
               },
               "icon": "lucide-list",
-              "title": "MySQL 的大纲"
+              "title": "Redis 的大纲"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/MySQL.md",
+                "file": "_notes/Redis.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "MySQL 的反向链接列表"
+              "title": "Redis 的反向链接列表"
             }
           },
           {
@@ -164,9 +164,10 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "0c027d9bfdce5199",
+  "active": "2862b08edeb6f0b5",
   "lastOpenFiles": [
     "_notes/技术栈.md",
+    "_notes/Redis.md",
     "_notes/MySQL.md",
     "_notes/杂项/关于我.md",
     "_notes/Java 查漏补缺.md",
@@ -202,7 +203,6 @@
     "assets/images/神经网络-12.png",
     "assets/images/神经网络-11.png",
     "assets/images/神经网络-10.png",
-    "_notes/算法.md",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

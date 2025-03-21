@@ -285,4 +285,37 @@ b = b[1:]      // len(b)=4, cap(b)=4
 |**操作影响**|直接受切片操作影响（如 `s[:n]`）|受切片起始位置影响（如 `s[low:]`）|
 |**扩展性**|不能超过容量|允许通过 `append` 扩展底层数组|
 
+`for` 循环的 `range` 形式可遍历切片或映射。当使用 `for` 循环遍历切片时，每次迭代都会返回两个值。 第一个值为当前元素的下标，第二个值为该下标所对应元素的一份副本。
 
+```go
+package main
+
+import "fmt"
+
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+func main() {
+	for i, v := range pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+}
+
+// 忽略某一元素
+func main() {
+	pow := make([]int, 10)
+	// 遍历下标
+	for i := range pow {
+		pow[i] = 1 << uint(i) // == 2**i
+	}
+	// 遍历元素副本
+	for _, value := range pow {
+		fmt.Printf("%d\n", value)
+	}
+}
+```
+
+# map 映射
+
+- `map` 映射将键映射到值。
+- 映射的零值为 `nil` 。`nil` 映射既没有键，也不能添加键。
+- `make` 函数会返回给定类型的映射，并将其初始化备用。

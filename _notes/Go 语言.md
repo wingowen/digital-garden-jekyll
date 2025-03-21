@@ -314,8 +314,58 @@ func main() {
 }
 ```
 
-# map 映射
+# 映射
 
 - `map` 映射将键映射到值。
 - 映射的零值为 `nil` 。`nil` 映射既没有键，也不能添加键。
 - `make` 函数会返回给定类型的映射，并将其初始化备用。
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	Lat, Long float64
+}
+
+// 写法一
+var m = map[string]Vertex{
+	"Bell Labs": Vertex{
+		40.68433, -74.39967,
+	},
+	"Google": Vertex{
+		37.42202, -122.08408,
+	},
+}
+
+// 写法二
+var m = map[string]Vertex{
+	"Bell Labs": {40.68433, -74.39967},
+	"Google":    {37.42202, -122.08408},
+}
+
+func main() {
+	fmt.Println(m)
+}
+
+// 统计一句话里单词出现的次数
+package main
+
+import (
+	"strings"
+)
+
+func WordCount(s string) map[string]int {
+	words := strings.Fields(s)    // 按空白分割字符串为单词切片
+	counts := make(map[string]int) // 初始化映射
+
+	// 遍历单词并统计
+	for _, word := range words {
+		counts[word]++
+	}
+
+	return counts
+}
+```
+

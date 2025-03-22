@@ -6,10 +6,6 @@
 
 Go 官方下载地址：[The Go Programming Language](https://go.dev/dl/)。
 
-
-
-
-
 # 基础
 
 包，每个 Go 程序都由包构成，程序从 main 包开始运行。

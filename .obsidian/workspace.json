@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Go 语言.md",
+                "file": "_notes/JAVA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Go 语言"
+              "title": "JAVA"
             }
           }
         ]
@@ -85,10 +85,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Go 语言.md"
+                "file": "_notes/JAVA.md"
               },
               "icon": "lucide-list",
-              "title": "Go 语言 的大纲"
+              "title": "JAVA 的大纲"
             }
           },
           {
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Go 语言.md",
+                "file": "_notes/JAVA.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Go 语言 的反向链接列表"
+              "title": "JAVA 的反向链接列表"
             }
           },
           {
@@ -166,12 +166,12 @@
   },
   "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
-    "_notes/Redis.md",
     "_notes/技术栈.md",
     "_notes/MySQL.md",
+    "_notes/Redis.md",
+    "_notes/Go 语言.md",
     "_notes/杂项/关于我.md",
     "_notes/Java 查漏补缺.md",
-    "_notes/Go 语言.md",
     "_notes/Web3开发工程师学习计划.md",
     "_notes/Defi 开发.md",
     "_notes/区块链工作原理.md",

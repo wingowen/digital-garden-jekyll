@@ -4,6 +4,8 @@
 
 ![[assets/images/JAVA-1.png]]
 
+![[assets/images/JAVA-2.png]]
+
 **重载和重写**
 
 - 重载就是同样的一个方法能够根据输入数据的不同，做出不同的处理

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/杂项/关于我.md",
+                "file": "_notes/Go 语言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "关于我"
+              "title": "Go 语言"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/杂项/关于我.md",
+                "file": "_notes/Go 语言.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "关于我 的大纲"
+              "title": "Go 语言 的大纲"
             }
           },
           {
@@ -169,6 +169,7 @@
   },
   "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
+    "_notes/杂项/关于我.md",
     "_notes/Go 语言.md",
     "_notes/技术栈.md",
     "_notes/MySQL.md",
@@ -177,7 +178,6 @@
     "assets/images/JAVA-1.png",
     "_notes/NIO.md",
     "_notes/Redis.md",
-    "_notes/杂项/关于我.md",
     "_notes/Java 查漏补缺.md",
     "_notes/Web3开发工程师学习计划.md",
     "_notes/Defi 开发.md",

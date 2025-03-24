@@ -6,7 +6,6 @@
   "promptDelete": false,
   "attachmentFolderPath": "assets/images",
   "newLinkFormat": "absolute",
-  "showRibbon": false,
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,

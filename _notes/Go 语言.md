@@ -2,6 +2,9 @@
 - [Go 语言圣经](https://gopl-zh.github.io/)
 - [Go 语言之旅](https://tour.go-zh.org)
 
+实战项目
+- [[Go 高并发秒杀系统]]
+
 # 开发环境
 
 Go 官方下载地址：[The Go Programming Language](https://go.dev/dl/)。

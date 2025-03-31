@@ -150,8 +150,7 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -168,7 +167,7 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "0c027d9bfdce5199",
+  "active": "2862b08edeb6f0b5",
   "lastOpenFiles": [
     "_notes/Go 高并发秒杀系统.md",
     "assets/images/Go 高并发秒杀系统-2.png",

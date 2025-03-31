@@ -15,7 +15,10 @@ Go 官方下载地址：[The Go Programming Language](https://go.dev/dl/)。
 
 # 基础
 
-
+**类型断言**（Type Assertion）是一种用于检查接口类型变量是否包含特定类型的值，并将其转换为该类型值的操作。
+```go
+value, ok := x.(T)
+```
 
 协程泄漏是指协程创建之后没有得到释放。主要原因有：
 - 缺少接收器，导致发送阻塞

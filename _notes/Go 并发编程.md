@@ -1,3 +1,13 @@
+# 管道
+
+```go
+// 必须通过 make 声明
+// 满了会报错
+// chan 可声明只读只写
+var chanIn chan<- int
+var chanOut ->chan int
+```
+
 # 协程与管道
 
 ```go
@@ -49,5 +59,74 @@ func readData(intChan chan int, exitChan chan bool) {
     }
     exitChan < -true
     close(exitChan)
+}
+```
+
+# 并行找质数
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+var intChan chan int = make(chan int, 100)
+
+func main() {
+
+	var primeChan chan int = make(chan int, 100)
+	var exitChan chan bool = make(chan bool, 8)
+
+	go initChan(100)
+
+	for range 8 {
+		// 开启八个协程并行计算
+		go isPrime(intChan, primeChan, exitChan)
+	}
+
+	go func() {
+		for range 8 {
+			<-exitChan
+		}
+		close(primeChan)
+	}()
+
+	for {
+		res, ok := <-primeChan
+		if !ok {
+			break
+		}
+		fmt.Println("素数: ", res)
+	}
+}
+
+func initChan(num int) {
+	for i := 1; i <= num; i++ {
+		intChan <- i
+	}
+	close(intChan)
+}
+
+func isPrime(intChan chan int, primeChan chan int, exitChan chan bool) {
+	var flag bool
+	for {
+		flag = true
+		num, ok := <-intChan
+		if !ok {
+			break
+		}
+		// 判断是否质数
+		for j := 2; j < num; j++ {
+			if num%j == 0 {
+				flag = false
+				break
+			}
+		}
+		if flag {
+			primeChan <- num
+		}
+	}
+	exitChan <- true
 }
 ```

@@ -150,7 +150,8 @@
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -170,8 +171,8 @@
   "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
     "_notes/Go 语言.md",
-    "_notes/Go 高并发秒杀系统.md",
     "_notes/Go 并发编程.md",
+    "_notes/Go 高并发秒杀系统.md",
     "assets/images/Go 高并发秒杀系统-2.png",
     "assets/images/Go 高并发秒杀系统-1.png",
     "_notes/杂项/关于我.md",

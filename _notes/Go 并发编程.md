@@ -16,8 +16,6 @@ case channel2 <- value:
 default:
     // 当没有通道操作可以立即执行时执行的代码
 }
-
-
 ```
 
 # 协程与管道
@@ -111,6 +109,17 @@ func main() {
 		}
 		fmt.Println("素数: ", res)
 	}
+
+	// label:
+	//
+	//	for {
+	//		select {
+	//		case res := <-primeChan:
+	//			fmt.Println("素数: ", res)
+	//		default:
+	//			break label
+	//		}
+	//	} TODO 这段代码不知道为什么结果不对？
 }
 
 func initChan(num int) {

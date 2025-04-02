@@ -15,6 +15,30 @@ Go 官方下载地址：[The Go Programming Language](https://go.dev/dl/)。
 
 # 基础
 
+在Go语言中，`label`（标签）可以用于标记循环或语句块，以便在需要时通过 `break` 或 `continue` 语句跳转到指定的标签位置。`label` 的使用场景通常是在嵌套循环中，当需要从外层循环中退出时。
+
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+outerLoop: // 定义标签
+	for i := 0; i < 5; i++ {
+		fmt.Printf("Outer loop: i = %d\n", i)
+		for j := 0; j < 5; j++ {
+			fmt.Printf("Inner loop: j = %d\n", j)
+			if j == 3 {
+				break outerLoop // 使用标签退出外层循环
+			}
+		}
+	}
+	fmt.Println("Exited outer loop")
+}
+```
+
 **类型断言**（Type Assertion）是一种用于检查接口类型变量是否包含特定类型的值，并将其转换为该类型值的操作。
 ```go
 value, ok := x.(T)

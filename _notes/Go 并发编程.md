@@ -6,6 +6,18 @@
 // chan 可声明只读只写
 var chanIn chan<- int
 var chanOut ->chan int
+
+// 多通道选择
+select {
+case <-channel1:
+    // 当 channel1 有数据可接收时执行的代码
+case channel2 <- value:
+    // 当可以向 channel2 发送数据时执行的代码
+default:
+    // 当没有通道操作可以立即执行时执行的代码
+}
+
+
 ```
 
 # 协程与管道

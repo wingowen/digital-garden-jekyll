@@ -346,6 +346,7 @@ func main() {
 // {1 2} &{1 2} {1 0} {0 0}
 ```
 
+如果结构体的全部成员都是可以比较的，那么结构体也是可以比较的。
 # 数组
 
 类型 `[n]T` 表示一个数组，它拥有 `n` 个类型为 `T` 的值。
@@ -510,3 +511,39 @@ func WordCount(s string) map[string]int {
 在函数体中，函数的形参作为局部变量，被初始化为调用者提供的值。函数的形参和有名返回值作为函数最外层的局部变量，被存储在相同的词法块中。
 
 实参通过值的方式传递，因此函数的形参是实参的拷贝。对形参进行修改不会影响实参。但是，如果实参包括引用类型，如指针，slice(切片)、map、function、channel等类型，实参可能会由于函数的间接引用被修改。
+
+```go
+package main
+
+import "fmt"
+
+// 定义一个函数类型
+type StringFunc func(string) string
+
+// 高阶函数，接受一个函数作为参数
+func processString(s string, f StringFunc) string {
+    return f(s)
+}
+
+// 具体的函数实现
+func toUpperCase(s string) string {
+    return strings.ToUpper(s)
+}
+
+func main() {
+    // 将函数作为参数传递
+    result: = processString("hello, world", toUpperCase)
+    fmt.Println(result) // 输出: HELLO, WORLD
+}
+```
+
+`defer` 后面跟一个函数调用，该函数调用会在当前函数执行完毕后执行。`defer` 的主要用途是确保某些代码在函数退出时执行，无论函数是正常退出还是因为错误退出。
+- **参数求值时机**：`defer` 函数的参数在 `defer` 语句执行时就被求值，而不是在函数实际执行时。
+- **函数返回值**：`defer` 函数可以修改函数的返回值。
+
+一般而言，当panic异常发生时，程序会中断运行，并立即执行在该goroutine（可以先理解成线程，在第8章会详细介绍）中被延迟的函数（defer 机制）。随后，程序崩溃并输出日志信息。日志信息包括panic value和函数调用的堆栈跟踪信息。
+
+`recover` 函数可以在 `defer` 函数中调用，用于捕获当前 Goroutine 中的 `panic`。如果 `recover` 成功捕获了 `panic`，程序将继续执行，而不是直接退出。
+- **`recover` 只能在 `defer` 函数中使用**：`recover` 必须在 `defer` 函数中调用，否则无法捕获 `panic`。
+- **`recover` 只能捕获当前 Goroutine 中的 `panic`**：`recover` 无法捕获其他 Goroutine 中的 `panic`。
+- **`recover` 的返回值**：`recover` 的返回值是 `interface{}` 类型，可以用于获取 `panic` 的详细信息。

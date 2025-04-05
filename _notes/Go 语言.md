@@ -547,3 +547,5 @@ func main() {
 - **`recover` 只能在 `defer` 函数中使用**：`recover` 必须在 `defer` 函数中调用，否则无法捕获 `panic`。
 - **`recover` 只能捕获当前 Goroutine 中的 `panic`**：`recover` 无法捕获其他 Goroutine 中的 `panic`。
 - **`recover` 的返回值**：`recover` 的返回值是 `interface{}` 类型，可以用于获取 `panic` 的详细信息。
+
+在Go语言中，我们并不会像其它语言那样用this或者self作为接收器；我们可以任意的选择接收器的名字。由于接收器的名字经常会被使用到，所以保持其在方法间传递时的一致性和简短性是不错的主意。

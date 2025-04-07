@@ -13,6 +13,9 @@ Go 官方下载地址：[The Go Programming Language](https://go.dev/dl/)。
 
 [[Go 并发编程]]
 
+[[Go 面试题]]
+
+
 # 基础
 
 在Go语言中，`label`（标签）可以用于标记循环或语句块，以便在需要时通过 `break` 或 `continue` 语句跳转到指定的标签位置。`label` 的使用场景通常是在嵌套循环中，当需要从外层循环中退出时。

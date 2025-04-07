@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Go 语言.md",
+                "file": "_notes/Go 面试题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Go 语言"
+              "title": "Go 面试题"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Go 语言.md",
+                "file": "_notes/Go 面试题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Go 语言 的大纲"
+              "title": "Go 面试题 的大纲"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Go 语言.md",
+                "file": "_notes/Go 面试题.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Go 语言 的反向链接列表"
+              "title": "Go 面试题 的反向链接列表"
             }
           },
           {
@@ -167,10 +167,11 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "2862b08edeb6f0b5",
+  "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
-    "_notes/Go 并发编程.md",
     "_notes/Go 语言.md",
+    "_notes/Go 面试题.md",
+    "_notes/Go 并发编程.md",
     "_notes/Go 高并发秒杀系统.md",
     "assets/images/Go 高并发秒杀系统-2.png",
     "assets/images/Go 高并发秒杀系统-1.png",
@@ -199,7 +200,6 @@
     "_notes/神经网络.md",
     "_notes/注意力机制.md",
     "_notes/Web3.0.md",
-    "_notes/区块链技术与应用.md",
     "assets/images/电商数仓-2.png",
     "assets/images/电商数仓-1.png",
     "assets/images/注意力机制-2.png",

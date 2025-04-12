@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/腾讯招聘要求.md",
+                "file": "_notes/Redis 面试题目整理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "腾讯招聘要求"
+              "title": "Redis 面试题目整理"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/腾讯招聘要求.md",
+                "file": "_notes/Redis 面试题目整理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "腾讯招聘要求 的大纲"
+              "title": "Redis 面试题目整理 的大纲"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/腾讯招聘要求.md",
+                "file": "_notes/Redis 面试题目整理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "腾讯招聘要求 的反向链接列表"
+              "title": "Redis 面试题目整理 的反向链接列表"
             }
           },
           {
@@ -170,11 +170,12 @@
   },
   "active": "0c027d9bfdce5199",
   "lastOpenFiles": [
+    "_notes/腾讯招聘要求.md",
+    "_notes/Redis 面试题目整理.md",
     "assets/images/腾讯招聘要求-3.png",
     "assets/images/腾讯招聘要求-2.png",
     "assets/images/腾讯招聘要求-1.png",
     "_notes/杂项/关于我.md",
-    "_notes/腾讯招聘要求.md",
     "_notes/简历.md",
     "_notes/Go 面试题.md",
     "_notes/Go 语言.md",
@@ -206,7 +207,6 @@
     "assets/images/电商数仓-2.png",
     "assets/images/电商数仓-1.png",
     "assets/images/注意力机制-2.png",
-    "assets/images/注意力机制-1.png",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",
     "_site/英语一.html",

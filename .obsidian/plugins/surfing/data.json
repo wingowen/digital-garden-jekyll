@@ -49,5 +49,6 @@
   "treeData": [],
   "enableHtmlPreview": true,
   "supportLivePreviewInlineUrl": false,
-  "enableTreeView": false
+  "enableTreeView": false,
+  "focusSearchBarViaKeyboard": true
 }

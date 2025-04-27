@@ -40,8 +40,21 @@
               "icon": "lucide-file",
               "title": "MySQL常见面试题总结 - JavaGuide"
             }
+          },
+          {
+            "id": "a76077fed2afb07b",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://javaguide.cn/database/mysql/mysql-questions-01.html#mysql-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84"
+              },
+              "icon": "lucide-file",
+              "title": "MySQL常见面试题总结 | JavaGuide"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,13 +118,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/MySQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MySQL 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -120,7 +132,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/MySQL.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +141,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "MySQL 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -189,10 +200,10 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "6614eb8fa989abfd",
+  "active": "a76077fed2afb07b",
   "lastOpenFiles": [
-    "MySQL常见面试题总结 - JavaGuide.md",
     "_notes/MySQL.md",
+    "MySQL常见面试题总结 - JavaGuide.md",
     "assets/images/MySQL-1.png",
     "3种常用的缓存读写策略详解 - JavaGuide.md",
     "_notes/技术栈.md",

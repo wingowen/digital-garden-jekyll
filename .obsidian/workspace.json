@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/MySQL.md",
+                "file": "_notes/面试.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL"
+              "title": "面试"
             }
           }
         ]
@@ -47,14 +47,26 @@
             "state": {
               "type": "surfing-view",
               "state": {
-                "url": "https://javaguide.cn/database/mysql/mysql-questions-01.html#mysql-%E5%9F%BA%E7%A1%80%E6%9E%B6%E6%9E%84"
+                "url": "https://javaguide.cn/database/mysql/mysql-questions-01.html#%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%E5%92%8C%E5%B9%BB%E8%AF%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"
               },
               "icon": "lucide-file",
               "title": "MySQL常见面试题总结 | JavaGuide"
             }
+          },
+          {
+            "id": "adc2806764d4daf3",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://javaguide.cn/database/mysql/mysql-high-performance-optimization-specification-recommendations.html#%E4%B8%80%E5%AE%9A%E4%B8%8D%E8%A6%81%E7%94%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%98%E5%82%A8%E6%97%A5%E6%9C%9F"
+              },
+              "icon": "lucide-file",
+              "title": "MySQL高性能优化规范建议总结 | JavaGuide"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -200,13 +212,14 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "a76077fed2afb07b",
+  "active": "adc2806764d4daf3",
   "lastOpenFiles": [
+    "_notes/面试.md",
+    "_notes/Kafka.md",
     "_notes/MySQL.md",
     "MySQL常见面试题总结 - JavaGuide.md",
     "assets/images/MySQL-1.png",
     "3种常用的缓存读写策略详解 - JavaGuide.md",
-    "_notes/技术栈.md",
     "_notes/Redis.md",
     "assets/images/Redis-2.png",
     "Redis常见面试题总结(下) - JavaGuide.md",

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/面试.md",
+                "file": "_notes/MySQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面试"
+              "title": "MySQL"
             }
           }
         ]
@@ -47,26 +47,28 @@
             "state": {
               "type": "surfing-view",
               "state": {
-                "url": "https://javaguide.cn/database/mysql/mysql-questions-01.html#%E4%B8%8D%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB%E5%92%8C%E5%B9%BB%E8%AF%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"
+                "url": "https://javaguide.cn/database/mysql/mysql-logs.html"
               },
               "icon": "lucide-file",
-              "title": "MySQL常见面试题总结 | JavaGuide"
+              "title": "MySQL三大日志(binlog、redo log和undo log)详解 | JavaGuide"
             }
           },
           {
-            "id": "adc2806764d4daf3",
+            "id": "452dc1811a104ec7",
             "type": "leaf",
             "state": {
-              "type": "surfing-view",
+              "type": "markdown",
               "state": {
-                "url": "https://javaguide.cn/database/mysql/mysql-high-performance-optimization-specification-recommendations.html#%E7%B4%A2%E5%BC%95-set-%E8%A7%84%E8%8C%83"
+                "file": "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL高性能优化规范建议总结 | JavaGuide"
+              "title": "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -212,12 +214,14 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "adc2806764d4daf3",
+  "active": "a76077fed2afb07b",
   "lastOpenFiles": [
-    "_notes/面试.md",
-    "_notes/Kafka.md",
     "_notes/MySQL.md",
+    "_notes/面试.md",
+    "_notes/Nginx.md",
     "MySQL常见面试题总结 - JavaGuide.md",
+    "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路.md",
+    "_notes/Kafka.md",
     "assets/images/MySQL-1.png",
     "3种常用的缓存读写策略详解 - JavaGuide.md",
     "_notes/Redis.md",
@@ -248,8 +252,6 @@
     "_notes/JAVA.md",
     "_notes/NIO.md",
     "_notes/Java 查漏补缺.md",
-    "_notes/Web3开发工程师学习计划.md",
-    "_notes/Defi 开发.md",
     "简历.pdf",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",

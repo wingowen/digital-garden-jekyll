@@ -13,62 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/MySQL.md",
+                "file": "_notes/面试项目准备.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL"
+              "title": "面试项目准备"
             }
           }
         ]
-      },
-      {
-        "id": "03ec8c789f110a4b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ff5efdb856a31791",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "MySQL常见面试题总结 - JavaGuide.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MySQL常见面试题总结 - JavaGuide"
-            }
-          },
-          {
-            "id": "a76077fed2afb07b",
-            "type": "leaf",
-            "state": {
-              "type": "surfing-view",
-              "state": {
-                "url": "https://javaguide.cn/database/mysql/mysql-logs.html"
-              },
-              "icon": "lucide-file",
-              "title": "Surfing"
-            }
-          },
-          {
-            "id": "452dc1811a104ec7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_notes/面试项目准备.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "面试项目准备 的反向链接列表"
             }
           },
           {
@@ -200,8 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,12 +167,13 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "a76077fed2afb07b",
+  "active": "6614eb8fa989abfd",
   "lastOpenFiles": [
-    "_notes/MySQL.md",
     "_notes/面试.md",
-    "_notes/Nginx.md",
+    "_notes/面试项目准备.md",
+    "_notes/MySQL.md",
     "MySQL常见面试题总结 - JavaGuide.md",
+    "_notes/Nginx.md",
     "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路.md",
     "_notes/Kafka.md",
     "assets/images/MySQL-1.png",
@@ -251,7 +205,6 @@
     "assets/images/Go 高并发秒杀系统-1.png",
     "_notes/JAVA.md",
     "_notes/NIO.md",
-    "_notes/Java 查漏补缺.md",
     "简历.pdf",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",

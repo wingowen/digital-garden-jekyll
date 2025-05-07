@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/面试项目准备.md",
+                "file": "_notes/面试.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面试项目准备"
+              "title": "面试"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/面试项目准备.md",
+                "file": "_notes/面试.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "面试项目准备 的反向链接列表"
+              "title": "面试 的反向链接列表"
             }
           },
           {
@@ -169,16 +169,16 @@
   },
   "active": "6614eb8fa989abfd",
   "lastOpenFiles": [
+    "_notes/Kafka.md",
     "_notes/面试.md",
-    "_notes/面试项目准备.md",
     "_notes/MySQL.md",
+    "_notes/Redis.md",
+    "_notes/面试项目准备.md",
     "MySQL常见面试题总结 - JavaGuide.md",
     "_notes/Nginx.md",
     "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路.md",
-    "_notes/Kafka.md",
     "assets/images/MySQL-1.png",
     "3种常用的缓存读写策略详解 - JavaGuide.md",
-    "_notes/Redis.md",
     "assets/images/Redis-2.png",
     "Redis常见面试题总结(下) - JavaGuide.md",
     "Redis常见阻塞原因总结 - JavaGuide.md",

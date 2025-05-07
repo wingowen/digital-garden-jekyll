@@ -1,3 +1,5 @@
+视频资料 https://www.bilibili.com/video/BV1NUBNYFEYv
+
 参考资料
 - [Go 语言圣经](https://gopl-zh.github.io/)
 - [Go 语言之旅](https://tour.go-zh.org)

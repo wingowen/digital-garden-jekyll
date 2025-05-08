@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "JAVA"
             }
+          },
+          {
+            "id": "d79d1a1fe4994afe",
+            "type": "leaf",
+            "state": {
+              "type": "surfing-view",
+              "state": {
+                "url": "https://javabetter.cn/thread/synchronized-1.html#synchronized%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95"
+              },
+              "icon": "lucide-file",
+              "title": "面了一个25岁的学妹，把synchronized关键字讲的那叫一个透彻 | 二哥的Java进阶之路"
+            }
           }
         ]
       }
@@ -167,9 +179,12 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "6614eb8fa989abfd",
+  "active": "2862b08edeb6f0b5",
   "lastOpenFiles": [
     "_notes/面试.md",
+    "_notes/JAVA.md",
+    "_notes/SpringBoot.md",
+    "_notes/杂项/关于我.md",
     "_notes/Go 语言.md",
     "_notes/Kafka.md",
     "_notes/MySQL.md",
@@ -189,7 +204,6 @@
     "assets/images/Redis-2.png",
     "assets/images/Redis-1.png",
     "_notes/未命名.md",
-    "_notes/杂项/关于我.md",
     "_notes/面试题目整理.md",
     "assets/images/面试题目整理-1.png",
     "_notes/腾讯招聘要求.md",
@@ -203,8 +217,6 @@
     "_notes/Go 高并发秒杀系统.md",
     "assets/images/Go 高并发秒杀系统-2.png",
     "assets/images/Go 高并发秒杀系统-1.png",
-    "_notes/JAVA.md",
-    "_notes/NIO.md",
     "简历.pdf",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",

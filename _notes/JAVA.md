@@ -383,6 +383,45 @@ CAS 的全称是：比较并交换（Compare And Swap）。在 CAS 中，有这�
 
 CAS 虽好，但也有一些问题，比如说 ABA 问题、循环时间长开销大、只能保证一个共享变量的原子操作等。在开发中，我们要根据实际情况来选择使用 CAS 还是使用锁。
 
+## AQS
+
+AQS是Java并发包（JUC）的核心组件，为构建锁和同步器（如ReentrantLock、Semaphore等）提供了底层框架。它通过**双向CLH队列**管理线程的排队与唤醒，并通过**volatile修饰的state变量**标识资源状态（如锁是否被占用）124。
+
+**两种资源访问模式**
+- **独占模式（Exclusive）**：同一时刻仅允许一个线程获取资源（如ReentrantLock）。通过`tryAcquire`和`tryRelease`方法实现24。
+- **共享模式（Shared）**：允许多个线程同时访问资源（如CountDownLatch、Semaphore）。通过`tryAcquireShared`和`tryReleaseShared`方法实现24。
+
+**内部结构**
+- **State变量**：通过CAS操作修改state值（如0表示未加锁，1表示已加锁），实现资源的原子性竞争12。
+- **CLH队列**：基于双向链表的FIFO队列，存储等待线程的节点（Node），每个节点包含前驱（prev）和后继（next）指针
+
+## 锁的分类
+![](https://ima-notebook-prod.image.myqcloud.com/2/eeT0U4xKE3xYKKq88fofxe/238a31bf9be24ac88498cc68bfb7a318.webp?q-sign-algorithm=sha1&q-ak=AKID9IDtLZZKqGRO7hVFnMn0zjXTXovoTtAN&q-sign-time=1746787742%3B1746816542&q-key-time=1746787742%3B1746816542&q-header-list=&q-url-param-list=&q-signature=b101495faed89538d8a3e3f2fab01b706c0d50ae)
+
+## Lock
+
+### ReentrantLock
+
+- **ReentrantLock 是一个类，而 synchronized 是 Java 中的关键字**；
+- **ReentrantLock 可以实现多路选择通知（可以绑定多个 Condition），而 synchronized 只能通过 wait 和 notify/notifyAll 方法唤醒一个线程或者唤醒全部线程（单路通知）**；
+- ReentrantLock 必须手动释放锁。通常需要在 finally 块中调用 unlock 方法以确保锁被正确释放。
+- synchronized 会自动释放锁，当同步块执行完毕时，由 JVM 自动释放，不需要手动操作。
+- ReentrantLock: 通常提供更好的性能，特别是在高竞争环境下。
+- synchronized: 在某些情况下，性能可能稍差一些，但随着 JDK 版本的升级，性能差距已经不大了。
+
+# ReentrantReadWriteLock
+
+ReentrantReadWriteLock 是 Java 的一种读写锁，它允许多个读线程同时访问，但只允许一个写线程访问，或者阻塞所有的读写线程。这种锁的设计可以提高性能，特别是在数据结构中，读操作的数量远远超过写操作的情况下。
+
+读写锁的实现主要是通过重写 AQS 的 tryAcquire 方法和 tryRelease 方法实现的，读锁和写锁的获取和释放都是通过这两个方法实现的。
+
+读写锁支持锁降级，遵循按照获取写锁，获取读锁再释放写锁的次序，写锁能够降级成为读锁，不支持锁升级。
+
+## Condition
+
+每个对象都可以调用 Object 的 wait/notify 方法来实现等待/通知机制。而 Condition 接口也提供了类似的方法。
+
+`Condition`接口与`Lock`配合使用，可实现更灵活的线程间通信机制，尤其适用于需要多条件等待/通知的场景。
 
 
 

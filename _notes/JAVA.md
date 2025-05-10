@@ -409,7 +409,7 @@ AQS是Java并发包（JUC）的核心组件，为构建锁和同步器（如Reen
 - ReentrantLock: 通常提供更好的性能，特别是在高竞争环境下。
 - synchronized: 在某些情况下，性能可能稍差一些，但随着 JDK 版本的升级，性能差距已经不大了。
 
-# ReentrantReadWriteLock
+### ReentrantReadWriteLock
 
 ReentrantReadWriteLock 是 Java 的一种读写锁，它允许多个读线程同时访问，但只允许一个写线程访问，或者阻塞所有的读写线程。这种锁的设计可以提高性能，特别是在数据结构中，读操作的数量远远超过写操作的情况下。
 
@@ -423,6 +423,31 @@ ReentrantReadWriteLock 是 Java 的一种读写锁，它允许多个读线程同
 
 `Condition`接口与`Lock`配合使用，可实现更灵活的线程间通信机制，尤其适用于需要多条件等待/通知的场景。
 
+## LockSupport
+
+LockSupport是JUC并发包的底层基石，通过许可证机制实现线程阻塞与唤醒。其核心优势在于解耦锁操作、支持精确唤醒且无信号丢失。LockSupport 的 `unpark()` 方法可以在目标线程调用 `park()` 之前执行。此时，许可证会被预先发放给目标线程（即使线程尚未阻塞），并保存在线程关联的许可证状态中。当目标线程后续调用 `park()` 时，会立即消耗这个预存的许可证（将值从 1 变为 0），从而直接返回而不会阻塞。若使用 `Object.wait()`/`notify()`，若 `notify()` 在 `wait()` 前调用，信号会丢失，导致线程永久阻塞。
+对比`wait/notify`，它无需锁即可调用，且`unpark()`可指定目标线程；相比`Condition`，它更底层，直接操作线程状态。  
+典型应用如AQS框架中管理等待队列，或实现自定义同步工具时作为基础原语。例如，`ReentrantLock`在获取锁失败时，通过`LockSupport.park()`阻塞线程，释放锁时`unpark()`唤醒队首线程16
+
+## 线程池
+
+线程池主要是通过阻塞队列来实现的，线程池的使用场景主要是异步或者多线程处理任务的场景。线程池的使用可以通过 Executors 来快速创建，但是不推荐使用，因为 Executors 创建的线程池都有一些缺陷，比如无界队列可能导致内存溢出，无限大的线程数可能导致机器负载过高。所以在实际的项目中，建议自定义线程池 ThreadPoolExecutor，根据业务场景来合理的设置线程数，队列大小等参数。
+
+参数
+- corePoolSize：线程池中用来工作的核心线程数量。
+- maximumPoolSize：最大线程数，线程池允许创建的最大线程数。
+- keepAliveTime：超出 corePoolSize 后创建的线程存活时间或者是所有线程最大存活时间，取决于配置。
+- unit：keepAliveTime 的时间单位。
+- workQueue：任务队列，是一个阻塞队列，当线程数达到核心线程数后，会将任务存储在阻塞队列中。
+- threadFactory ：线程池内部创建线程所用的工厂。
+- handler：拒绝策略；当队列已满并且线程数量达到最大线程数量时，会调用该方法处理任务。
+
+线程池的五种状态
+- RUNNING：线程池创建时就是这个状态，能够接收新任务，以及对已添加的任务进行处理。
+- SHUTDOWN：调用 shutdown 方法，线程池就会转换成 SHUTDOWN 状态，此时线程池不再接收新任务，但能继续处理已添加的任务到队列中。
+- STOP：调用 shutdownNow 方法，线程池就会转换成 STOP 状态，不接收新任务，也不能继续处理已添加的任务到队列中任务，并且会尝试中断正在处理的任务的线程。
+- TIDYING：SHUTDOWN 状态下，任务数为 0， 其他所有任务已终止，线程池会变为 TIDYING 状态；线程池在 SHUTDOWN 状态，任务队列为空且执行中任务为空，线程池会变为 TIDYING 状态；线程池在 STOP 状态，线程池中执行中任务为空时，线程池会变为 TIDYING 状态。
+- TERMINATED：线程池彻底终止。线程池在 TIDYING 状态执行完 `terminated()` 方法就会转变为 TERMINATED 状态。
 
 
 # JVM

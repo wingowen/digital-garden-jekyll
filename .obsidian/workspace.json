@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/JAVA.md",
+                "file": "_notes/Netty.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JAVA"
+              "title": "Netty"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/JAVA.md",
+                "file": "_notes/Netty.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "JAVA 的大纲"
+              "title": "Netty 的大纲"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/JAVA.md",
+                "file": "_notes/Netty.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "JAVA 的反向链接列表"
+              "title": "Netty 的反向链接列表"
             }
           },
           {
@@ -150,7 +150,8 @@
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -169,10 +170,11 @@
   },
   "active": "6614eb8fa989abfd",
   "lastOpenFiles": [
+    "_notes/面试.md",
+    "_notes/Netty.md",
+    "_notes/JAVA.md",
     "assets/images/JAVA-4.png",
     "assets/images/JAVA-3.png",
-    "_notes/JAVA.md",
-    "_notes/面试.md",
     "_notes/MySQL.md",
     "_notes/Redis.md",
     "_notes/SpringBoot.md",
@@ -204,7 +206,6 @@
     "assets/images/腾讯招聘要求-1.png",
     "_notes/Go 面试题.md",
     "_notes/Go 并发编程.md",
-    "assets/images/Go 高并发秒杀系统-2.png",
     "简历.pdf",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",

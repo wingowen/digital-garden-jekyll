@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/tmp.md",
+                "file": "_notes/suwen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tmp"
+              "title": "suwen"
             }
           }
         ],
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/tmp.md",
+                "file": "_notes/suwen.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "tmp 的反向链接列表"
+              "title": "suwen 的反向链接列表"
             }
           },
           {
@@ -185,7 +185,7 @@
   },
   "active": "5f22630def756e90",
   "lastOpenFiles": [
-    "_notes/tmp.md",
+    "_notes/suwen.md",
     "_notes/杂项/关于我.md",
     "_notes/JAVA.md",
     "_notes/面试.md",

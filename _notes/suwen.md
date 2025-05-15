@@ -26,3 +26,6 @@ ssh suwenuser@124.71.61.247
 sudo nginx -t 校验配置
 sudo nginx -s reload 加载配置
 ```
+
+
+优化验证码获取逻辑。

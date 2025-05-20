@@ -72,7 +72,6 @@
 
 ### 线程生命周期
 
-![](https://ima-notebook-prod.image.myqcloud.com/2/eeT0U4xKE3xYKKq88fofxe/2e0f9042902c44b188eb033a029e8d78.webp?q-sign-algorithm=sha1&q-ak=AKID9IDtLZZKqGRO7hVFnMn0zjXTXovoTtAN&q-sign-time=1746602854;1746631654&q-key-time=1746602854;1746631654&q-header-list=&q-url-param-list=&q-signature=e898391380937b3db30de7b366cbef44112203ca)
 
 ## 获取线程执行结果
 
@@ -116,7 +115,6 @@
 
 操作系统的线程**三个基本状态**：
 
-![](https://ima-notebook-prod.image.myqcloud.com/2/eeT0U4xKE3xYKKq88fofxe/d6b5c48a114d47e7b2cb556d6fab42cf.webp?q-sign-algorithm=sha1&q-ak=AKID9IDtLZZKqGRO7hVFnMn0zjXTXovoTtAN&q-sign-time=1746605223%3B1746634023&q-key-time=1746605223%3B1746634023&q-header-list=&q-url-param-list=&q-signature=2ff71085d5a64a5db6dc8392308d693de1416c14)
 
 - **就绪状态(ready)**：线程正在等待使用CPU，经调度程序调用之后进入running状态。
 
@@ -126,7 +124,6 @@
 
 **Java线程的六种状态**
 
-![](https://ima-notebook-prod.image.myqcloud.com/2/eeT0U4xKE3xYKKq88fofxe/2927a804edfb4307b0f5c2f3be0498db.webp?q-sign-algorithm=sha1&q-ak=AKID9IDtLZZKqGRO7hVFnMn0zjXTXovoTtAN&q-sign-time=1746606433%3B1746635233&q-key-time=1746606433%3B1746635233&q-header-list=&q-url-param-list=&q-signature=c6201eb6bd138f89ede5a59730f35e23d611cab8)
 
 - **NEW**：线程尚未启动，未调用Thread实例的start()方法。
 
@@ -224,7 +221,6 @@ Java 内存模型（Java Memory Model，JMM）定义了 Java 程序中的变量�
 
 **Java 使用的是共享内存并发模型**。
 
-![](https://ima-notebook-prod.image.myqcloud.com/2/eeT0U4xKE3xYKKq88fofxe/663fb6fc4015434c9c4afce20b45071e.webp?q-sign-algorithm=sha1&q-ak=AKID9IDtLZZKqGRO7hVFnMn0zjXTXovoTtAN&q-sign-time=1746610027%3B1746638827&q-key-time=1746610027%3B1746638827&q-header-list=&q-url-param-list=&q-signature=a504e76a6b56d56e7fc53b2452c68f204726f7d9)
 
 **线程对共享变量的所有操作都必须在自己的本地内存中进行，不能直接从主存中读取**。
 - 主内存：Java堆中对象实例数据部分，对应于物理硬件的内存

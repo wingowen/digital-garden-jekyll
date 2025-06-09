@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/JAVA.md",
+                "file": "_notes/Build a Large Language Model From Scratch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JAVA"
+              "title": "Build a Large Language Model From Scratch"
             }
           }
         ]
@@ -84,13 +84,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/杂项/关于我.md",
+                "file": "_notes/Build a Large Language Model From Scratch.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "关于我 的大纲"
+              "title": "Build a Large Language Model From Scratch 的大纲"
             }
           },
           {
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/JAVA.md",
+                "file": "_notes/Build a Large Language Model From Scratch.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "JAVA 的反向链接列表"
+              "title": "Build a Large Language Model From Scratch 的反向链接列表"
             }
           },
           {
@@ -118,12 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/杂项/关于我.md",
+                "file": "_notes/Build a Large Language Model From Scratch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 关于我"
+              "title": "Build a Large Language Model From Scratch 的出链列表"
             }
           },
           {
@@ -169,10 +169,15 @@
   },
   "active": "5f22630def756e90",
   "lastOpenFiles": [
-    "_notes/suwen.md",
-    "_notes/JAVA.md",
+    "assets/images/Build a Large Language Model From Scratch-2.png",
+    "assets/images/Build a Large Language Model From Scratch-1.png",
+    "_notes/杂项/技术探索.md",
+    "_notes/Build a Large Language Model From Scratch.md",
+    "_pages/index.md",
     "_notes/杂项/关于我.md",
     "_notes/面试.md",
+    "_notes/JAVA.md",
+    "_notes/suwen.md",
     "_notes/Netty.md",
     "assets/images/JAVA-4.png",
     "assets/images/JAVA-3.png",
@@ -198,13 +203,8 @@
     "_notes/面试题目整理.md",
     "assets/images/面试题目整理-1.png",
     "_notes/腾讯招聘要求.md",
-    "_notes/Elasticsearch 面试题目整理.md",
-    "_notes/简历.md",
     "assets/images/腾讯招聘要求-3.png",
     "assets/images/腾讯招聘要求-2.png",
-    "assets/images/腾讯招聘要求-1.png",
-    "_notes/Go 面试题.md",
-    "_notes/Go 并发编程.md",
     "简历.pdf",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",

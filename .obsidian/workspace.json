@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Build a Large Language Model From Scratch.md",
+                "file": "_notes/Spring.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Build a Large Language Model From Scratch"
+              "title": "Spring"
             }
           }
         ]
@@ -84,13 +84,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Build a Large Language Model From Scratch.md",
+                "file": "_notes/Spring.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Build a Large Language Model From Scratch 的大纲"
+              "title": "Spring 的大纲"
             }
           },
           {
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Build a Large Language Model From Scratch.md",
+                "file": "_notes/Spring.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Build a Large Language Model From Scratch 的反向链接列表"
+              "title": "Spring 的反向链接列表"
             }
           },
           {
@@ -118,12 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Build a Large Language Model From Scratch.md",
+                "file": "_notes/Spring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Build a Large Language Model From Scratch 的出链列表"
+              "title": "Spring 的出链列表"
             }
           },
           {
@@ -169,12 +169,15 @@
   },
   "active": "5f22630def756e90",
   "lastOpenFiles": [
-    "assets/images/Build a Large Language Model From Scratch-2.png",
-    "assets/images/Build a Large Language Model From Scratch-1.png",
+    "_notes/技术栈.md",
+    "_notes/Spring.md",
+    "_pages/index.md",
+    "_notes/杂项/人生体验清单.md",
+    "_notes/杂项/关于我.md",
     "_notes/杂项/技术探索.md",
     "_notes/Build a Large Language Model From Scratch.md",
-    "_pages/index.md",
-    "_notes/杂项/关于我.md",
+    "assets/images/Build a Large Language Model From Scratch-2.png",
+    "assets/images/Build a Large Language Model From Scratch-1.png",
     "_notes/面试.md",
     "_notes/JAVA.md",
     "_notes/suwen.md",
@@ -200,11 +203,8 @@
     "Redis常见面试题总结(上) - JavaGuide.md",
     "assets/images/Redis-2.png",
     "assets/images/Redis-1.png",
-    "_notes/面试题目整理.md",
     "assets/images/面试题目整理-1.png",
-    "_notes/腾讯招聘要求.md",
     "assets/images/腾讯招聘要求-3.png",
-    "assets/images/腾讯招聘要求-2.png",
     "简历.pdf",
     "assets/pdfs/os-dev.pdf",
     "_site/英语阅读.html",

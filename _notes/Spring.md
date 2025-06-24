@@ -13,8 +13,13 @@ Spring 使用 IoC 容器实现依赖反转，完成对象之间的关系解耦�
 Spring 体系中包含了开发中经常用到的许多服务，比如事务处理、Web MVC、JDBC、ORM、远端调用。类比驱动，没有驱动的 Linux 对与用户来讲也是没有价值的。
 - 这些服务绑定的 IoC / AOP 模块的使用接口，而不是绑定具体的 Java EE 服务。==面向接口开发而不依赖于具体的产品实现==。
 
+# IoC 容器的实现
+
 Spring IoC 提供了一个基本的 JavaBean 容器，通过 IoC 模式管理依赖关系，并通过依赖注入和 AOP 切面增强了为 JavaBean 这样的 POJO 对象赋予事务管理、生命周期管理等基本功能。
 
+BeanFactory
+
+ApplicationContext
 
 
 

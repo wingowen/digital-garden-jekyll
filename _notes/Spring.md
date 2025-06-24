@@ -17,7 +17,7 @@ Spring 体系中包含了开发中经常用到的许多服务，比如事务处�
 
 Spring IoC 提供了一个基本的 JavaBean 容器，通过 IoC 模式管理依赖关系，并通过依赖注入和 AOP 切面增强了为 JavaBean 这样的 POJO 对象赋予事务管理、生命周期管理等基本功能。
 
-BeanFactory
+BeanFactory 体现了 Spring 为提供给用户使用的 IoC 容器所设定的最基本功能规范。
 
 ApplicationContext
 

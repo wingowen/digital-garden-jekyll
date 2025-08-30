@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Spring.md",
+                "file": "_notes/K8S.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring"
+              "title": "K8S"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Spring.md",
+                "file": "_notes/K8S.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Spring 的大纲"
+              "title": "K8S 的大纲"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Spring.md",
+                "file": "_notes/K8S.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Spring 的反向链接列表"
+              "title": "K8S 的反向链接列表"
             }
           },
           {
@@ -150,13 +150,11 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,11 +167,13 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "5f22630def756e90",
+  "active": "2862b08edeb6f0b5",
   "lastOpenFiles": [
+    "_notes/Docker.md",
+    "_notes/K8S.md",
     "_notes/技术栈.md",
-    "_notes/Spring.md",
     "_pages/index.md",
+    "_notes/Spring.md",
     "_notes/杂项/人生体验清单.md",
     "_notes/杂项/关于我.md",
     "_notes/杂项/技术探索.md",
@@ -201,8 +201,6 @@
     "Redis常见面试题总结(下) - JavaGuide.md",
     "Redis常见阻塞原因总结 - JavaGuide.md",
     "Redis持久化机制详解 - JavaGuide.md",
-    "如何基于Redis实现延时任务 - JavaGuide.md",
-    "Redis常见面试题总结(上) - JavaGuide.md",
     "assets/images/Redis-2.png",
     "assets/images/Redis-1.png",
     "assets/images/面试题目整理-1.png",

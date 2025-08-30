@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/K8S.md",
+                "file": "_notes/Context Engineering.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "K8S"
+              "title": "Context Engineering"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/K8S.md",
+                "file": "_notes/Context Engineering.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "K8S 的大纲"
+              "title": "Context Engineering 的大纲"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/K8S.md",
+                "file": "_notes/Context Engineering.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "K8S 的反向链接列表"
+              "title": "Context Engineering 的反向链接列表"
             }
           },
           {
@@ -119,12 +119,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Spring.md",
+                "file": "_notes/Context Engineering.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Spring 的出链列表"
+              "title": "Context Engineering 的出链列表"
             }
           },
           {
@@ -150,7 +150,8 @@
               "title": "标签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -167,11 +168,13 @@
       "pkmer:Open Pkmer Market": true
     }
   },
-  "active": "2862b08edeb6f0b5",
+  "active": "5f22630def756e90",
   "lastOpenFiles": [
-    "_notes/Docker.md",
-    "_notes/K8S.md",
+    "_notes/Agent.md",
+    "_notes/Context Engineering.md",
     "_notes/技术栈.md",
+    "_notes/K8S.md",
+    "_notes/Docker.md",
     "_pages/index.md",
     "_notes/Spring.md",
     "_notes/杂项/人生体验清单.md",
@@ -199,8 +202,6 @@
     "3种常用的缓存读写策略详解 - JavaGuide.md",
     "assets/images/Redis-2.png",
     "Redis常见面试题总结(下) - JavaGuide.md",
-    "Redis常见阻塞原因总结 - JavaGuide.md",
-    "Redis持久化机制详解 - JavaGuide.md",
     "assets/images/Redis-2.png",
     "assets/images/Redis-1.png",
     "assets/images/面试题目整理-1.png",

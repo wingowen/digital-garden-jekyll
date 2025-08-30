@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Context Engineering.md",
+                "file": "_notes/Claud Code Prompt.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Context Engineering"
+              "title": "Claud Code Prompt"
             }
           }
         ]
@@ -85,13 +85,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/Context Engineering.md",
+                "file": "_notes/Claud Code Prompt.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Context Engineering 的大纲"
+              "title": "Claud Code Prompt 的大纲"
             }
           },
           {
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Context Engineering.md",
+                "file": "_notes/Claud Code Prompt.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Context Engineering 的反向链接列表"
+              "title": "Claud Code Prompt 的反向链接列表"
             }
           },
           {
@@ -119,12 +119,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_notes/Context Engineering.md",
+                "file": "_notes/Claud Code Prompt.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Context Engineering 的出链列表"
+              "title": "Claud Code Prompt 的出链列表"
             }
           },
           {
@@ -169,8 +169,8 @@
   },
   "active": "5f22630def756e90",
   "lastOpenFiles": [
-    "_notes/Claud Code Prompt.md",
     "_notes/Context Engineering.md",
+    "_notes/Claud Code Prompt.md",
     "_notes/Agent.md",
     "_notes/技术栈.md",
     "_notes/K8S.md",

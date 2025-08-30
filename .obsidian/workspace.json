@@ -150,8 +150,7 @@
               "title": "标签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -170,8 +169,9 @@
   },
   "active": "5f22630def756e90",
   "lastOpenFiles": [
-    "_notes/Agent.md",
+    "_notes/Claud Code Prompt.md",
     "_notes/Context Engineering.md",
+    "_notes/Agent.md",
     "_notes/技术栈.md",
     "_notes/K8S.md",
     "_notes/Docker.md",
@@ -201,7 +201,6 @@
     "assets/images/MySQL-1.png",
     "3种常用的缓存读写策略详解 - JavaGuide.md",
     "assets/images/Redis-2.png",
-    "Redis常见面试题总结(下) - JavaGuide.md",
     "assets/images/Redis-2.png",
     "assets/images/Redis-1.png",
     "assets/images/面试题目整理-1.png",

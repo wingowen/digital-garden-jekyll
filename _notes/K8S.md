@@ -2,9 +2,31 @@
 ---
 [[Docker]]
 
+[Kubernetes指南](https://www.bookstack.cn/read/feiskyer-kubernetes-handbook-202005/README.md)
 # 简介
 
-## 核心组件
+## 基本概念
+
+### container
+
+### pod
+
+Pod 是一组紧密关联的容器集合，它们共享 PID、IPC、Network 和 UTS namespace，是 Kubernetes 调度的基本单位。Pod 内的多个容器共享网络和文件系统，可以通过进程间通信和文件共享这种简单高效的方式组合完成服务。
+- **PID namespace**：容器之间可以看到彼此的进程（可选，取决于配置）。
+- **IPC namespace**：容器之间可以通过进程间通信（如共享内存）进行通信。
+- **Network namespace**：所有容器共享同一个网络栈，包括 IP 地址和端口空间，因此它们可以通过 `localhost` 互相通信。
+- **UTS namespace**：容器共享主机名。
+
+IPC 是 **Inter-Process Communication**（进程间通信）的缩写，指操作系统为用户态进程提供的**数据交换与同步手段**。它让两个或多个彼此独立的进程能够：
+- 交换数据（消息、字节流、共享对象）
+- 同步执行（锁、信号、事件）
+- 共享资源（内存、文件描述符、信号量等）
+
+### node
+
+
+
+### 核心组成
 
 Kubernetes 主要由以下几个核心组件组成：
 - etcd 保存了整个集群的状态；
@@ -13,7 +35,9 @@ Kubernetes 主要由以下几个核心组件组成：
 - scheduler 负责资源的调度，按照预定的调度策略将 Pod 调度到相应的机器上；
 - kubelet 负责维护容器的生命周期，同时也负责 Volume（CVI）和网络（CNI）的管理；
 - Container runtime 负责镜像管理以及 Pod 和容器的真正运行（CRI）；
-- kube-proxy 负责为 Service 提供 cluster 内部的服务发现和负载均衡
+- kube-proxy 负责为 Service 提供 cluster 内部的服务发现和负载均衡。
+
+
 
 # 控制器
 

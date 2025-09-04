@@ -7,7 +7,13 @@
 
 ## 基本概念
 
-### container
+- Container
+- Pod
+- Node
+- Namespace
+- Service
+- Label
+- Annotation
 
 ### pod
 
@@ -23,6 +29,14 @@ IPC 是 **Inter-Process Communication**（进程间通信）的缩写，指操�
 - 共享资源（内存、文件描述符、信号量等）
 
 ### node
+
+Node 是 Pod 真正运行的主机。为了管理 Pod，每个 Node 节点上至少要运行 container runtime（比如 docker 或者 rkt）、`kubelet` 和 `kube-proxy` 服务。
+
+### namespace
+
+Namespace 是对一组资源和对象的抽象集合，比如可以用来将系统内部的对象划分为不同的项目组或用户组。
+
+### service
 
 
 

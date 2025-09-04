@@ -8,10 +8,10 @@
 ## 基本概念
 
 - Container
-- Pod
-- Node
-- Namespace
-- Service
+- Pod：Pod 是一组紧密关联的容器集合，它们共享 PID、IPC、Network 和 UTS namespace，是 Kubernetes 调度的基本单位。
+- Node：是 Pod 真正运行的主机。为了管理 Pod，每个 Node 节点上至少要运行 container runtime（比如 docker 或者 rkt）、`kubelet` 和 `kube-proxy` 服务。
+- Namespace：是对一组资源和对象的抽象集合，比如可以用来将系统内部的对象划分为不同的项目组或用户组。
+- Service：Service 是应用服务的抽象，通过 labels 为应用提供负载均衡和服务发现。匹配 labels 的 Pod IP 和端口列表组成 endpoints，由 kube-proxy 负责将服务 IP 负载均衡到这些 endpoints 上。
 - Label
 - Annotation
 
@@ -27,18 +27,6 @@ IPC 是 **Inter-Process Communication**（进程间通信）的缩写，指操�
 - 交换数据（消息、字节流、共享对象）
 - 同步执行（锁、信号、事件）
 - 共享资源（内存、文件描述符、信号量等）
-
-### node
-
-Node 是 Pod 真正运行的主机。为了管理 Pod，每个 Node 节点上至少要运行 container runtime（比如 docker 或者 rkt）、`kubelet` 和 `kube-proxy` 服务。
-
-### namespace
-
-Namespace 是对一组资源和对象的抽象集合，比如可以用来将系统内部的对象划分为不同的项目组或用户组。
-
-### service
-
-
 
 ### 核心组成
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_notes/Agent.md",
+                "file": "_notes/Agent 的日志处理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agent"
+              "title": "Agent 的日志处理"
             }
           }
         ]
@@ -100,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/Agent.md",
+                "file": "_notes/Agent 的日志处理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Agent 的反向链接列表"
+              "title": "Agent 的日志处理 的反向链接列表"
             }
           },
           {
@@ -171,11 +171,12 @@
   },
   "active": "5f22630def756e90",
   "lastOpenFiles": [
+    "_notes/Agent.md",
+    "_notes/Agent 的日志处理.md",
     "_notes/技术栈.md",
     "_pages/index.md",
     "_notes/杂项/关于我.md",
     "_notes/简历.md",
-    "_notes/Agent.md",
     "_notes/Context Engineering.md",
     "_notes/Claud Code Prompt.md",
     "_notes/K8S.md",
@@ -200,7 +201,6 @@
     "_notes/面试项目准备.md",
     "MySQL常见面试题总结 - JavaGuide.md",
     "_notes/Nginx.md",
-    "40 道 Nginx 精选面试题👍 - 二哥的Java进阶之路.md",
     "assets/images/MySQL-1.png",
     "assets/images/Redis-2.png",
     "assets/images/Redis-2.png",

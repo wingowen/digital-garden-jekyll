@@ -2,6 +2,57 @@
 ---
 [二哥的 JAVA 进阶之路](https://javabetter.cn/thread/wangzhe-thread.html)
 
+# 基础
+
+## OOP 三大特性
+
+封装
+
+继承
+
+```java
+class Parent {
+    private int money = 10000;          // 私有字段
+    private void printMoney() {
+        System.out.println("money = " + money);
+    }
+}
+
+class Child extends Parent { }
+
+public class Demo {
+    public static void main(String[] args) {
+        Child c = new Child();
+        // 利用反射这把“万能钥匙”偷看
+        Field f = Child.class.getSuperclass().getDeclaredField("money");
+        f.setAccessible(true);
+        System.out.println(f.get(c));   // 输出 10000
+    }
+}
+
+class Child extends Parent {
+    void spend() {
+        money -= 100;      // 编译错误：money has private access in Parent
+        printMoney();      // 编译错误：printMoney() has private access in Parent
+    }
+}
+
+
+class Parent {
+    private int money = 10000;
+    protected int getMoney() { return money; }
+    protected void setMoney(int m) { money = m; }
+}
+
+class Child extends Parent {
+    void spend(int amount) {
+        setMoney(getMoney() - amount);   // 合法：通过 protected 方法间接改
+    }
+}
+```
+
+多态
+
 # 多线程
 
 ## 基础

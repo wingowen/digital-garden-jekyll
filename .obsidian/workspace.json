@@ -8,35 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5f22630def756e90",
+            "id": "c58bb0de5f3cdb7d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "_notes/雅思.md",
-                "mode": "source",
-                "source": false
+                "file": "_notes/物品清单.base",
+                "viewName": "表格"
               },
-              "icon": "lucide-file",
-              "title": "雅思"
-            }
-          },
-          {
-            "id": "7651c0a999472014",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_notes/物品清单.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
+              "icon": "lucide-table",
               "title": "物品清单"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 234.5,
+    "collapsed": true
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -100,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/物品清单.md",
+                "file": "_notes/物品清单.base",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/物品清单.md",
+                "file": "_notes/物品清单.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -191,14 +176,14 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "7651c0a999472014",
+  "active": "c58bb0de5f3cdb7d",
   "lastOpenFiles": [
+    "_notes/物品清单.md",
+    "_notes/物品清单.base",
+    "_notes/物品清单/Red Mi Turbo.md",
     "_notes/物品清单/JBL 音箱.md",
     "_notes/物品清单/Xiao Mi Brand 7 NFC.md",
-    "_notes/物品清单/Red Mi Turbo.md",
     "_notes/物品清单/Xiao Mi Pad 5 + Origin Pencil.md",
-    "_notes/物品清单.md",
-    "_notes/未命名.base",
     "_notes/物品清单/未命名.md",
     "_notes/物品清单/Air Pod 1.md",
     "_notes/物品清单/MacBook Pro.md",
@@ -220,7 +205,6 @@
     "_notes/简历.md",
     "_notes/Context Engineering.md",
     "_notes/Claud Code Prompt.md",
-    "_notes/Docker.md",
     "assets/images/Build a Large Language Model From Scratch-2.png",
     "assets/images/Build a Large Language Model From Scratch-1.png",
     "assets/images/JAVA-4.png",

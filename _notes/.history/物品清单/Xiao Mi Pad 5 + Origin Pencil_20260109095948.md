@@ -1,26 +1,25 @@
 ---
 tags:
   - 电子产品
-  - Apple
 ---
 
-# iPad Pro + Apple pencil
+# Xiao Mi Pad 5 + Origin Pencil
 
-## iPad Pro 基本信息
-- **型号**: iPad Pro
+## Xiao Mi Pad 5 基本信息
+- **型号**: Xiao Mi Pad 5
 - **尺寸**: 
 - **存储容量**: 
 - **购买日期**: 
 - **序列号**: 
 - **保修状态**: 
 
-## iPad Pro 配置信息
+## Xiao Mi Pad 5 配置信息
 - **处理器**: 
 - **屏幕**: 
 - **颜色**: 
 
-## Apple Pencil 基本信息
-- **型号**: Apple Pencil
+## Origin Pencil 基本信息
+- **型号**: Origin Pencil
 - **版本**: 
 - **购买日期**: 
 - **序列号**: 
@@ -30,6 +29,6 @@ tags:
 - 数据线
 - 保护壳
 - 贴膜
-- Apple Pencil 笔尖
+- Origin Pencil 笔尖
 
 ## 备注

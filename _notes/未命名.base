@@ -6,7 +6,7 @@ views:
         - file.inFolder("_notes/物品清单")
     order:
       - file.name
-      - 标签
+      - file.tags
     sort:
       - property: file.name
         direction: ASC

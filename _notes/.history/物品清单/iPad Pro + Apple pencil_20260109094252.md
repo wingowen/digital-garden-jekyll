@@ -1,8 +1,3 @@
----
-tags:
-  - 电子产品
----
-
 # iPad Pro + Apple pencil
 
 ## iPad Pro 基本信息

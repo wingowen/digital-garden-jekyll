@@ -1,8 +1,3 @@
----
-tags:
-  - 电子产品
----
-
 # Apple Watch Series 9
 
 ## 基本信息

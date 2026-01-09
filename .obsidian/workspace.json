@@ -25,10 +25,14 @@
             "id": "7651c0a999472014",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_notes/物品清单.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "物品清单"
             }
           }
         ],
@@ -79,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 234.5
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -97,6 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_notes/物品清单.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +110,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "物品清单 的反向链接列表"
             }
           },
           {
@@ -159,12 +163,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "_notes/物品清单.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "物品清单 的大纲"
             }
           }
         ]
@@ -188,10 +193,16 @@
   },
   "active": "7651c0a999472014",
   "lastOpenFiles": [
-    "_notes/雅思.md",
-    "_notes/物品清单.md",
-    "_notes/物品清单",
     "_notes/未命名.base",
+    "_notes/物品清单.md",
+    "_notes/物品清单/未命名.md",
+    "_notes/物品清单/Air Pod 1.md",
+    "_notes/物品清单/MacBook Pro.md",
+    "_notes/物品清单/iPad Pro + Apple pencil.md",
+    "_notes/物品清单/Apple Watch Series 9.md",
+    "_notes/物品清单/iPhone 15 Pro 256G.md",
+    "_notes/雅思.md",
+    "_notes/物品清单",
     "_notes/单词学习.md",
     "_notes/杂项/碎碎念.md",
     "_pages/index.md",
@@ -209,16 +220,10 @@
     "_notes/Spring.md",
     "_notes/杂项/人生体验清单.md",
     "_notes/杂项/技术探索.md",
-    "_notes/Build a Large Language Model From Scratch.md",
     "assets/images/Build a Large Language Model From Scratch-2.png",
     "assets/images/Build a Large Language Model From Scratch-1.png",
-    "_notes/suwen.md",
-    "_notes/Netty.md",
     "assets/images/JAVA-4.png",
     "assets/images/JAVA-3.png",
-    "_notes/MySQL.md",
-    "_notes/Redis.md",
-    "_notes/SpringBoot.md",
     "assets/images/MySQL-1.png",
     "assets/images/Redis-2.png",
     "assets/images/Redis-2.png",

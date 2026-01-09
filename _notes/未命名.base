@@ -3,6 +3,12 @@ views:
     name: 表格
     filters:
       and:
-        - file.inFolder("/物品清单")
+        - file.inFolder("_notes/物品清单")
+    order:
+      - file.name
+      - 标签
+    sort:
+      - property: file.name
+        direction: ASC
   - type: table
     name: 视图

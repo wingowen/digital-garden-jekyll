@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "cecb256065ea55bc",
+        "id": "85335cdd8da219dc",
         "type": "tabs",
         "children": [
           {
-            "id": "527fac3652464d2c",
+            "id": "5152a096d6e7927b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_pages/index.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "index"
             }
           }
         ]
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_notes/物品清单.base",
+                "file": "_pages/index.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,7 +95,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "物品清单 的反向链接列表"
+              "title": "index 的反向链接列表"
             }
           },
           {
@@ -144,13 +148,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_notes/物品清单.base",
+                "file": "_pages/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "物品清单 的大纲"
+              "title": "index 的大纲"
             }
           }
         ]
@@ -162,7 +166,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:创建新数据库": false,
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -172,8 +176,12 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "527fac3652464d2c",
+  "active": "5152a096d6e7927b",
   "lastOpenFiles": [
+    "_notes/杂项/关于我.md",
+    "_notes/考研/考研.md",
+    "_notes/英语阅读.md",
+    "_notes/2010 考研英语二真题.md",
     "_notes/物品清单.base",
     "_notes/物品清单/Air Pod 1.md",
     "_notes/物品清单.md",
@@ -194,13 +202,10 @@
     "_notes/JAVA.md",
     "_notes/面试.md",
     "_notes/技术栈.md",
-    "_notes/杂项/关于我.md",
     "_notes/K8S.md",
     "_notes/Agent 的日志处理.md",
     "_notes/Agent.md",
     "_notes/简历.md",
-    "_notes/Context Engineering.md",
-    "_notes/Claud Code Prompt.md",
     "assets/images/Build a Large Language Model From Scratch-2.png",
     "assets/images/Build a Large Language Model From Scratch-1.png",
     "assets/images/JAVA-4.png",

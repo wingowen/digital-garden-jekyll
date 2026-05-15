@@ -2,6 +2,9 @@
 tags:
   - 电子产品
   - Redmi
+状态:
+  - 偶尔
+备注: 备用机
 ---
 
 # Red Mi Turbo

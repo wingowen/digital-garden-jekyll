@@ -2,6 +2,8 @@
 tags:
   - 电子产品
   - Apple
+状态:
+  - 闲置
 ---
 
 # Air Pod 1

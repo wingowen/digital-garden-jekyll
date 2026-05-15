@@ -8,16 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c58bb0de5f3cdb7d",
+            "id": "527fac3652464d2c",
             "type": "leaf",
             "state": {
-              "type": "bases",
-              "state": {
-                "file": "_notes/物品清单.base",
-                "viewName": "表格"
-              },
-              "icon": "lucide-table",
-              "title": "物品清单"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -67,8 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5,
-    "collapsed": true
+    "width": 234.5
   },
   "right": {
     "id": "e087b5a5abfdc25d",
@@ -176,16 +172,16 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "c58bb0de5f3cdb7d",
+  "active": "527fac3652464d2c",
   "lastOpenFiles": [
-    "_notes/物品清单.md",
     "_notes/物品清单.base",
+    "_notes/物品清单/Air Pod 1.md",
+    "_notes/物品清单.md",
     "_notes/物品清单/Red Mi Turbo.md",
     "_notes/物品清单/JBL 音箱.md",
     "_notes/物品清单/Xiao Mi Brand 7 NFC.md",
     "_notes/物品清单/Xiao Mi Pad 5 + Origin Pencil.md",
     "_notes/物品清单/未命名.md",
-    "_notes/物品清单/Air Pod 1.md",
     "_notes/物品清单/MacBook Pro.md",
     "_notes/物品清单/iPad Pro + Apple pencil.md",
     "_notes/物品清单/Apple Watch Series 9.md",

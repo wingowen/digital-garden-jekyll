@@ -2,6 +2,8 @@
 tags:
   - 电子产品
   - Apple
+状态:
+  - 经常
 ---
 
 # Apple Watch Series 9

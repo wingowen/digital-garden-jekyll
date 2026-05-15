@@ -2,6 +2,8 @@
 tags:
   - 电子产品
   - Xiaomi
+状态:
+  - 闲置
 ---
 
 # Xiao Mi Pad 5 + Origin Pencil

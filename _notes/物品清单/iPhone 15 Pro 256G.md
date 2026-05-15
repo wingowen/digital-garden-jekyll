@@ -2,6 +2,9 @@
 tags:
   - 电子产品
   - Apple
+状态:
+  - 经常
+备注: 主力机
 ---
 
 # iPhone 15 Pro 256G

@@ -1,0 +1,45 @@
+Global View - Booking A Hotel Room (C0344) continued
+Daily Life - Working Out (C0345)
+- Do you want to go catch a movie tonight?
+- I can't, I have to go to the gym.
+- Come on! You can go tomorrow, just skip it today. It's not as if you are gonna get in trouble!
+- Actually I will! I am working out with a personal trainer that gets on my case if I don't go. I like it, because it makes me feel more obligated to go and get healthy.
+- That's cool, does your personal trainer basically teach you how to work out?
+- Yeah. He makes a work out plan depending on to areas I want to work on, or to muscles I want to build. Like for example in order to get better muscle tone in my abs, pecs and biceps, he makes me work out with free weights. Then for my quads, calves and hamstrings, I do leg lifts or squats.
+- Sounds like you are really getting in shape!
+Global View - All About Wines (C0346)
+- Hello there, welcome to WineWorld. Let me know if I can help you out at all.
+- Um, yes, please, I could really use some help. I'm going over to my boss' house for dinner tonight and don't know what kind of wine I should bring.
+- OK, do you know what kind of food will be served?
+- Well, his wife is Japanese. He said she makes really good sushi.
+- Hmm, that's a bit of a challenge. Sushi is notoriously difficult to pair with wine. Well, let's see. It have to be a white wine, of course.
+- Why? Wouldn't a red wine go well with sushi?
+- No, I don't think so. Sushi is a very delicately flavored food, and red wine would be a jarring contrast. You need a white wine, which has more subtle flavors, to complement to fish.
+- I see. So should I get a bottle of Chardonnay? That's a white wine, right?
+- Yes, Chardonnay is a white wine, but I'm not sure it'd be your best bet. Chardonnay is one of to more full-bodied whites, and tends to be a bit oaky. I'd suggest that you go for something brighter, like this Sauvignon Blanc from New Zealand.
+- Sauvignon Blanc? What's that?
+- That's another varietal, or type of grape, just like Chardonnay.
+- Let's see. The label says it's got "attractive citrus and grassy aromas that give way to crisp, mineral flavors and a bone-dry finish. Serve chilled." Oh, no, how long will it take to chill to wine? I'm on my way to dinner now.
+- It's OK, don't worry, we'll just choose a wine from to cooler. We don't have quite as extensive a selection over here, but...this Rhone Valley white would be lovely.
+- All right. What varietal is that?
+- Well, this is a French wine, so they don't always specify to varietal on to label. The French believe that to soil a grape is grown in is one of to most important factors in to final flavor of to wine. This wine is probably a blend of a few different types of to grapes, mostly Viognier, I'd guess.
+- And you think this is a good wine?
+- Yes, this is one of our best-sellers. It's not quite as dry as to Sauvignon Blanc we were looking at earlier, which means it's more approachable. It's light and crisp, with a bit of a vanilla aroma.
+- Perfect! I'll take it!
+Global View - Immigration and Customs (C0347)
+- Good afternoon, passport and arrival card please.
+- Here you are.
+- Where are you coming from?
+- China.
+- Is this your country of birth or residence.
+- I just work there.
+- What is to purpose of your visit to to United States?
+- I'm here on vacation.
+- How long do you plan to stay in to United States?
+- Almost three weeks.
+- Sir, you didn't fill out to information on to your arrival card of where you will be staying.
+- Oh, I'm sorry, but there are a couple of different places I will travel to within to United States, so I wasn't sure what to put.
+- You must specify an address of to place where you will spend most of your time.
+- Ok, here you are.
+- Do you have enough means to support yourself while you are here?
+- Yes. I have some travellers cheques and two credit cards.

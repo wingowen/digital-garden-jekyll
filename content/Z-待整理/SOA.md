@@ -1,0 +1,1 @@
+﻿---\ntitle: SOA\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [待整理, 架构]\n---\nSOA Service-Oriented Architecture 面向服务的架构。

@@ -1,4 +1,10 @@
-﻿---\ntitle: Hadoop 面经\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Hadoop]\n---\n# 介绍下 Hadoop
+﻿---
+title: Hadoop 面经
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [大数据, Hadoop]
+---
+# 介绍下 Hadoop
 
 Hadoop 是一个开源的分布式存储和计算框架，最初由 Apache 软件基金会开发。
 处理大规模数据集，通过在计算机集群上分布式处理数据来实现高吞吐量的数据访问。

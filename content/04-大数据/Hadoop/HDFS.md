@@ -1,4 +1,10 @@
-﻿---\ntitle: HDFS\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Hadoop]\n---\nNamenode 是一个中心服务器，负责管理文件系统的命名空间以及文件的访问控制。执行文件系统的命名空间操作，比如打开、关闭、重命名文件或目录。它也负责确定数据块到具体 Datanode 设备的映射。为了保证文件系统的高可靠，往往需要另一个 Standby 的 Namenode 在 Actived Namenode 出现问题后，立刻接管文件系统。
+﻿---
+title: HDFS
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [大数据, Hadoop]
+---
+Namenode 是一个中心服务器，负责管理文件系统的命名空间以及文件的访问控制。执行文件系统的命名空间操作，比如打开、关闭、重命名文件或目录。它也负责确定数据块到具体 Datanode 设备的映射。为了保证文件系统的高可靠，往往需要另一个 Standby 的 Namenode 在 Actived Namenode 出现问题后，立刻接管文件系统。
 
 Datanode一般是一个设备上部署一个，负责管理它所在节点上的存储。负责处理文件系统客户端的读写请求。在 Namenod e的统一调度下进行数据块的创建、删除和复制。
 

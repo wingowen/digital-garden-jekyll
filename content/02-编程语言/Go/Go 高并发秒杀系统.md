@@ -1,8 +1,8 @@
----
-title: Go 高并发秒杀系统
+﻿---
+title: Go 楂樺苟鍙戠鏉€绯荤粺
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [编程语言, Go, 项目]
+tags: [缂栫▼璇█, Go, 椤圭洰]
 ---
 
 ```text
@@ -20,6 +20,6 @@ tags: [编程语言, Go, 项目]
 }
 ```
 
-![[assets/images/Go 高并发秒杀系统-1.png]]
+![[assets/images/Go 楂樺苟鍙戠鏉€绯荤粺-1.png]]
 
-![[assets/images/Go 高并发秒杀系统-2.png]]
+![[assets/images/Go 楂樺苟鍙戠鏉€绯荤粺-2.png]]

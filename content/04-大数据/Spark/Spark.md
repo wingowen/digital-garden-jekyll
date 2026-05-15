@@ -1,4 +1,10 @@
-﻿---\ntitle: Spark\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Spark]\n---\n# RDD
+﻿---
+title: Spark
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [大数据, Spark]
+---
+# RDD
 
 `RDD` 全称为 Resilient Distributed Datasets，是 Spark 最基本的数据抽象，它是只读的、分区记录的集合，支持并行操作，可以由外部数据集或其他 RDD 转换而来。
 - `RDD` 由一个或多个 `Partitions`  组成，每个分区会被一个计算任务所处理，用户可以在创建 `RDD` 时指定其分区个数，如果没有指定，则默认采用程序所分配到的 CPU 的核心数；`K-V RDD` 拥有 `Partitioner`。

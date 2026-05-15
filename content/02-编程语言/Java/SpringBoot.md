@@ -1,39 +1,38 @@
----
+﻿---
 title: SpringBoot
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [编程语言, Java, SpringBoot]
+tags: [缂栫▼璇█, Java, SpringBoot]
 ---
 
 [GitHub - spring-reading](https://github.com/xuchengsheng/spring-reading?tab=readme-ov-file)
 
 [[JAVA]]
 
-[练手项目](https://gitee.com/wingowen/demo-mybatis-plus)
+[缁冩墜椤圭洰](https://gitee.com/wingowen/demo-mybatis-plus)
 
-# 注解
+# 娉ㄨВ
 
-自定义注解的实现方式
-- 拦截器
-- AOP
+鑷畾涔夋敞瑙ｇ殑瀹炵幇鏂瑰紡
+- 鎷︽埅鍣?- AOP
 
 # IO
 
 ```java
 /*
-读取 Resources 下的文件
+璇诲彇 Resources 涓嬬殑鏂囦欢
 */
 
-// 报错代码
+// 鎶ラ敊浠ｇ爜
 ClassPathResource resource = new ClassPathResource("DeviceCert.cer");
 String certFilePath = resource.getURL().getPath();
 FileInputStream fis = new FileInputStream(certFilePath)
-// 这样读不到，因为这里 resource.getURL().getPath() 获取的路径协议非通用
-// 修正代码，直接获取流进行使用
+// 杩欐牱璇讳笉鍒帮紝鍥犱负杩欓噷 resource.getURL().getPath() 鑾峰彇鐨勮矾寰勫崗璁潪閫氱敤
+// 淇浠ｇ爜锛岀洿鎺ヨ幏鍙栨祦杩涜浣跨敤
 ClassPathResource resource = new ClassPathResource("DeviceCert.cer");
 InputStream inputStream = resource.getInputStream()
 
-// 通用方法
+// 閫氱敤鏂规硶
 public static String readFileFromResource(String fileName) {
 	String content;
 	try (InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(fileName)) {
@@ -55,7 +54,7 @@ public static String readFileFromResource(String fileName) {
 
 ```java
 /*
-打包运行报错：找不到主类清单
+鎵撳寘杩愯鎶ラ敊锛氭壘涓嶅埌涓荤被娓呭崟
 */
 
 
@@ -64,9 +63,9 @@ public static String readFileFromResource(String fileName) {
 # Context
 
 ```java
-// 在 Spring Boot 项目中通常存在两种管理方式
-// 一、SpringBoot 管理的上下文对象
-// 二、普通的 Java 对象
+// 鍦?Spring Boot 椤圭洰涓€氬父瀛樺湪涓ょ绠＄悊鏂瑰紡
+// 涓€銆丼pringBoot 绠＄悊鐨勪笂涓嬫枃瀵硅薄
+// 浜屻€佹櫘閫氱殑 Java 瀵硅薄
 
 
 ```

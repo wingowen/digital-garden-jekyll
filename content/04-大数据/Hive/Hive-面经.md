@@ -1,4 +1,10 @@
-﻿---\ntitle: Hive 面经\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Hive]\n---\n# Hive 的优缺点与作用
+﻿---
+title: Hive 面经
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [大数据, Hive]
+---
+# Hive 的优缺点与作用
 
 Hive 是一个建立在 Hadoop 之上的数据仓库工具，它提供了一种类似于 SQL 的查询语言（HiveQL），使得熟悉 SQL 的分析师可以方便地对大规模数据集进行查询和分析。Hive 将 SQL 查询转换为一系列的 MapReduce 作业，从而利用 Hadoop 的分布式计算能力处理大数据。
 

@@ -1,8 +1,8 @@
----
+﻿---
 title: Build a Large Language Model From Scratch
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [机器学习, AI, 大模型]
+tags: [鏈哄櫒瀛︿範, AI, 澶фā鍨媇
 ---
 
 # Data Preparation & Sampling

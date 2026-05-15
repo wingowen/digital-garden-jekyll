@@ -1,4 +1,10 @@
-﻿---\ntitle: Flink 面经\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Flink]\n---\nFlink 是一个分布式流处理框架，具有高吞吐量、低延迟和容错性强的特点。
+﻿---
+title: Flink 面经
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [大数据, Flink]
+---
+Flink 是一个分布式流处理框架，具有高吞吐量、低延迟和容错性强的特点。
 # Flink 架构
 
 - **JobManager**：负责协调分布式执行，包括任务调度、失败恢复等。

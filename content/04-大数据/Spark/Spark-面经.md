@@ -1,4 +1,10 @@
-﻿---\ntitle: Spark 面经\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Spark]\n---\n# Spark 的运行流程
+﻿---
+title: Spark 面经
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [大数据, Spark]
+---
+# Spark 的运行流程
 
 - 初始化 SparkContext：创建 SparkContext 对象，初始化 Spark 应用。
 - 创建 RDD：从数据源创建 RDD。

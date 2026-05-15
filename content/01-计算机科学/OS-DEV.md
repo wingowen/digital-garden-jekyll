@@ -1,17 +1,17 @@
----
+﻿---
 title: OS-DEV
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [计算机科学]
+tags: [璁＄畻鏈虹瀛
 ---
 
-<object data="/assets/pdfs/os-dev.pdf" type="application/pdf" width="100%" height="800" style="”border:"></object>
+<object data="/assets/pdfs/os-dev.pdf" type="application/pdf" width="100%" height="800" style="鈥漛order:"></object>
 
 ```
 brew install bochs sdl nasm
 ```
 
-[手写一个简单的操作系统](https://jaylinh-com.github.io/os-dev/doc/introduction.html)
+[鎵嬪啓涓€涓畝鍗曠殑鎿嶄綔绯荤粺](https://jaylinh-com.github.io/os-dev/doc/introduction.html)
 
 # The Boot Process
 

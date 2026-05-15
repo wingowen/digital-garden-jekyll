@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "数字花园",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -64,7 +64,8 @@
               "title": "搜索"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -176,7 +177,7 @@
       "pkmer:Open Pkmer Market": false
     }
   },
-  "active": "46f954af614e0acc",
+  "active": "60c85303b0664253",
   "lastOpenFiles": [
     "content/01-计算机科学/Linux.md",
     "content/01-计算机科学/OS-DEV.md",

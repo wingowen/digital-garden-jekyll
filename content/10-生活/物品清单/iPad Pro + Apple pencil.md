@@ -2,8 +2,9 @@
 title: iPad Pro + Apple pencil
 date: 2026-01-09
 lastmod: 2026-01-09
-tags: [生活, 物品]
+tags: [生活]
 ---
+
 # iPad Pro + Apple pencil
 
 ## iPad Pro 基本信息
@@ -33,5 +34,3 @@ tags: [生活, 物品]
 - Apple Pencil 笔尖
 
 ## 备注
-
-

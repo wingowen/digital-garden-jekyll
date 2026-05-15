@@ -1,8 +1,8 @@
 ﻿---
-title: Nginx
+title: Nginx 如何处理请求
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [待整理, DevOps]
+tags: [待整理]
 ---
 # Nginx 如何处理请求
 
@@ -82,6 +82,4 @@ location / {
 # Nginx 限流
 
 Nginx中使用`ngx_http_limit_req_module`模块来限制的访问频率，限制的原理实质是基于漏桶算法原理来实现的。在nginx.conf配置文件中可以使用`limit_req_zone`命令及`limit_req`命令限制单个IP的请求处理频率。
-
-
 

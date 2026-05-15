@@ -1,10 +1,9 @@
 ﻿---
-title: Build a Large Language Model From Scratch
+title: Data Preparation & Sampling
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [鏈哄櫒瀛︿範, AI, 澶фā鍨媇
+tags: [待整理]
 ---
-
 # Data Preparation & Sampling
 
 **Embedding** model converts raw input into a vector representation.

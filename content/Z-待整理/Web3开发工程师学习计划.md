@@ -2,7 +2,7 @@
 title: Web3开发工程师学习计划
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [待整理, Web3]
+tags: [待整理]
 ---
 https://github.com/smartcontractkit/full-blockchain-solidity-course-js
 
@@ -110,4 +110,3 @@ https://github.com/smartcontractkit/full-blockchain-solidity-course-js
 3. **网络建设**：加入Discord技术频道（如Chainlink Builders）
 
 通过以上计划，每天投入3小时学习，预计6个月可达到初级工程师水平。建议每完成一个阶段后复盘知识盲区，及时补充学习。Web3技术迭代迅速，需持续关注新趋势（如ERC-4337账户抽象、LSTFi等）。
-

@@ -2,8 +2,9 @@
 title: iPhone 15 Pro 256G
 date: 2026-01-09
 lastmod: 2026-01-09
-tags: [生活, 物品]
+tags: [生活]
 ---
+
 # iPhone 15 Pro 256G
 
 ## 基本信息
@@ -28,5 +29,3 @@ tags: [生活, 物品]
 - 贴膜
 
 ## 备注
-
-

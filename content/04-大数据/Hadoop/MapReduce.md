@@ -1,10 +1,10 @@
 ﻿---
-title: MapReduce
-date: 2025-09-01
-lastmod: 2025-09-01
-tags: [大数据, Hadoop]
+title: 作业启动
+date: 2026-05-15
+lastmod: 2026-05-15
+tags: [大数据]
 ---
-# 计算过程
+﻿---\ntitle: MapReduce\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Hadoop]\n---\n# 计算过程
 
 一个典型的 MR 作业。
 

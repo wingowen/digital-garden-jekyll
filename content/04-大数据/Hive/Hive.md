@@ -1,10 +1,10 @@
 ﻿---
-title: Hive
-date: 2025-09-01
-lastmod: 2025-09-01
-tags: [大数据, Hive]
+title: 特性
+date: 2026-05-15
+lastmod: 2026-05-15
+tags: [大数据]
 ---
-Hive 基本介绍及简单使用。
+﻿---\ntitle: Hive\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Hive]\n---\nHive 基本介绍及简单使用。
 
 <!-- more -->
 
@@ -185,8 +185,7 @@ row format delimited
 fields terminated by ','
 collection items terminated by '_'
 map keys terminated by ':'
-lines terminated by '
-';
+lines terminated by '\n';
 ```
 
 ```shell

@@ -1,10 +1,10 @@
 ﻿---
 title: Yarn
-date: 2025-09-01
-lastmod: 2025-09-01
-tags: [大数据, Hadoop]
+date: 2026-05-15
+lastmod: 2026-05-15
+tags: [大数据]
 ---
-![](assets/images/Yarn-1.png)
+﻿---\ntitle: Yarn\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Hadoop]\n---\n![](assets/images/Yarn-1.png)
 
 ResourceManager 是一个全局的资源管理器，负责整个系统的资源管理和分配。它主要由两个组件构成：调度器 Scheduler 和应用程序管理器 Applications Manager。
 - 调度器根据容量、队列等限制条件，将系统中的资源分配给各个正在运行的 MapReduce 程序。

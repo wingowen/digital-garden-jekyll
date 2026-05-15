@@ -1,15 +1,22 @@
 ﻿---
-title: Java 鏌ユ紡琛ョ己
+title: 大白话 JAVA 基础
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [缂栫▼璇█, Java]
+tags: [编程语言]
 ---
 
-鍙傝€冭祫鏂?- [JavaGuide](https://javaguide.cn/)
+参考资料
+- [JavaGuide](https://javaguide.cn/)
 
-鍒烽
+刷题
 - [LeetCode 75](https://leetcode.cn/studyplan/leetcode-75/)
 
-# 澶х櫧璇?JAVA 鍩虹
+# 大白话 JAVA 基础
 
-## 鍩虹姒傚康涓庡父璇
+## 基础概念与常识
+
+
+
+
+
+

@@ -2,8 +2,9 @@
 title: Red Mi Turbo
 date: 2026-01-09
 lastmod: 2026-01-09
-tags: [生活, 物品]
+tags: [生活]
 ---
+
 # Red Mi Turbo
 
 ## 基本信息
@@ -27,5 +28,3 @@ tags: [生活, 物品]
 - 贴膜
 
 ## 备注
-
-

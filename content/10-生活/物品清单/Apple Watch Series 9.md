@@ -2,8 +2,9 @@
 title: Apple Watch Series 9
 date: 2026-01-09
 lastmod: 2026-01-09
-tags: [生活, 物品]
+tags: [生活]
 ---
+
 # Apple Watch Series 9
 
 ## 基本信息
@@ -27,5 +28,3 @@ tags: [生活, 物品]
 - 保护壳
 
 ## 备注
-
-

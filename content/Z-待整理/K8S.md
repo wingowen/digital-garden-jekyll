@@ -1,8 +1,8 @@
 ﻿---
-title: K8S
-date: 2025-09-01
+title: 简介
+date: 2025-09-04
 lastmod: 2025-09-04
-tags: [待整理, DevOps]
+tags: [待整理]
 ---
 [[Docker]]
 
@@ -92,4 +92,3 @@ flannel 方案。
 手动。
 
 自动 Cluster Autoscaler。
-

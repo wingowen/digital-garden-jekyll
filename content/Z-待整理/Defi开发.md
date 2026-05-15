@@ -1,9 +1,11 @@
 ﻿---
-title: Defi 开发
+title: 安装开发环境
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [待整理, Web3]
+tags: [待整理]
 ---
+
+
 我将为您提供DeFi项目开发的系统学习路径，以下是分阶段的学习指南：
 
 一、DeFi开发核心技术栈
@@ -115,4 +117,3 @@ npx hardhat run scripts/deploy.js --network mainnet
 
 建议每周投入20小时系统学习，典型学习周期为：
 基础（4周）→ 协议开发（8周）→ 安全优化（4周）→ 复杂系统实现（持续）
-

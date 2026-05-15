@@ -1,10 +1,10 @@
 ﻿---
-title: Kafka 面经
-date: 2025-09-01
-lastmod: 2025-09-01
-tags: [大数据, Kafka]
+title: Kafka 的作用
+date: 2026-05-15
+lastmod: 2026-05-15
+tags: [大数据]
 ---
-Kafka 是一个分布式流处理平台，最初由 LinkedIn 开发，后来成为 Apache 软件基金会的一个项目。它主要用于构建实时数据管道和流应用，可以水平扩展，容错，处理大量数据。
+﻿---\ntitle: Kafka 面经\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [大数据, Kafka]\n---\nKafka 是一个分布式流处理平台，最初由 LinkedIn 开发，后来成为 Apache 软件基金会的一个项目。它主要用于构建实时数据管道和流应用，可以水平扩展，容错，处理大量数据。
 
 # Kafka 的作用
 

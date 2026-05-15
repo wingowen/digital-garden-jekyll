@@ -1,8 +1,8 @@
 ﻿---
-title: suwen
+title: TEST
 date: 2025-09-01
 lastmod: 2025-09-01
-tags: [待整理, 工作]
+tags: [待整理]
 ---
 pip install libxml2 pip install libxslt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
@@ -35,5 +35,3 @@ sudo nginx -s reload 加载配置
 
 
 优化验证码获取逻辑。
-
-

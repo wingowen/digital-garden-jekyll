@@ -1,4 +1,10 @@
-﻿---\ntitle: Xiao Mi Brand 7 NFC\ndate: 2026-01-09\nlastmod: 2026-01-09\ntags: [生活, 物品]\n---\n# Xiao Mi Brand 7 NFC
+﻿---
+title: Xiao Mi Brand 7 NFC
+date: 2026-01-09
+lastmod: 2026-01-09
+tags: [生活, 物品]
+---
+# Xiao Mi Brand 7 NFC
 
 ## 基本信息
 - **型号**: Xiao Mi Brand 7 NFC
@@ -21,4 +27,5 @@
 - 贴膜
 
 ## 备注
+
 

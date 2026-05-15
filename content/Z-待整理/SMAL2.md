@@ -1,4 +1,10 @@
-﻿---\ntitle: SMAL2\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [待整理, 安全]\n---\nIdentity Provider, IDP 和 Service Providers, SP 通过用户的浏览器的重定向访问来实现交换数据。
+﻿---
+title: SMAL2
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [待整理, 安全]
+---
+Identity Provider, IDP 和 Service Providers, SP 通过用户的浏览器的重定向访问来实现交换数据。
 
 RelayState 可以帮助应用程序在用户通过身份提供商验证后重定向到正确的页面或状态
 
@@ -6,4 +12,5 @@ RelayState 可以帮助应用程序在用户通过身份提供商验证后重定
 - [SAML2.0 笔记（二）](https://blog.csdn.net/CoffeeAndIce/article/details/127957055)
 - [理解 SAML 流程](https://docs.authing.co/v2/concepts/saml/saml-flow.html)
 - [生成证书_合作伙伴中心](https://support.huaweicloud.com/devg-bpconsole/appendix_00003.html)
+
 

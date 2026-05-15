@@ -1,4 +1,10 @@
-﻿---\ntitle: iPhone 15 Pro 256G\ndate: 2026-01-09\nlastmod: 2026-01-09\ntags: [生活, 物品]\n---\n# iPhone 15 Pro 256G
+﻿---
+title: iPhone 15 Pro 256G
+date: 2026-01-09
+lastmod: 2026-01-09
+tags: [生活, 物品]
+---
+# iPhone 15 Pro 256G
 
 ## 基本信息
 - **型号**: iPhone 15 Pro
@@ -22,4 +28,5 @@
 - 贴膜
 
 ## 备注
+
 

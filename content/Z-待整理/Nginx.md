@@ -1,4 +1,10 @@
-﻿---\ntitle: Nginx\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [待整理, DevOps]\n---\n# Nginx 如何处理请求
+﻿---
+title: Nginx
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [待整理, DevOps]
+---
+# Nginx 如何处理请求
 
 - 首先，Nginx 在启动时，会解析配置文件，得到需要监听的端口与 IP 地址，然后在 Nginx 的 Master 进程里面先初始化好这个监控的Socket(创建 Socket，设置 addr、reuse 等选项，绑定到指定的 ip 地址端口，再 listen 监听)。
 - 然后，再 fork(一个现有进程可以调用 fork 函数创建一个新进程。由 fork 创建的新进程被称为子进程 )出多个子进程出来。
@@ -76,5 +82,6 @@ location / {
 # Nginx 限流
 
 Nginx中使用`ngx_http_limit_req_module`模块来限制的访问频率，限制的原理实质是基于漏桶算法原理来实现的。在nginx.conf配置文件中可以使用`limit_req_zone`命令及`limit_req`命令限制单个IP的请求处理频率。
+
 
 

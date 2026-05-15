@@ -1,4 +1,10 @@
-﻿---\ntitle: K8S\ndate: 2025-09-01\nlastmod: 2025-09-04\ntags: [待整理, DevOps]\n---\n[[Docker]]
+﻿---
+title: K8S
+date: 2025-09-01
+lastmod: 2025-09-04
+tags: [待整理, DevOps]
+---
+[[Docker]]
 
 [Kubernetes指南](https://www.bookstack.cn/read/feiskyer-kubernetes-handbook-202005/README.md)
 # 简介
@@ -86,3 +92,4 @@ flannel 方案。
 手动。
 
 自动 Cluster Autoscaler。
+

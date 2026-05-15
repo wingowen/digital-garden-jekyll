@@ -1,4 +1,10 @@
-﻿---\ntitle: Air Pod 1\ndate: 2026-01-09\nlastmod: 2026-01-09\ntags: [生活, 物品]\n---\n# Air Pod 1
+﻿---
+title: Air Pod 1
+date: 2026-01-09
+lastmod: 2026-01-09
+tags: [生活, 物品]
+---
+# Air Pod 1
 
 ## 基本信息
 - **型号**: AirPods
@@ -18,4 +24,5 @@
 - 说明书
 
 ## 备注
+
 

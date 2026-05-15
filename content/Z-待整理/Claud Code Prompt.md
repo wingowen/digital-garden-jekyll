@@ -1,4 +1,10 @@
-﻿---\ntitle: Claud Code Prompt\ndate: 2025-09-01\nlastmod: 2025-09-01\ntags: [待整理, AI]\n---\n# System prompt
+﻿---
+title: Claud Code Prompt
+date: 2025-09-01
+lastmod: 2025-09-01
+tags: [待整理, AI]
+---
+# System prompt
 
 ```
 You are Claude Code, Anthropic's official CLI for Claude.
@@ -384,7 +390,18 @@ Important:
 
 # Other common operations
 - View comments on a Github PR: gh api repos/foo/bar/pulls/123/comments
-Input schema: {'type': 'object', 'properties': {'command': {'type': 'string', 'description': 'The command to execute'}, 'timeout': {'type': 'number', 'description': 'Optional timeout in milliseconds (max 600000)'}, 'description': {'type': 'string', 'description': " Clear, concise description of what this command does in 5-10 words. Examples:\nInput: ls\nOutput: Lists files in current directory\n\nInput: git status\nOutput: Shows working tree status\n\nInput: npm install\nOutput: Installs package dependencies\n\nInput: mkdir foo\nOutput: Creates directory 'foo'"}}, 'required': ['command'], 'additionalProperties': False, '$schema': 'http://json-schema.org/draft-07/schema#'}
+Input schema: {'type': 'object', 'properties': {'command': {'type': 'string', 'description': 'The command to execute'}, 'timeout': {'type': 'number', 'description': 'Optional timeout in milliseconds (max 600000)'}, 'description': {'type': 'string', 'description': " Clear, concise description of what this command does in 5-10 words. Examples:
+Input: ls
+Output: Lists files in current directory
+
+Input: git status
+Output: Shows working tree status
+
+Input: npm install
+Output: Installs package dependencies
+
+Input: mkdir foo
+Output: Creates directory 'foo'"}}, 'required': ['command'], 'additionalProperties': False, '$schema': 'http://json-schema.org/draft-07/schema#'}
 
 ---
 
@@ -788,3 +805,4 @@ Input schema: {'type': 'object', 'properties': {'code': {'type': 'string', 'desc
 
 ---
 ```
+

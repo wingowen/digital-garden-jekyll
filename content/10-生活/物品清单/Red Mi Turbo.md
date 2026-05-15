@@ -1,4 +1,10 @@
-﻿---\ntitle: Red Mi Turbo\ndate: 2026-01-09\nlastmod: 2026-01-09\ntags: [生活, 物品]\n---\n# Red Mi Turbo
+﻿---
+title: Red Mi Turbo
+date: 2026-01-09
+lastmod: 2026-01-09
+tags: [生活, 物品]
+---
+# Red Mi Turbo
 
 ## 基本信息
 - **型号**: Red Mi Turbo
@@ -21,4 +27,5 @@
 - 贴膜
 
 ## 备注
+
 

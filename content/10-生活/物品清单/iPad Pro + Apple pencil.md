@@ -1,4 +1,10 @@
-﻿---\ntitle: iPad Pro + Apple pencil\ndate: 2026-01-09\nlastmod: 2026-01-09\ntags: [生活, 物品]\n---\n# iPad Pro + Apple pencil
+﻿---
+title: iPad Pro + Apple pencil
+date: 2026-01-09
+lastmod: 2026-01-09
+tags: [生活, 物品]
+---
+# iPad Pro + Apple pencil
 
 ## iPad Pro 基本信息
 - **型号**: iPad Pro
@@ -27,4 +33,5 @@
 - Apple Pencil 笔尖
 
 ## 备注
+
 
